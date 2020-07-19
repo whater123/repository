@@ -1,0 +1,186 @@
+#all{
+   width: 1300px;
+   height: 750px;
+   margin: auto;
+}
+/**顶部**/
+#top{
+   color: 255,252,249;
+   width: 100%;
+   height: 100px; 
+   background-color: (255,252,249);
+}
+#top-left{
+  display: inline-block;
+  height: 100%;
+  width: 40%;
+}
+#top-right{
+  display: inline-block;
+  float: right;
+  height: 100%;
+  width: 60%;
+}
+/**顶部logo图片**/
+#top-logo{
+    position: relative;
+    left: 80px;
+    top: 20px;
+    width: 80px;
+    height: 80px;
+}
+/**顶部logo旁边的文字**/
+#character-logo{
+    position: relative;
+    left: 80px;
+    top: 20px;
+    font-size: large;
+    font-weight: 700;
+}
+/**顶部右侧菜单**/
+#homepage-banner{
+    list-style-type: none;
+    overflow: hidden;
+    position: relative;
+    padding-left: 280px;
+    top: 20px;
+    width: 500px;
+    height: 80px;
+}
+#homepage-banner li{
+    float: left;
+    width:100px;
+    height: 100%;
+}
+#homepage-banner li a{
+    position: relative;
+    top: 25px;
+    font-weight: 700;
+    display: block;
+    text-align: center;/**文字居中**/
+    color: black;
+    text-decoration: none;
+}
+.joinus:hover #joinus-banner{
+    display: block;
+}
+#joinus-banner{
+    position: absolute;
+    display: none;
+    top: 20px;
+}
+#joinus-banner li{
+    z-index: 2;
+    position: relative;
+    display: block;
+    line-height: 20px;
+}
+/**中部**/
+#middle{
+    width: 100%;
+    height: 550px;
+}
+.middle-z{
+    width: 100%;
+    height: 550px;
+    z-index: 1;
+    position: relative;
+}
+#loginBtn{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#loginBtn:hover{
+    transition-duration: 1s;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+/**中部第五个 加入我们 界面**/
+#middle-5-left{
+    width: 350px;
+    height: 550px;
+    padding: 50px 0px 50px 300px;
+    float: left;
+}
+#middle-5-right{
+    width: 350px;
+    height: 550px;
+    padding: 50px 300px 50px 0px;
+    float: right;
+}
+#change{
+    height: 50px;
+    list-style-type: none;
+    overflow: hidden;
+}
+#change li{
+    width:50%;
+    height:50px;
+    float: left;
+    font-size: 25px;
+    text-align: center;
+    vertical-align: center;
+    background-color: rgb(255,255,255);
+}
+#change li a{
+    display: inline-block;
+    width:100%;
+    height:100%;
+}
+#change li:hover{
+    background-color: rgb(230,230,230);
+}
+#m-5-r-bottom-2{
+    position:relative;
+    display: none;
+}
+/**底部**/
+#bottom{
+    width: 650;
+    height: 100px;
+}
+.bot-character{
+    color: #4C698A;
+    display: block;
+    font-size: 25px;
+    text-align: center;
+}
+.bot-character2{
+    color: #B13245;
+    display: block;
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+    top: -15px;
+}
+/**底部圆点**/
+.status-point{
+    display:inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+}
+#status-point1{
+    position: relative;
+    left: 560px;
+    top: 25px;
+}
+#status-point2{
+    position: relative;
+    left: 718px;
+    top: -34px;
+}
+/**底部二维码**/
+#erweima{
+    display: block;
+    position: relative;
+    left: 760px;
+    top: -90px;
+    width: 90px;
+    height: 90px;
+}
