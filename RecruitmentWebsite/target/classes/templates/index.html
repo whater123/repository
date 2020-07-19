@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+   <meta charset="utf-8">
+   <title>凡路</title> 
+   <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+   <link href="../static/css/reset.css" rel="stylesheet" type="text/css">
+   <link href="../static/css/homepage.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+    <div id="all">
+      <div id="top">
+        <div id="top-left">
+           <img id="top-logo" src="../static/img/logo2.jpg">
+           <span id="character-logo">&nbsp;&nbsp;Final team</span>
+        </div>
+        <div id="top-right">
+           <ul id="homepage-banner">
+           <li><a class="lis" href="#">首页</a></li>
+           <li><a class="lis" href="#">部门介绍</a></li>
+           <li><a class="lis" href="#">招新流程</a></li>
+           <li><a class="lis" href="#">了解凡路</a></li>
+           <li><a class="lis joinus" href="#">加入我们</a></li>
+           </ul>
+        </div>
+      </div>
+      <div id="middle">
+       <div class="middle-z">
+            <img src="../static/img/样例.png" style="width: 100%;height:550px;">
+       </div>
+       <div class="middle-z">
+            <img src="../static/img/logo.jpg" style="width: 100%;height:550px;">
+       </div>
+       <div class="middle-z">
+            <img src="../static/img/底部二维码.jpg" style="width: 100%;height:550px;">
+       </div>
+       <div class="middle-z">
+            <img src="../static/img/4.jpg" style="width: 100%;height:550px;">
+       </div>
+       <div class="middle-z">
+           <div id="middle-5-left">
+               <img src="../static/img/loge-left.png" style="width: 350px;height: 550px;">
+           </div>      
+           <div id="middle-5-right">
+            <div id="m-5-r-top">
+             <ul id="change">
+               <li><a href="#" id="change-l">登录</a></li>
+               <li><a href="#" id="change-r">注册</a></li>
+             </ul> 
+            </div>
+            <div id="m-5-r-bottom-1" style="height: 500px;background-color: rgb(255,255,255);">
+             <br><h2 style="text-align: center;">请输入账号和密码后登录系统</h2>
+               <form>
+                账号:<input type="text" name="username" id="number"><br>
+                密码:<input type="password" name="password" id="password"><br>
+               <input type="submit" value="登录" id="loginBtn">
+               </form>
+             </div>
+             <div id="m-5-r-bottom-2" style="height: 500px;background-color: rgb(255,255,255);">
+              <h2 style="text-align: center;">请按要求填写资料注册</h2>
+                <table class="register">
+                    <tr>
+                        <td>昵称：</td>
+                        <td><p><input type="text" name="username" size="20" class="username"/></p></td>
+                    </tr>
+                    <tr>
+                        <td>密码：</td>
+                        <td><p><input type="password" name="password" size="20" class="password"/></p></td>
+                    </tr>
+                    <tr>
+                        <td><a href="register.html">注册账号</a></td>
+                        <td><input type="submit" name="submit" value="登录" id="login"/></td>
+                    </tr>
+                </table> 
+             </div>         
+       </div>
+      </div>
+      <div id="bottom">
+          <div class="status-point" id="status-point1" style=" background-color:#4C698A" /></div>
+          <span class="bot-character">联系我们</span>
+          <div class="status-point" id="status-point2" style=" background-color:#4C698A" /></div>
+          <span class="bot-character2">招新群:760804756</span>
+          <img src="../static/img/底部二维码.jpg" id="erweima">
+      </div>  
+    </div>
+    <script src="../static/js/homepage.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        //**
+    $(document).ready(function(){
+        $("#loginBtn").click(function(){
+        console.log("1");
+        var user = new Object();
+        user.number = $("#number").val();
+        user.password = $("#password").val();
+        if(user.number==""||user.number==null){
+        $("#formtip").html("登录账户不能为空");
+        }
+        else if(user.password==""||user.password==null){
+        $("#formtip").html("登录密码不能为空");
+        }
+        else{
+        $("#formtip").html("异步");
+        $.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: "/login",
+            data: JSON.stringify(user),
+            dataType: 'text',
+            cache: false,
+            timeout: 600000,
+            success: function (data) {
+                let stateCode = JSON.parse(data);
+                if(stateCode.state=="-1"){
+                    alert(stateCode.msg);
+                }else if(stateCode.state == "1"){
+                    alert(stateCode.msg);
+                }else if(stateCode.state == "2"){
+                    alert(stateCode.msg);
+                }},
+            error:function(XMLHttpRequest){  //请求失败的回调方法
+                alert("Error: "+XMLHttpRequest.status);
+            }
+        });
+      }}
+   )});
+
+    </script>
+  </body>
+ </html>
