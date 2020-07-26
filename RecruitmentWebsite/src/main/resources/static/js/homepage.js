@@ -23,13 +23,16 @@ var login = document.getElementById("m-5-r-bottom-1");
 var register = document.getElementById("m-5-r-bottom-2");
 var change_l = document.getElementById("change-l");
 var change_r = document.getElementById("change-r");
+var pic = document.getElementById('pic');
 change_l.onclick=function(){
 	register.style.display="none";
 	login.style.display="block";
+	pic.src="../static/img/纪念碑谷1.jpg";
 }
 change_r.onclick=function(){
 	register.style.display="block";
 	login.style.display="none";
+	pic.src="../static/img/纪念碑谷2.jpg";
 }
 
     

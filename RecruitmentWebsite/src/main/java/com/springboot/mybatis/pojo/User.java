@@ -3,6 +3,7 @@ package com.springboot.mybatis.pojo;
 import com.springboot.mybatis.util.SystemParam;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 /**
@@ -29,6 +30,11 @@ public class User {
     /**
      *登陆成功后的判断权限
      */
+    public User(String number,String password){
+        this.number = number;
+        this.password = password;
+    }
+
     public StateCode returnLoginCode(){
         if (SystemParam.isManager(this)){
             return new StateCode("1","管理员登录成功");
@@ -56,3 +62,4 @@ public class User {
         }
     }
 }
+
