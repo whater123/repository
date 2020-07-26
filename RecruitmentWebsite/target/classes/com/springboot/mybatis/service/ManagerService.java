@@ -55,4 +55,15 @@ public class ManagerService implements ManagerImp {
         stringStringMap.put("isdalao",user.getIsdalao());
         return managerMapper.getSomeUser(stringStringMap);
     }
+
+
+    @Override
+    public Integer updateInterviewId(String id, String targetId,String isDalao) {
+        return managerMapper.updateInterviewId(id, targetId,isDalao);
+    }
+
+    @Override
+    public Integer updateStageStatus(List ids, Integer status) {
+        return managerMapper.updateStageStatus(ids, status);
+    }
 }

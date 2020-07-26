@@ -3,8 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        function init(){
+            $.ajax({
+                type: "POST",
+                url: "/getSession",
+                dataType: 'text',
+                cache: false,
+                timeout: 600000,
+                success: function (data) {
+                    let user = JSON.parse(data);
+                    if (user === null||user.number ===""){
+                        alert("登录失效，请重新登录！");
+                        window.location.href='/';
+                    }
+                    else {
+                        alert(user.number);
+                    }
+                },
+                error:function(XMLHttpRequest){  //请求失败的回调方法
+                    alert("Error: "+XMLHttpRequest.status);
+                }
+            });
+        }
+        function init2(){
+            let item = window.sessionStorage.getItem('user');
+            alert(item);
+        }
+    </script>
 </head>
-<body>
-#{msg}
+<body onload="init()">
+<button onclick="init2()">test</button>
 </body>
 </html>

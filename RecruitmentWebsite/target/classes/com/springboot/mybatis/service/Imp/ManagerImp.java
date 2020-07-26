@@ -1,5 +1,6 @@
 package com.springboot.mybatis.service.Imp;
 
+import com.alibaba.druid.pool.ha.selector.StickyDataSourceHolder;
 import com.springboot.mybatis.dao.ManagerMapper;
 import com.springboot.mybatis.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,4 +30,19 @@ public interface ManagerImp {
      * @return list
      */
     List<User> getSomeUserMsg(User user);
+
+    /**
+     * 修改新生面试Id
+     * @param id 新生原Id
+     * @param targetId 修改后的新生Id
+     */
+    Integer updateInterviewId(String id, String targetId, String isDalao);
+
+    /**
+     * 修改新生面试状态 异常：Cause: java.sql.SQLException: sql injection violation, multi-statement not allow : update user_signup set id = ? where id = ?;
+     *         update user_register set id = ? where id = ?
+     * @param ids 新生Id
+     * @param status 修改后的新生面试/大作业状态
+     */
+    Integer updateStageStatus(List ids, Integer status);
 }

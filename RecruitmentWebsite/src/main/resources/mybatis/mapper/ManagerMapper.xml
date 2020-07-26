@@ -15,9 +15,11 @@
     </select>
 
     <select id="getSomeUser" resultType="User" parameterType="java.util.Map">
-        select * from user_signup as a,user_register as b
+        select * from
+        user_register as b left join user_signUp as a on a.id = b.id
+        left join user_dalao as d on b.id = d.id
         <where>
-            a.id = b.id
+            b.id !=0
             <if test="name != null">
                 and a.name = #{name}
             </if>
@@ -44,4 +46,24 @@
             </if>
         </where>
     </select>
+
+    <update id="updateInterviewId">
+
+    <trim suffixOverrides=";">
+
+        update user_signup set id = #{targetId} where id = #{id};
+        update user_register set id = #{targetId} where id = #{id};
+        <if test="isDalao == 1">
+            update user_dalao set id = #{targetId} where id = #{id}
+        </if>
+    </trim>
+    </update>
+
+
+    <update id="updateStageStatus">
+    update user_signup set stageState = #{status} where id in
+    <foreach separator="," item="id" close=")" open="(" collection="ids">#{id} </foreach>
+    </update>
+
+
 </mapper>
