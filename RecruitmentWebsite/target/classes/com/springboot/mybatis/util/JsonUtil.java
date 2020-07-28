@@ -8,6 +8,7 @@ import com.springboot.mybatis.pojo.User;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -41,7 +42,7 @@ public class JsonUtil {
      * @return 目标封装类
      * @throws JsonProcessingException JsonProcessingException
      */
-    public Object getObject(String json, Class<?> pojoClass) throws JsonProcessingException {
+    public Object getObject(String json, Class<?> pojoClass) throws IOException {
         return mapper.readValue(json,pojoClass);
     }
 
