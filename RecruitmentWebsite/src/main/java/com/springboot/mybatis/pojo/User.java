@@ -54,7 +54,16 @@ public class User {
     }
 
     public String getBigWorkState(){
-        if ("0".equals(stageState)||"1".equals(stageState)){
+        if ("2".equals(stageState)){
+            return "通过";
+        }
+        else {
+            return "未通过";
+        }
+    }
+
+    public String getFinalState(){
+        if ("2".equals(stageState)){
             return "通过";
         }
         else {
