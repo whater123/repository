@@ -16,6 +16,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 
 /**
  * @author w
@@ -29,7 +30,7 @@ public class LoginAndRegister {
     JsonUtil jsonUtil;
 
     @RequestMapping(value = "/register" , produces = "application/json;charset=UTF-8")
-    public String register(@RequestBody String context) throws JsonProcessingException {
+    public String register(@RequestBody String context) throws IOException {
         User user = (User) jsonUtil.getObject(context, User.class);
         StateCode registered = loAndReService.isRegistered(user);
 

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0bcad14-c606-401f-9a68-a7c792070b0f" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_12.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/b19dac05-d246-49f7-8a2b-a67b73a4e3f3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b19dac05-d246-49f7-8a2b-a67b73a4e3f3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f0a4f8a4-b759-4b66-a0ff-ff1bfd6411d1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f0a4f8a4-b759-4b66-a0ff-ff1bfd6411d1.xml" afterDir="false" />
@@ -35,6 +36,10 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/util/SystemParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/util/SystemParam.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/springboot/mybatis/MybatisApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/springboot/mybatis/MybatisApplicationTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../hh.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../hh.txt" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/LoginAndRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/LoginAndRegister.java" afterDir="false" />
+>>>>>>> 928f32a670841e584c7d528cb106786e65eff40c
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +141,11 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+=======
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/RecruitmentWebsite" />
+>>>>>>> 928f32a670841e584c7d528cb106786e65eff40c
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32988507" />
@@ -272,7 +281,11 @@
       <workItem from="1595656853064" duration="11643000" />
       <workItem from="1595750954545" duration="3478000" />
       <workItem from="1595910269835" duration="936000" />
+<<<<<<< HEAD
       <workItem from="1595916787742" duration="1076000" />
+=======
+      <workItem from="1595916846238" duration="2305000" />
+>>>>>>> 928f32a670841e584c7d528cb106786e65eff40c
     </task>
     <servers />
   </component>
@@ -312,10 +325,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="170" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594784832040" />
+<<<<<<< HEAD
     <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1595916846642">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595916846642" />
+=======
+    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1595919151954">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595919151954" />
+>>>>>>> 928f32a670841e584c7d528cb106786e65eff40c
     <state width="1493" height="56" key="GridCell.Tab.0.bottom" timestamp="1595756570183">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -348,6 +368,7 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="56" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595756570183" />
+<<<<<<< HEAD
     <state x="356" y="77" key="Maven.ArtifactSearchDialog" timestamp="1595916897720">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -356,6 +377,12 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595917869335" />
+=======
+    <state x="73" y="12" width="1038" height="812" key="SettingsEditor" timestamp="1595918781786">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="73" y="12" width="1038" height="812" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595918781786" />
+>>>>>>> 928f32a670841e584c7d528cb106786e65eff40c
     <state x="499" y="183" key="extract.method.dialog" timestamp="1595657360545">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
