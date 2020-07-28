@@ -55,4 +55,16 @@ public class LoginAndRegisterService implements LoginAndRegisterImp {
         return false;
     }
 
+    @Override
+    public User getUserByNumber(String number) {
+        List<User> allUsers = uerRegisterMapper.getAllAll();
+        for (User i : allUsers
+                ) {
+            if (i.getNumber().equals(number)){
+                return i;
+            }
+        }
+        return new User("","");
+    }
+
 }

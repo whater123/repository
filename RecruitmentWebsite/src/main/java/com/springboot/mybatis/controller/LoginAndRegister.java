@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.springboot.mybatis.pojo.StateCode;
 import com.springboot.mybatis.pojo.User;
 import com.springboot.mybatis.service.LoginAndRegisterService;
+import com.springboot.mybatis.service.ManagerService;
 import com.springboot.mybatis.util.JsonUtil;
 import com.springboot.mybatis.util.SystemParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,8 @@ public class LoginAndRegister {
     @Autowired
     LoginAndRegisterService loAndReService;
     @Autowired
+    ManagerService managerService;
+    @Autowired
     JsonUtil jsonUtil;
 
     @RequestMapping(value = "/register" , produces = "application/json;charset=UTF-8")
@@ -45,7 +48,7 @@ public class LoginAndRegister {
     }
 
     @RequestMapping(value = "/login" , produces = "application/json;charset=UTF-8")
-    public String login(@RequestBody String context, HttpServletRequest request, HttpServletResponse response) throws JsonProcessingException {
+    public String login(@RequestBody String context, HttpServletRequest request, HttpServletResponse response) throws IOException {
         //默认记住密码
         HttpSession session = request.getSession();
         User user = (User) jsonUtil.getObject(context, User.class);
@@ -65,13 +68,13 @@ public class LoginAndRegister {
      * @throws JsonProcessingException json
      */
     @RequestMapping(value = "/getSession" )
-    public String getNowUser(HttpServletRequest request) throws JsonProcessingException {
+    public String getNowUser(HttpServletRequest request) throws IOException {
         User user = (User)jsonUtil.getObject(getNowUserJson(request), User.class);
-        return jsonUtil.getJson(user);
+        return jsonUtil.getJson(loAndReService.getUserByNumber(user.getNumber()));
     }
 
     @RequestMapping("/loginOut")
-    public String loginOut(HttpServletRequest request) throws JsonProcessingException {
+    public String loginOut(HttpServletRequest request) throws IOException {
         HttpSession session = request.getSession();
         User user = (User)jsonUtil.getObject(getNowUserJson(request), User.class);
 
@@ -85,12 +88,12 @@ public class LoginAndRegister {
     }
 
     @RequestMapping("/userIsManager")
-    public String isManager(HttpServletRequest request) throws JsonProcessingException {
+    public String isManager(HttpServletRequest request) throws IOException {
         User user = (User)jsonUtil.getObject(getNowUserJson(request), User.class);
         return String.valueOf(SystemParam.isManager(user));
     }
 
-    private String getNowUserJson(HttpServletRequest request) throws JsonProcessingException {
+    private String getNowUserJson(HttpServletRequest request) throws IOException {
         User user;
         HttpSession session = request.getSession();
         String string = (String) session.getAttribute("user");

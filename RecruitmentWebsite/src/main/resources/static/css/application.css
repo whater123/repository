@@ -1,0 +1,64 @@
+#all{
+   width: 1300px;
+   height: 750px;
+   margin: auto;
+}
+#top{
+   padding-top: 10px;
+   text-align: center;
+   width: 100%;
+   height: 120px; 
+ 
+}
+#bottom{
+    width: 1300px;
+    margin: auto;
+}
+/**图片**/
+#logo{
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+#logo_name{
+    position: relative;
+    font-size: 30px;
+    font-weight: 15px;
+    top: -75px;
+    left: 140px;
+}
+#two_btn{
+    position: absolute;
+    left: 500px;
+    width: 300px;
+    display: inline-block;
+}
+#two_btn input{
+    border-radius: 10px;
+    display: inline-block;
+    width: 100px;
+    padding: 0 16px;
+    height: 44px;
+    text-align: center;
+    box-sizing: border-box;  
+    cursor:pointer;
+}
+#show_inf{
+    float: right;
+    padding-top: 50px;
+    width: 820px;
+    height: 500px;
+    overflow: scroll;
+}
+#show_inf label{
+    display: block;
+    width: 80px;
+    padding-top: 5px;
+    cursor: pointer;
+}
+#show_inf input,select{
+    display: block;
+    width: 65px;
+    paddin7g-top: 5px;
+}

@@ -5,10 +5,10 @@
 }
 /**顶部**/
 #top{
-   color: 255,252,249;
+   color: rgb(255,252,249);
    width: 100%;
    height: 100px; 
-   background-color: (255,252,249);
+   background-color: rgb(245,245,245);
 }
 #top-left{
   display: inline-block;
@@ -61,24 +61,11 @@
     color: black;
     text-decoration: none;
 }
-.joinus:hover #joinus-banner{
-    display: block;
-}
-#joinus-banner{
-    position: absolute;
-    display: none;
-    top: 20px;
-}
-#joinus-banner li{
-    z-index: 2;
-    position: relative;
-    display: block;
-    line-height: 20px;
-}
+
 /**中部**/
 #middle{
     width: 100%;
-    height: 650px;
+    height: 600px;
 }
 .middle-z{
     width: 100%;
@@ -86,6 +73,40 @@
     z-index: 1;
     position: relative;
 }
+/**第二div部门介绍**/
+.alldepartments{
+    display: inline-block;
+    width: 254px;
+    height:  250px;
+}
+/*上部分总介绍的圆圈*/
+.alldepartments .solodepartment{
+    background-color: white;
+    margin: auto;
+    width: 80%;
+    height: 70%;
+    border-radius: 50%;
+}
+/*每个详细介绍*/
+.detaildepartments{
+    height: 280px;
+}
+/*每个部门圆圈*/
+.circle{
+    display: inline-block;
+    float: left;
+    height: 280px;
+    width: 350px;
+    border-radius:  50%;
+}
+/*圆圈旁边的字*/
+.worddetail{
+    display: inline-block;
+    float: right;
+    height: 280px;
+    width: 880px;
+}
+/**登录注册页面的按钮**/
 #middle-5-right input{
     border-radius: 10px;
     display: block;
@@ -120,11 +141,10 @@
 }
 /**登录注册后界面**/
 #middle-5-before{
-    
     height: 650px;
 }
 #middle-5-after-login1{
-    display: none; 
+    display: none;
     height: 550px;
     padding: 50px 0px 50px 0px;
 }
@@ -132,6 +152,61 @@
     display: none;
     height: 550px;
     padding: 50px 0px 50px 0px;
+}
+/*部门*/
+.middle_5{
+    border: 1px solid #8799a3;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    display:inline-block;
+    text-align: center;
+    vertical-align:middle;
+    margin: 50px 20px 80px 20px;
+    font:25px Georgia, "Times New Roman", Times, serif;
+    cursor:pointer;
+    background-color: rgb(255,242,230);
+}
+#middle_5_1{
+    margin-left: 250px;
+}
+#middle_5_5{
+    margin-right: 250px;
+}
+.middle_6{
+    border: 1px solid #a5673f;
+    width: 140px;
+    height: 140px;
+    border-radius: 70px;
+    display:inline-block;
+    text-align: center;
+    margin: 0px 25px;
+    font:25px Georgia, "Times New Roman", Times, serif;
+    cursor:pointer;
+    background-color: rgb(255,242,230);
+}
+#middle_6_1{
+    margin-left: 80px;
+}
+#middle_6_6{
+    margin-right: 80px;
+}
+.middle_5 span{
+    display: block;
+    margin-top: 30px;
+}
+.middle_6 span{
+    display: block;
+    margin-top: 50px;
+}
+#middle-5-after-login2 div:hover{
+    -webkit-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    transform: translateY(-3px);
+    -webkit-box-shadow: 0 0 6px #999;
+    box-shadow: 0 0 6px #999;
+    -webkit-transition: all .5s ease-out;
+    transition: all .5s ease-out;
 }
 #step li{
     float: left;
@@ -147,9 +222,10 @@
     height: 120px;
     line-height: 20px;/**垂直居中了**/
     border-radius: 50%;
-    font-size: 22px;
+    font-size: 25px;
     background-color: rgb(138,190,178);
     color: black;
+    cursor: pointer;
 }
 /**箭头**/
 .pic-arrow{
@@ -204,7 +280,7 @@
 #bottom{
     width: 650;
     height: 100px;
-    padding-top: 20px;
+    padding-top: 50px;
 }
 .bot-character{
     width: 50%;
@@ -238,4 +314,16 @@
     top: -70px;
     left: 750px;
     height: 75px;
+}
+#KnowMore
+{
+    position: absolute;
+    z-index: 2;
+    height: 0px;
+    width: 120px;
+    right: 150px;
+    top: 70px;
+    border:1px solid black;
+    transition:  height 0.5s;
+    text-align: center;
 }

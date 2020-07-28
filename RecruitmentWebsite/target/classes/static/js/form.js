@@ -7,12 +7,92 @@ var tab = document.getElementById("tab");
 change_l.onclick=function(){
 	mogul.style.display="none";
 	normal.style.display="block";
-	tab.style.display="none"
+	tab.style.display="none";
 }
 change_r.onclick=function(){
 	mogul.style.display="block";
 	normal.style.display="none";
-	tab.style.display="none"
+	tab.style.display="none";
+}
+//网申部分
+//当传递过来的参数为yes 代表已经填写了
+var url = window.location.href;
+var argsIndex = url .split("?if=");
+var arg = argsIndex[1];
+if(arg=='yes'){ 
+      $.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: "/getSession",
+            dataType: 'text',
+            timeout: 600000,
+            success: function (data){
+                let user = JSON.parse(data);
+                tab.style.display="none";
+                mogul.style.display="none";
+                normal.style.display="block";
+                $("#name_normal").after('<label id="plus">面试ID</label>');
+                $("#plus").after('<input type="text" id="id_normal">');
+                $("#id_normal").val(user.id);
+                $("#id_normal").after('<label id="interviewState">面试状态</label>');
+                $("#interviewState").after('<input type="text" id="interviewState_normal">');
+                $("#interviewState_normal").val(user.interviewState);
+                $("#interviewState_normal").after('<label id="bigWordState">大作业状态</label>');
+                $("#bigWordState").after('<input type="text" id="bigWordState_normal">');
+                $("#bigWordState_normal").val(user.bigWorkState);
+                $("#name_normal").val(user.name);
+                $("#qq_normal").val(user.qq);
+                $("#college_normal").val(user.college);
+                $("#major_normal").val(user.major);
+                $("#number_normal").val(user.number);
+                $("#classroom_normal").val(user.classroom);
+                $("#department_normal").val(user.department);
+                $("#context_normal").val(user.context);
+                $("#btn_normal").hide();//隐藏提交按钮               
+               },              
+            error:function(XMLHttpRequest){  //请求失败的回调方法
+                alert("Error: "+XMLHttpRequest.status);
+               }
+           });
+}
+//管理员查看成员信息时 点击头像
+//当传递过来的参数为yes 代表已经填写了
+if(arg>0&&arg<1000){
+      var msg = new Object();
+      msg.id=arg;
+      $.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: "/manager/getStudentMsg/" + arg,
+            dataType: 'text',
+            timeout: 600000,
+            success: function (data){
+                let user = JSON.parse(data);
+                tab.style.display="none";
+                mogul.style.display="none";
+                normal.style.display="block";
+                $("#name_normal").after('<label id="plus">面试ID</label>');
+                $("#plus").after('<input type="text" id="id_normal">');
+                $("#id_normal").val(user.id);
+                $("#name_normal").val(user.name);
+                $("#qq_normal").val(user.qq);
+                $("#college_normal").val(user.college);
+                $("#major_normal").val(user.major);
+                $("#number_normal").val(user.number);
+                $("#classroom_normal").val(user.classroom);
+                $("#department_normal").val(user.department);
+                $("#context_normal").val(user.context);
+                if(user.specialty!=null&&user.specialty!=''){
+                $("#context_normal").after('<label id="specialty">面试状态</label>');
+                $("#specialty").after('<input type="text" id="specialty_normal">');
+                $("#specialty_normal").val(user.specialty);
+                }
+                $("#btn_normal").hide();//隐藏提交按钮               
+               },              
+            error:function(XMLHttpRequest){  //请求失败的回调方法
+                alert("Error: "+XMLHttpRequest.status);
+               }
+           }); 
 }
 //普通用户报名
 $(document).ready(function(){
@@ -40,8 +120,11 @@ $(document).ready(function(){
             success: function (data){
                 let stateCode = JSON.parse(data);
                 //登录失败状态码为-1 管理员成功状态码为1 新生为2//
-                alert(stateCode.msg);
-                },
+                if(stateCode.state=="3"){
+                    alert(stateCode.msg);
+                }else if(stateCode.state=="-1"){
+                    alert(stateCode.msg);
+                }},
             error:function(XMLHttpRequest){  //请求失败的回调方法
                 alert("Error: "+XMLHttpRequest.status);
             }
@@ -78,14 +161,18 @@ $(document).ready(function(){
             success: function (data){
                 let stateCode = JSON.parse(data);
                 //登录失败状态码为-1 管理员成功状态码为1 新生为2//
-                alert(stateCode.msg);
-                },
+                if(stateCode.state=="3"){
+                    alert(stateCode.msg);
+                }else if(stateCode.state=="-1"){
+                    alert(stateCode.msg);
+                }},
             error:function(XMLHttpRequest){  //请求失败的回调方法
                 alert("Error: "+XMLHttpRequest.status);
             }
         });
       }}
    )});
-    
+//
+
 
 
