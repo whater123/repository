@@ -27,7 +27,6 @@ if(arg=='yes'){
             dataType: 'text',
             timeout: 600000,
             success: function (data){
-                alert(data);
                 let user = JSON.parse(data);
                 tab.style.display="none";
                 mogul.style.display="none";
@@ -64,7 +63,7 @@ if(arg>0&&arg<1000){
       $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/manager/getStudentMsg/{id}",
+            url: "/manager/getStudentMsg/" + arg,
             dataType: 'text',
             timeout: 600000,
             success: function (data){

@@ -87,6 +87,7 @@ public class FreshmanSignUp {
             String str = (String) session.getAttribute("user");
             user = (User) jsonUtil.getObject(context,User.class);
             User user1 = (User) jsonUtil.getObject(str,User.class);
+
             if(freshmanSignUpService.isSignedUp(user1.getNumber())){
                 return jsonUtil.getJson(new StateCode("-1","报名失败，您已报名"));
             }

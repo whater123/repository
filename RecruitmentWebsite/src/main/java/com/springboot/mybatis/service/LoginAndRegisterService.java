@@ -17,8 +17,6 @@ import java.util.List;
 public class LoginAndRegisterService implements LoginAndRegisterImp {
     @Autowired
     UerRegisterMapper uerRegisterMapper;
-    @Autowired
-    ManagerService managerService;
 
     @Override
     public StateCode isRegistered(User user) {
@@ -59,8 +57,8 @@ public class LoginAndRegisterService implements LoginAndRegisterImp {
 
     @Override
     public User getUserByNumber(String number) {
-        List<User> allUserMsg = managerService.getAllUserMsg();
-        for (User i : allUserMsg
+        List<User> allUsers = uerRegisterMapper.getAllAll();
+        for (User i : allUsers
                 ) {
             if (i.getNumber().equals(number)){
                 return i;

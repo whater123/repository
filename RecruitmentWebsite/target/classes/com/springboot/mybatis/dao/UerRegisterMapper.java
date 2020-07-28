@@ -14,5 +14,7 @@ import java.util.List;
 public interface UerRegisterMapper {
     List<User> getAllUsers();
 
+    List<User> getAllAll();
+
     void insertUser(User user);
 }

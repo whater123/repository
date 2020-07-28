@@ -25,7 +25,7 @@ $(document).ready(function(){
             contentType: "application/json",
             url: "/manager/queryStudents",
             data: JSON.stringify(msg),
-            dataType: 'json',
+            dataType: 'text',
             timeout: 600000,
             success: function (data){
                 let user = JSON.parse(data);
@@ -33,7 +33,7 @@ $(document).ready(function(){
                 for(var p in user){
 
                 $("#name_follow").after('<label id=name></label>');
-                $("#name").text(user.name);
+                $("#name").text(user[p].name);
                 document.getElementById('name').onclick=function(){
                 getInfById(''+this.id);}; //给名字绑定点击事件 查询信息
                 document.getElementById('name').id='name'+number;
