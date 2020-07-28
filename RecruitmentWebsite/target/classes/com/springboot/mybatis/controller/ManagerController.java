@@ -8,6 +8,7 @@ import com.springboot.mybatis.util.JsonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -35,14 +36,14 @@ public class ManagerController {
     }
 
     @RequestMapping(value = "/queryStudents" , produces = "application/json;charset=UTF-8")
-    public String getSomeMsg(@RequestBody String context) throws JsonProcessingException {
+    public String getSomeMsg(@RequestBody String context) throws IOException {
         User user = (User) jsonUtil.getObject(context, User.class);
         return jsonUtil.getJson( managerService.getSomeUserMsg(user));
     }
 
 
     @PostMapping(value = "/editStatus",produces = "application/json;charset=UTF-8")
-    public String updateStageStatus(@RequestBody String context) throws JsonProcessingException {
+    public String updateStageStatus(@RequestBody String context) throws IOException {
         Map map = (Map) jsonUtil.getObject(context, Map.class);
         List ids = (List) map.get("ids");
         Integer status = (Integer) map.get("status");
@@ -66,7 +67,7 @@ public class ManagerController {
      * @throws JsonProcessingException 1
      */
     @PostMapping(value = "/editId",produces = "application/json;charset=UTF-8")
-    public String updateInterviewId(@RequestBody String context) throws JsonProcessingException {
+    public String updateInterviewId(@RequestBody String context) throws IOException {
         Map map = (Map) jsonUtil.getObject(context, Map.class);
         String id = (String) map.get("id");
         String targetId = (String) map.get("targetId");
