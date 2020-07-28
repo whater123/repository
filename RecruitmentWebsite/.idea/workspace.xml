@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0bcad14-c606-401f-9a68-a7c792070b0f" name="Default Changelist" comment="" />
+    <list default="true" id="f0bcad14-c606-401f-9a68-a7c792070b0f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_12.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b19dac05-d246-49f7-8a2b-a67b73a4e3f3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b19dac05-d246-49f7-8a2b-a67b73a4e3f3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f0a4f8a4-b759-4b66-a0ff-ff1bfd6411d1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f0a4f8a4-b759-4b66-a0ff-ff1bfd6411d1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spring-boot-mybatis.iml" beforeDir="false" afterPath="$PROJECT_DIR$/spring-boot-mybatis.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-boot-mybatis.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/MybatisApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/MybatisApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/config/DefultView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/config/DefultView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/config/druid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/config/druid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/FreshmanSignUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/FreshmanSignUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/ManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/ManagerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/PageJumpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/PageJumpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/FreshmanSignUpMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/FreshmanSignUpMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/ManagerMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/ManagerMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/UerRegisterMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/UerRegisterMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/pojo/LoginUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/pojo/LoginUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/pojo/StateCode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/pojo/StateCode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/pojo/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/FreshmanSignUpService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/FreshmanSignUpService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/FreshmanSignUpImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/FreshmanSignUpImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/LoginAndRegisterImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/LoginAndRegisterImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/ManagerImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/ManagerImp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/LoginAndRegisterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/LoginAndRegisterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/ManagerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/ManagerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/util/JsonUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/util/JsonUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/util/SystemParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/util/SystemParam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/springboot/mybatis/MybatisApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/springboot/mybatis/MybatisApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hh.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../hh.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,15 +99,18 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="JRebelWorkspace">
     <option name="jrebelEnabledAutocompile" value="true" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\apache-maven-3.6.3\repository" />
-        <option name="mavenHome" value="D:/apache-maven-3.6.3" />
-        <option name="userSettingsFile" value="D:\apache-maven-3.6.3\conf\settings.xml" />
+        <option name="localRepository" value="D:\Program Files\Apache\maven-repository" />
+        <option name="mavenHome" value="D:/Program Files/Apache/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="D:\Program Files\Apache\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -96,13 +133,14 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="E:/Git/repository/RecruitmentWebsite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32988507" />
-    <property name="settings.editor.selected.configurable" value="com.zeroturnaround.javarebel.idea.plugin.settings.startup.StartupConfigurable" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
@@ -234,6 +272,7 @@
       <workItem from="1595656853064" duration="11643000" />
       <workItem from="1595750954545" duration="3478000" />
       <workItem from="1595910269835" duration="936000" />
+      <workItem from="1595916787742" duration="1076000" />
     </task>
     <servers />
   </component>
@@ -253,6 +292,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1594973994509" />
+    <state x="677" y="311" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1595916801866">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="677" y="311" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.824@0.0.1536.824" timestamp="1595916801866" />
     <state x="507" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1594866383551">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -269,10 +312,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="170" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594784832040" />
-    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1595910286290">
+    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1595916846642">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595910286290" />
+    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595916846642" />
     <state width="1493" height="56" key="GridCell.Tab.0.bottom" timestamp="1595756570183">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -305,10 +348,14 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="56" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1595756570183" />
-    <state x="249" y="0" key="SettingsEditor" timestamp="1595660954025">
+    <state x="356" y="77" key="Maven.ArtifactSearchDialog" timestamp="1595916897720">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595660954025" />
+    <state x="356" y="77" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1595916897720" />
+    <state x="249" y="0" key="SettingsEditor" timestamp="1595917869335">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595917869335" />
     <state x="499" y="183" key="extract.method.dialog" timestamp="1595657360545">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
