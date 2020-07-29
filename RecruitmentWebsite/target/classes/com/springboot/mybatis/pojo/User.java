@@ -51,6 +51,9 @@ public class User {
         else if("1".equals(stageState)||"2".equals(stageState)||"4".equals(stageState)){
             return "已通过";
         }
+        else if (stageState == null){
+            return null;
+        }
         else {
             return "未通过";
         }

@@ -43,7 +43,7 @@ public class ManagerService implements ManagerImp {
 
     @Override
     public List<User> getSomeUserMsg(User user) {
-        Map<String,String> stringStringMap = new HashMap<String, String>(8);
+        Map<String,String> stringStringMap = new HashMap<>(8);
         stringStringMap.put("name",user.getName());
         stringStringMap.put("number",user.getNumber());
         stringStringMap.put("college",user.getCollege());
@@ -52,6 +52,7 @@ public class ManagerService implements ManagerImp {
         stringStringMap.put("department",user.getDepartment());
         stringStringMap.put("major",user.getMajor());
         stringStringMap.put("isdalao",user.getIsdalao());
+        stringStringMap.put("interviewState",user.getInterviewState());
         return managerMapper.getSomeUser(stringStringMap);
     }
 
