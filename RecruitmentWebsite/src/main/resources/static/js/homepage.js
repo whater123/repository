@@ -16,10 +16,13 @@ for(i = 0; i<5 ; i++)
     	}
     divs[this.num].style.display="block";	
     }
-    if (this.num==1){
-     		divs[this.num].style.height=3500+"px";
+    if(this.num==1){
+     		divs[this.num].style.height=3500+"px";      
      	}
-	}
+    if(this.num==2){
+            getNotice();
+        }
+    }
 }
 //切换登录和注册界面
 var login = document.getElementById("m-5-r-bottom-1");
@@ -37,6 +40,13 @@ change_r.onclick=function(){
 	login.style.display="none";
 	pic.src="../static/img/纪念碑谷2.jpg";
 }
+//当切换至第三个div通知系统时
+function getNotice(){
+    var number=1;
+    $("#data_follow").append('<label id=data></label>');
+    $("#data").text(1);
+    document.getElementById('data').id='data'+number;
+};
 /**不同部门的报名表跳转**/
 function jumpto(e){
     console.log(e.id);
@@ -119,6 +129,7 @@ $(document).ready(function(){
         });
       }}
    )});
+ 
 //判断是报名还是查看报名信息(网申)
 $(document).ready(function(){
     $("#getSignBtn").click(function(){
@@ -131,7 +142,7 @@ $(document).ready(function(){
             success: function (data){
                 let user = JSON.parse(data);
                 //返回的值全为空 说明未登陆//
-                if(user.number==""||user.number==null){
+                if(user.number==""||user.number==null||user.password==""||user.password==null){
                   alert('您还未登陆 请先登陆');       
                 }
                 else{        
@@ -162,7 +173,7 @@ $(document).ready(function(){
   }); 
 });
 
-//
+//**//
 window.onload=function()
 {
  var knowmore = document.getElementById('KnowMore');

@@ -10,8 +10,8 @@ function getInfById(x){
   var id = document.getElementById(get);
   var url = 'form?if='+id.value;
   window.open(url);
-}            
-
+}
+              
 //显示所有名单的函数                
 $(document).ready(function(){
         $("#show_all").click(function(){
@@ -28,6 +28,10 @@ $(document).ready(function(){
             dataType: 'text',
             timeout: 600000,
             success: function (data){
+                //防止因为多次点击出现重复
+                var children = $('#name_follow').siblings();
+                if(children.length==0){
+              
                 let user = JSON.parse(data);
                 var number = 1;
                 for(var p in user){
@@ -42,22 +46,22 @@ $(document).ready(function(){
                 $("#id").val(user[p].id);
                 document.getElementById('id').id='id'+number;
 
-                $("#interviewState_follow").after('<select id="interviewState"><option value="通过">通过</option><option value="未通过">未通过</option></select>'); 
+                $("#interviewState_follow").after('<select id="interviewState"><option value="待审核">待审核</option><option value="未通过">未通过</option><option value="已通过">已通过</option></select>'); 
                 $("#interviewState").val(user[p].interviewState);
                 document.getElementById('interviewState').id='interviewState'+number;
 
-                $("#bigWordState_follow").after('<select id="bigWordState"><option value="通过">通过</option><option value="未通过">未通过</option></select>'); 
-                $("#bigWordState").val(user[p].bigWordState);
-                document.getElementById('bigWordState').id='bigWordState'+number;
+                $("#bigWorkState_follow").after('<select id="bigWorkState"><option value="待审核">待审核</option><option value="未通过">未通过</option><option value="已通过">已通过</option></select>');
+                $("#bigWorkState").val(user[p].bigWorkState);
+                document.getElementById('bigWorkState').id='bigWorkState'+number;
 
-                $("#finalState_follow").after('<select id="finalState"><option value="通过">通过</option><option value="未通过">未通过</option></select>'); 
+                $("#finalState_follow").after('<select id="finalState"><option value="待审核">待审核</option><option value="未通过">未通过</option><option value="已通过">已通过</option></select>'); 
                 $("#finalState").val(user[p].finalState);
                 document.getElementById('finalState').id='finalState'+number;
                 
                 number++;
 
                 }
-               },
+               }},
             error:function(XMLHttpRequest){  //请求失败的回调方法
                 alert("Error: "+XMLHttpRequest.status);
             }

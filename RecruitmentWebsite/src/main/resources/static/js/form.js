@@ -32,15 +32,11 @@ if(arg=='yes'){
                 tab.style.display="none";
                 mogul.style.display="none";
                 normal.style.display="block";
+                //新增一个面试ID的显示
                 $("#name_normal").after('<label id="plus">面试ID</label>');
                 $("#plus").after('<input type="text" id="id_normal">');
                 $("#id_normal").val(user.id);
-                $("#id_normal").after('<label id="interviewState">面试状态</label>');
-                $("#interviewState").after('<input type="text" id="interviewState_normal">');
-                $("#interviewState_normal").val(user.interviewState);
-                $("#interviewState_normal").after('<label id="bigWorkState">大作业状态</label>');
-                $("#bigWorkState").after('<input type="text" id="bigWorkState_normal">');
-                $("#bigWorkState_normal").val(user.bigWorkState);
+                //信息的显示
                 $("#name_normal").val(user.name);
                 $("#qq_normal").val(user.qq);
                 $("#college_normal").val(user.college);
@@ -166,8 +162,8 @@ $(document).ready(function(){
                 let stateCode = JSON.parse(data);
                 //登录失败状态码为-1 管理员成功状态码为1 新生为2//
                 if(stateCode.state=="3"){
-                    window.close();
                     alert(stateCode.msg);
+                    window.close();
                 }else if(stateCode.state=="-1"){
                     alert(stateCode.msg);
                 }},

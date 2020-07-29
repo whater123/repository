@@ -106,6 +106,57 @@
     height: 280px;
     width: 880px;
 }
+/**第三个div通知管理系统**/
+#middle-3-top{
+   height: 50px;
+}
+#middle-3-middle{
+   height: 500px;
+}
+#banner-data{
+    margin-left: 100px;
+    width: 100px;
+    height: 50px;
+    float: left;
+    border-right: 1px solid black;
+}
+#banner-title{
+    width: 800px;
+    height: 50px;
+    float: left;
+}
+#middle-3-top label{
+    display: block;
+    margin: 0 auto;
+    font-weight: bolder;
+    font-size: 25px;
+    text-align: center;
+}
+#middle-3-middle label{
+    display: block;
+    height: 20px;
+}
+#data_follow{
+    margin-left: 100px;
+    width:100px;
+    height:500px;
+    float:left;
+}
+#title_follow{
+    width:800px;
+    height: 500px;
+    float: left;
+}
+#revise_follow{
+    width:125px;
+    height: 500px;
+    float: left;
+}
+#delete_follow{
+    width:125px;
+    height: 500px;
+    float: left;
+}
 /**登录注册页面的按钮**/
 #middle-5-right input{
     border-radius: 10px;
@@ -141,6 +192,7 @@
 }
 /**登录注册后界面**/
 #middle-5-before{
+   
     height: 650px;
 }
 #middle-5-after-login1{
@@ -278,7 +330,7 @@
 }
 /**底部**/
 #bottom{
-    width: 650;
+    width: 650px;
     height: 100px;
     padding-top: 50px;
 }
