@@ -45,8 +45,11 @@ public class User {
     }
 
     public String getInterviewState(){
-        if ("1".equals(stageState)||"2".equals(stageState)){
-            return "通过";
+        if ("0".equals(stageState)){
+            return "待审核";
+        }
+        else if("1".equals(stageState)||"2".equals(stageState)||"4".equals(stageState)){
+            return "已通过";
         }
         else {
             return "未通过";
@@ -57,17 +60,23 @@ public class User {
         if ("2".equals(stageState)){
             return "通过";
         }
-        else {
+        else if("4".equals(stageState)){
             return "未通过";
+        }
+        else {
+            return "待审核";
         }
     }
 
     public String getFinalState(){
         if ("2".equals(stageState)){
-            return "通过";
+            return "已通过";
+        }
+        else if("3".equals(stageState)||"4".equals(stageState)){
+            return "未通过";
         }
         else {
-            return "未通过";
+            return "待审核";
         }
     }
 }

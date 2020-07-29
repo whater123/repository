@@ -28,6 +28,7 @@ if(arg=='yes'){
             timeout: 600000,
             success: function (data){
                 let user = JSON.parse(data);
+                $("#title").html('报名信息');
                 tab.style.display="none";
                 mogul.style.display="none";
                 normal.style.display="block";
@@ -37,9 +38,9 @@ if(arg=='yes'){
                 $("#id_normal").after('<label id="interviewState">面试状态</label>');
                 $("#interviewState").after('<input type="text" id="interviewState_normal">');
                 $("#interviewState_normal").val(user.interviewState);
-                $("#interviewState_normal").after('<label id="bigWordState">大作业状态</label>');
-                $("#bigWordState").after('<input type="text" id="bigWordState_normal">');
-                $("#bigWordState_normal").val(user.bigWorkState);
+                $("#interviewState_normal").after('<label id="bigWorkState">大作业状态</label>');
+                $("#bigWorkState").after('<input type="text" id="bigWorkState_normal">');
+                $("#bigWorkState_normal").val(user.bigWorkState);
                 $("#name_normal").val(user.name);
                 $("#qq_normal").val(user.qq);
                 $("#college_normal").val(user.college);
@@ -48,7 +49,8 @@ if(arg=='yes'){
                 $("#classroom_normal").val(user.classroom);
                 $("#department_normal").val(user.department);
                 $("#context_normal").val(user.context);
-                $("#btn_normal").hide();//隐藏提交按钮               
+                $("#btn_normal").hide();//隐藏提交按钮
+
                },              
             error:function(XMLHttpRequest){  //请求失败的回调方法
                 alert("Error: "+XMLHttpRequest.status);
@@ -56,18 +58,19 @@ if(arg=='yes'){
            });
 }
 //管理员查看成员信息时 点击头像
-//当传递过来的参数为yes 代表已经填写了
+//当传递过来的参数为0到1000时 查看详细的资料
 if(arg>0&&arg<1000){
       var msg = new Object();
       msg.id=arg;
       $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/manager/getStudentMsg/" + arg,
+            url: "/manager/getStudentMsg/"+arg,
             dataType: 'text',
             timeout: 600000,
             success: function (data){
                 let user = JSON.parse(data);
+                $("#title").html('报名信息');
                 tab.style.display="none";
                 mogul.style.display="none";
                 normal.style.display="block";
@@ -122,6 +125,7 @@ $(document).ready(function(){
                 //登录失败状态码为-1 管理员成功状态码为1 新生为2//
                 if(stateCode.state=="3"){
                     alert(stateCode.msg);
+                    window.close();
                 }else if(stateCode.state=="-1"){
                     alert(stateCode.msg);
                 }},
@@ -162,6 +166,7 @@ $(document).ready(function(){
                 let stateCode = JSON.parse(data);
                 //登录失败状态码为-1 管理员成功状态码为1 新生为2//
                 if(stateCode.state=="3"){
+                    window.close();
                     alert(stateCode.msg);
                 }else if(stateCode.state=="-1"){
                     alert(stateCode.msg);
