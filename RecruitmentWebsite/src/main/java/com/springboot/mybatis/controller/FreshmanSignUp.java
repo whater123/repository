@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author w
@@ -27,88 +29,72 @@ public class FreshmanSignUp {
     FreshmanSignUpService freshmanSignUpService;
 
 
-    @RequestMapping(value = "/user/ifSignUp" , produces = "application/json;charset=UTF-8")
-    public String ifSignUp (HttpServletRequest request, HttpServletResponse response) throws JsonProcessingException{
-        try{
-            HttpSession session = request.getSession();
-            User user = (User)jsonUtil.getObject((String)session.getAttribute("user"),User.class);
-            boolean isSignedUp = freshmanSignUpService.isSignedUp(user.getNumber());
-            if(!isSignedUp){
-                return jsonUtil.getJson(new StateCode("-1","未报名"));
+    @RequestMapping(value = "/user/ifSignUp", produces = "application/json;charset=UTF-8")
+    public String ifSignUp(HttpServletRequest request, HttpServletResponse response) throws JsonProcessingException {
+        try {
+            User user = freshmanSignUpService.getLoginUser(request);
+            if (!freshmanSignUpService.isSignedUp(user.getNumber())) {
+                return jsonUtil.getJson(new StateCode("0", "未报名"));
             }
+        } catch (Exception e) {
+            return jsonUtil.getJson(new StateCode("-1", "出现错误"));
         }
-        catch (Exception e){
-            System.out.println(e);
-            return jsonUtil.getJson(new StateCode("-1","出现错误"));
-        }
-        return jsonUtil.getJson(new StateCode("3","已报名"));
+        return jsonUtil.getJson(new StateCode("1", "已报名"));
     }
 
-    /**getSession，获取用户名和密码来修改user_register表的id
+    /**
+     * getSession，获取用户名和密码来修改user_register表的id
+     *
      * @param context c
      * @return 1
      * @throws JsonProcessingException 1
      */
-    @RequestMapping(value = "/user/freshmanSignUp_normal" , produces = "application/json;charset=UTF-8")
-    public String normal (@RequestBody String context, HttpServletRequest request, HttpServletResponse response) throws JsonProcessingException {
+    @RequestMapping(value = "/user/freshmanSignUp_normal", produces = "application/json;charset=UTF-8")
+    public String normal(@RequestBody String context, HttpServletRequest request, HttpServletResponse response) throws JsonProcessingException {
         User user;
-        try{
-            HttpSession session = request.getSession();
-            String str = (String) session.getAttribute("user");
-            user = (User) jsonUtil.getObject(context,User.class);
-            User user1 = (User) jsonUtil.getObject(str,User.class);
-            if(freshmanSignUpService.isSignedUp(user1.getNumber())){
-                return jsonUtil.getJson(new StateCode("-1","报名失败，您已报名"));
+        try {
+            user = freshmanSignUpService.getUser_normal(context, request);
+            StateCode stateCode = freshmanSignUpService.isUserRule(freshmanSignUpService.deleteUserBlank(user));
+            if("-1".equals(stateCode.getState())){
+                return jsonUtil.getJson(stateCode);
             }
-            user.setNumber(user1.getNumber());
-            user.setPassword(user1.getPassword());
-            user.setIsdalao("0");
-            Random r = new Random();
-            user.setId(String.valueOf(r.nextInt(1000)));
-            while(freshmanSignUpService.isIdExisted(user) || "0".equals(user.getId())){
-                user.setId(String.valueOf(r.nextInt(1000)));
+            if (freshmanSignUpService.isSignedUp(user.getNumber())) {
+                return jsonUtil.getJson(new StateCode("-1", "报名失败，您已报名"));
             }
-            if(freshmanSignUpService.isQqExisted(user)){
-                return jsonUtil.getJson(new StateCode("-1","报名失败，QQ号码重复"));
+            freshmanSignUpService.setRandomId(user);
+            if (freshmanSignUpService.isQqExisted(user)) {
+                return jsonUtil.getJson(new StateCode("-1", "报名失败，QQ号码重复"));
             }
-        }
-        catch (Exception e){
-            return jsonUtil.getJson(new StateCode("-1","报名失败，出现错误"));
+        } catch (Exception e) {
+            return jsonUtil.getJson(new StateCode("-1", "报名失败，出现错误"));
         }
         freshmanSignUpService.insertSignUp(user);
-        freshmanSignUpService.updateLoginId(user.getNumber(),user.getId());
-        return jsonUtil.getJson(new StateCode("3","新生报名成功"));
-    }
-    @RequestMapping(value = "/user/freshmanSignUp_mogul" , produces = "application/json;charset=UTF-8")
-    public String mogul (@RequestBody String context, HttpServletRequest request, HttpServletResponse response) throws JsonProcessingException {
-        User user;
-        try{
-            HttpSession session = request.getSession();
-            String str = (String) session.getAttribute("user");
-            user = (User) jsonUtil.getObject(context,User.class);
-            User user1 = (User) jsonUtil.getObject(str,User.class);
-            if(freshmanSignUpService.isSignedUp(user1.getNumber())){
-                return jsonUtil.getJson(new StateCode("-1","报名失败，您已报名"));
-            }
-            user.setNumber(user1.getNumber());
-            user.setPassword(user1.getPassword());
-            user.setIsdalao("1");
-            Random r = new Random();
-            user.setId(String.valueOf(r.nextInt(1000)));
-            while(freshmanSignUpService.isIdExisted(user) || "0".equals(user.getId())){
-                user.setId(String.valueOf(r.nextInt(1000)));
-            }
-            if(freshmanSignUpService.isQqExisted(user)){
-                return jsonUtil.getJson(new StateCode("-1","报名失败，QQ号码重复"));
-            }
-        }
-        catch (Exception e){
-            return jsonUtil.getJson(new StateCode("-1","报名失败，出现错误"));
-        }
-        freshmanSignUpService.insertSignUp_mogul(user);
-        freshmanSignUpService.updateLoginId(user.getNumber(),user.getId());
-        return jsonUtil.getJson(new StateCode("3", "新生大佬报名成功"));
+        freshmanSignUpService.updateLoginId(user.getNumber(), user.getId());
+        return jsonUtil.getJson(new StateCode("3", "新生报名成功"));
     }
 
+    @RequestMapping(value = "/user/freshmanSignUp_mogul", produces = "application/json;charset=UTF-8")
+    public String mogul(@RequestBody String context, HttpServletRequest request, HttpServletResponse response) throws JsonProcessingException {
+        User user;
+        try {
+            user = freshmanSignUpService.getUser_mogul(context, request);
+            StateCode stateCode = freshmanSignUpService.isUserRule(freshmanSignUpService.deleteUserBlank(user));
+            if("-1".equals(stateCode.getState())){
+                return jsonUtil.getJson(stateCode);
+            }
+            if (freshmanSignUpService.isSignedUp(user.getNumber())) {
+                return jsonUtil.getJson(new StateCode("-1", "报名失败，您已报名"));
+            }
+            freshmanSignUpService.setRandomId(user);
+            if (freshmanSignUpService.isQqExisted(user)) {
+                return jsonUtil.getJson(new StateCode("-1", "报名失败，QQ号码重复"));
+            }
+        } catch (Exception e) {
+            return jsonUtil.getJson(new StateCode("-1", "报名失败，出现错误"));
+        }
+        freshmanSignUpService.insertSignUp_mogul(user);
+        freshmanSignUpService.updateLoginId(user.getNumber(), user.getId());
+        return jsonUtil.getJson(new StateCode("3", "新生报名成功"));
+    }
 
 }

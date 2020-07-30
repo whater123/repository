@@ -25,6 +25,7 @@ public class ManagerService implements ManagerImp {
              ) {
             //对前端显示部分得到数据部分屏蔽，因为是名单所以不应该拥有过多的信息
             i.setPassword(null);
+            i.setQq(null);
         }
         return all;
     }
