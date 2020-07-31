@@ -45,7 +45,7 @@ public class ManagerController {
     public String updateStageStatus(@RequestBody String context) throws JsonProcessingException {
         Map map = (Map) jsonUtil.getObject(context, Map.class);
         List ids = (List) map.get("ids");
-        Integer status = (Integer) map.get("status");
+        Integer status = Integer.valueOf((String) map.get("status"));
         try{
             Integer row = managerService.updateStageStatus(ids, status);
             if(row < ids.size()){
@@ -70,13 +70,14 @@ public class ManagerController {
         Map map = (Map) jsonUtil.getObject(context, Map.class);
         String id = (String) map.get("id");
         String targetId = (String) map.get("targetId");
+
+
         User userMsg = managerService.getUserMsg(id);
         String isExist = managerService.getUserMsg(targetId).getNumber();
         if(isExist !=null){
             Random random = new Random();
             String newId = String.valueOf(random.nextInt(1000));
             while(managerService.getUserMsg(newId).getNumber()!=null){
-                System.out.println(managerService.getUserMsg(newId));
                 newId = String.valueOf(random.nextInt(1000));
             }
             return jsonUtil.getJson(new StateCode("-1","该id已存在，你可以使用这个id来进行修改："+newId));

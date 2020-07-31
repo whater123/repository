@@ -112,6 +112,7 @@
 }
 #middle-3-middle{
    height: 500px;
+
 }
 #banner-data{
     margin-left: 100px;
@@ -124,6 +125,7 @@
     width: 800px;
     height: 50px;
     float: left;
+    border-right: 1px solid black;
 }
 #middle-3-top label{
     display: block;
@@ -134,7 +136,17 @@
 }
 #middle-3-middle label{
     display: block;
-    height: 20px;
+    height: 50px;
+    line-height: 50px;
+}
+#title_follow label{
+    cursor: pointer;
+}
+#middle-3-middle input{
+    display: block;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
 }
 #data_follow{
     margin-left: 100px;
@@ -148,15 +160,18 @@
     float: left;
 }
 #revise_follow{
+    display: none;
     width:125px;
     height: 500px;
     float: left;
 }
 #delete_follow{
+    display: none;
     width:125px;
     height: 500px;
     float: left;
 }
+
 /**登录注册页面的按钮**/
 #middle-5-right input{
     border-radius: 10px;

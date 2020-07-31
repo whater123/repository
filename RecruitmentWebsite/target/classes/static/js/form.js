@@ -17,7 +17,7 @@ change_r.onclick=function(){
 //网申部分
 //当传递过来的参数为yes 代表已经填写了
 var url = window.location.href;
-var argsIndex = url .split("?if=");
+var argsIndex = url.split("?if=");
 var arg = argsIndex[1];
 if(arg=='yes'){ 
       $.ajax({

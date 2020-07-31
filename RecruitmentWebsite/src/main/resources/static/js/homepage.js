@@ -40,13 +40,104 @@ change_r.onclick=function(){
 	login.style.display="none";
 	pic.src="../static/img/纪念碑谷2.jpg";
 }
+//管理员删除通知
+function noticeDelete(x){
+  var message = confirm("确认要删除吗?");
+  if(message==true){
+  var get = x.split('delete')[1];
+  var id = document.getElementsByClassName('allTitle')[get-1].id;
+  var notice = new Object();
+  notice.id=id; 
+  $.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: "/manager/deleteNotice",
+            data: JSON.stringify(notice),
+            dataType: 'text',
+            timeout: 600000,
+            success:function(data){
+             var thedata = JSON.parse(data);
+             if(thedata.state==5){//删除成功
+                alert(thedata.msg);}
+             else if(thedata.state==-1){//删除失败
+                alert(thedata.msg);}
+            },
+            error:function(XMLHttpRequest){  //请求失败的回调方法
+            alert("Error: "+XMLHttpRequest.status);
+            }
+        });
+   }
+}
+//管理员修改通知
+function noticeRevise(x){
+    var get = x.split('revise')[1];
+    var id = document.getElementsByClassName('allTitle')[get-1].id;
+    var url = 'notice?id='+id;
+    window.open(url);
+}
+//普通用户查看通知
+function getNoticeById(x){
+  var url = 'notice?id='+x;
+  window.open(url);
+}
 //当切换至第三个div通知系统时
 function getNotice(){
-    var number=1;
-    $("#data_follow").append('<label id=data></label>');
-    $("#data").text(1);
-    document.getElementById('data').id='data'+number;
-};
+   $.ajax({
+        type: "POST",
+            contentType: "application/json",
+            url: "/userIsManager",
+            dataType: 'xml',
+            timeout: 600000,
+            success:function(xml){
+            //是管理员 显示修改通知的按钮
+            if($(xml).find("text").text()==true){
+            $('#notice_publish').show();    
+            $('#revise_follow').show();
+            $('#delete_follow').show();
+            }
+            $.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: "/manager/getAllNotice",
+            dataType: 'text',
+            timeout: 600000,
+            success: function (data){
+                //防止因为多次点击出现重复
+                var children = $('#name_follow').children();
+                if(children.length==0){
+                let notice = JSON.parse(data);
+                var number = 1;
+                for(var p in notice){
+                $("#data_follow").append('<label id="data"></label>');
+                document.getElementById('data').id='data'+number;
+                $("#data"+number).text(notice[p].data);
+                
+                $("#title_follow").append('<label id="title" class="allTitle"></label>');
+                $("#title").text(notice[p].title);
+                document.getElementById('title').onclick=function(){
+                getNoticeById(''+this.id);}; //给标题绑定点击事件 查询具体通知
+                document.getElementById('title').id=notice[p].id;
+
+                $("#revise_follow").append('<input type="button" value="修改" id="revise">'); 
+                document.getElementById('revise').id='revise'+number;
+                
+                $("#delete_follow").append('<input type="button" value="删除" id="delete">');
+                document.getElementById('delete').onclick=function(){
+                noticeDelete(''+this.id);}; //给删除键绑定点击事件 删除具体通知 
+                document.getElementById('delete').id='delete'+number;
+                number++;
+                }
+               }},
+            error:function(XMLHttpRequest){  //请求失败的回调方法
+                alert("Error: "+XMLHttpRequest.status);
+                  }
+               });
+            },
+            error:function(XMLHttpRequest){  //请求失败的回调方法
+                alert("Error: "+XMLHttpRequest.status);
+            }
+               });
+}
 /**不同部门的报名表跳转**/
 function jumpto(e){
     console.log(e.id);
@@ -75,7 +166,7 @@ $(document).ready(function(){
             data: JSON.stringify(user),
             dataType: 'text',
             timeout: 600000,
-            success: function (data){
+            success: function(data){
                 let stateCode = JSON.parse(data);
                 //登录失败状态码为-1 管理员成功状态码为1 新生为2//
                 if(stateCode.state=="-1"){
