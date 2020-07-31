@@ -26,4 +26,10 @@ public interface LoginAndRegisterImp {
      * @return boolean
      */
     boolean canLogin(User user);
+    /**
+     * 根据session信息的学号获取user
+     * @param number number
+     * @return user
+     */
+    User getUserByNumber(String number);
 }
