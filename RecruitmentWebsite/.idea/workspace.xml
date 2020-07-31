@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff8167fa-8c5a-4a30-9640-e4be80c9d830" name="Default Changelist" comment="update 4.0">
+    <list default="true" id="ff8167fa-8c5a-4a30-9640-e4be80c9d830" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/LoginAndRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/LoginAndRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/NoticeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/PageJumpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/PageJumpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/homepage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/notice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/notice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/NoticeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/NoticeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/NoticeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/PageJumpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/PageJumpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/PageJumpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/PageJumpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/homepage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/notice.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/notice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +124,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/js" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32988507" />
@@ -124,11 +135,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\static\js" />
       <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources" />
       <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\static\css" />
       <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\templates" />
       <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\static" />
-      <recent name="C:\Users\w\IdeaProjects\RecruitmentWebsite\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\w\IdeaProjects\RecruitmentWebsite\src\main\resources\static" />
@@ -254,7 +265,7 @@
       <workItem from="1595925069624" duration="10370000" />
       <workItem from="1596074632712" duration="6238000" />
       <workItem from="1596163526328" duration="3426000" />
-      <workItem from="1596186032440" duration="4030000" />
+      <workItem from="1596186032440" duration="10287000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1595921173538</created>
@@ -340,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596188116528</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update 4.0">
+      <created>1596190300379</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1596190300379</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,10 +418,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="170" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594784832040" />
-    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2" timestamp="1596188709999">
+    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2" timestamp="1596190299046">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596188709999" />
+    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596190299046" />
     <state x="28" y="65" key="DiffContextDialog" timestamp="1596163380466">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -412,38 +430,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596157384725" />
-    <state width="1493" height="127" key="GridCell.Tab.0.bottom" timestamp="1596190088142">
+    <state width="1493" height="123" key="GridCell.Tab.0.bottom" timestamp="1596196137876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="127" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596190088142" />
-    <state width="1493" height="127" key="GridCell.Tab.0.center" timestamp="1596190088141">
+    <state width="1493" height="123" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596196137876" />
+    <state width="1493" height="123" key="GridCell.Tab.0.center" timestamp="1596196137876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="127" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596190088141" />
-    <state width="1493" height="127" key="GridCell.Tab.0.left" timestamp="1596190088141">
+    <state width="1493" height="123" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596196137876" />
+    <state width="1493" height="123" key="GridCell.Tab.0.left" timestamp="1596196137876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="127" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596190088141" />
-    <state width="1493" height="127" key="GridCell.Tab.0.right" timestamp="1596190088141">
+    <state width="1493" height="123" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596196137876" />
+    <state width="1493" height="123" key="GridCell.Tab.0.right" timestamp="1596196137876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="127" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596190088141" />
-    <state width="1493" height="127" key="GridCell.Tab.1.bottom" timestamp="1596190088142">
+    <state width="1493" height="123" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596196137876" />
+    <state width="1493" height="123" key="GridCell.Tab.1.bottom" timestamp="1596196137879">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="127" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596190088142" />
-    <state width="1493" height="127" key="GridCell.Tab.1.center" timestamp="1596190088142">
+    <state width="1493" height="123" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596196137879" />
+    <state width="1493" height="123" key="GridCell.Tab.1.center" timestamp="1596196137877">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="127" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596190088142" />
-    <state width="1493" height="127" key="GridCell.Tab.1.left" timestamp="1596190088142">
+    <state width="1493" height="123" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596196137877" />
+    <state width="1493" height="123" key="GridCell.Tab.1.left" timestamp="1596196137876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="127" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596190088142" />
-    <state width="1493" height="127" key="GridCell.Tab.1.right" timestamp="1596190088142">
+    <state width="1493" height="123" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596196137876" />
+    <state width="1493" height="123" key="GridCell.Tab.1.right" timestamp="1596196137878">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="127" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596190088142" />
+    <state width="1493" height="123" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596196137878" />
     <state x="104" y="70" width="1395" height="694" key="MergeDialog" timestamp="1596163288175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -12,6 +12,7 @@ $.ajax({
             dataType: 'text',
             timeout: 600000,
             success: function (data){
+                alert(data);
                 let notice = JSON.parse(data);
                 $("#title").html(notice.title);
                 $("#data").html(notice.data);
@@ -26,11 +27,11 @@ $.ajax({
             type: "POST",
             contentType: "application/json",
             url: "/userIsManager",
-            dataType: 'xml',
+            dataType: 'text',
             timeout: 600000,
             success:function(xml){
             //是管理员 显示修改通知的按钮
-            if($(xml).find("text").text()==true){
+            if(xml==="true"){
             $('#bottom').show();
             }},
             error:function(XMLHttpRequest){  //请求失败的回调方法

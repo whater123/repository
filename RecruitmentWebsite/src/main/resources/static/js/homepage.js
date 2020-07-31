@@ -8,17 +8,17 @@ divs[3].style.display="none";
 divs[4].style.display="none";
 for(i = 0; i<5 ; i++)
 {
-	lis[i].num=i;
-	lis[i].onclick=function(){
+    lis[i].num=i;
+    lis[i].onclick=function(){
     for(j = 0 ; j<5 ; j++){
-    	if(i!=j){
-    	divs[j].style.display="none";	
-    	}
-    divs[this.num].style.display="block";	
+        if(i!=j){
+        divs[j].style.display="none";   
+        }
+    divs[this.num].style.display="block";   
     }
     if(this.num==1){
-     		divs[this.num].style.height=3500+"px";      
-     	}
+            divs[this.num].style.height=3500+"px";      
+        }
     if(this.num==2){
             getNotice();
         }
@@ -31,14 +31,14 @@ var change_l = document.getElementById("change-l");
 var change_r = document.getElementById("change-r");
 var pic = document.getElementById('pic');
 change_l.onclick=function(){
-	register.style.display="none";
-	login.style.display="block";
-	pic.src="../static/img/纪念碑谷1.jpg";
+    register.style.display="none";
+    login.style.display="block";
+    pic.src="../static/img/纪念碑谷1.jpg";
 }
 change_r.onclick=function(){
-	register.style.display="block";
-	login.style.display="none";
-	pic.src="../static/img/纪念碑谷2.jpg";
+    register.style.display="block";
+    login.style.display="none";
+    pic.src="../static/img/纪念碑谷2.jpg";
 }
 //管理员删除通知
 function noticeDelete(x){
@@ -84,17 +84,17 @@ function getNoticeById(x){
 function getNotice(){
    $.ajax({
         type: "POST",
-            contentType: "application/json",
             url: "/userIsManager",
-            dataType: 'xml',
+            dataType: 'text',
             timeout: 600000,
             success:function(xml){
             //是管理员 显示修改通知的按钮
-            if($(xml).find("text").text()==true){
-            $('#notice_publish').show();    
+            if(xml==="true"){
+            $('#notice_publish').show();
             $('#revise_follow').show();
             $('#delete_follow').show();
             }
+
             $.ajax({
             type: "POST",
             contentType: "application/json",
@@ -103,31 +103,33 @@ function getNotice(){
             timeout: 600000,
             success: function (data){
                 //防止因为多次点击出现重复
-                var children = $('#name_follow').children();
+                var children = $('#title_follow').children();
                 if(children.length==0){
+
                 let notice = JSON.parse(data);
                 var number = 1;
                 for(var p in notice){
                 $("#data_follow").append('<label id="data"></label>');
                 document.getElementById('data').id='data'+number;
-                $("#data"+number).text(notice[p].data);
-                
+                $("#data"+number).text(notice[p].date.split(" ")[0]);
+
                 $("#title_follow").append('<label id="title" class="allTitle"></label>');
                 $("#title").text(notice[p].title);
                 document.getElementById('title').onclick=function(){
                 getNoticeById(''+this.id);}; //给标题绑定点击事件 查询具体通知
                 document.getElementById('title').id=notice[p].id;
 
-                $("#revise_follow").append('<input type="button" value="修改" id="revise">'); 
+                $("#revise_follow").append('<input type="button" value="修改" id="revise">');
                 document.getElementById('revise').id='revise'+number;
-                
+
                 $("#delete_follow").append('<input type="button" value="删除" id="delete">');
                 document.getElementById('delete').onclick=function(){
-                noticeDelete(''+this.id);}; //给删除键绑定点击事件 删除具体通知 
+                noticeDelete(''+this.id);}; //给删除键绑定点击事件 删除具体通知
                 document.getElementById('delete').id='delete'+number;
                 number++;
                 }
-               }},
+               }
+                },
             error:function(XMLHttpRequest){  //请求失败的回调方法
                 alert("Error: "+XMLHttpRequest.status);
                   }
@@ -156,7 +158,7 @@ $(document).ready(function(){
         $("#login-p").html("登录账户不能为空");
         }
         else if(user.password==""||user.password==null){
-        $("#login-p").html("登录密码不能为空");	
+        $("#login-p").html("登录密码不能为空"); 
         }
         else{
         $.ajax({
@@ -172,7 +174,7 @@ $(document).ready(function(){
                 if(stateCode.state=="-1"){
                     alert(stateCode.msg);
                 }else if(stateCode.state == "1"){
-                	$("#middle-5-before").hide();
+                    $("#middle-5-before").hide();
                     $("#middle-5-after-login2").show();
                     alert(stateCode.msg);
                 }else if(stateCode.state == "2"){
@@ -196,7 +198,7 @@ $(document).ready(function(){
         $("#register-p").html("注册账户不能为空");
         }
         else if(user.password==""||user.password==null){
-        $("#register-p").html("登录密码不能为空");	
+        $("#register-p").html("登录密码不能为空");  
         }
         else{
         $.ajax({
@@ -274,27 +276,27 @@ window.onload=function()
    var text = document.getElementById('KnowMoretext');
    knowmore.onmouseover = function()
 {
-	knowmore.style.height='80px';
-	logo.style.display = 'block';
-	text.style.display = 'block';
+    knowmore.style.height='80px';
+    logo.style.display = 'block';
+    text.style.display = 'block';
 }
 lis[3].onmouseover = function()
 {
-	knowmore.style.height='80px';
-	logo.style.display = 'block';
-	text.style.display = 'block';
+    knowmore.style.height='80px';
+    logo.style.display = 'block';
+    text.style.display = 'block';
 }
 knowmore.onmouseout = function()
 {
-	knowmore.style.height= '0px';
-	logo.style.display = 'none';
-	text.style.display = 'none';
+    knowmore.style.height= '0px';
+    logo.style.display = 'none';
+    text.style.display = 'none';
 }
 lis[3].onmouseout =function()
 {
-	knowmore.style.height = '0px';
-	logo.style.display = 'none';
-	text.style.display = 'none';
+    knowmore.style.height = '0px';
+    logo.style.display = 'none';
+    text.style.display = 'none';
 }
 }
 
