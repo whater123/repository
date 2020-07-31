@@ -11,6 +11,12 @@
        select * from user_register
     </select>
 
+    <select id="getAllAll" resultType="User">
+        select * from
+        user_register as b left join user_signUp as a on a.id = b.id
+        left join user_dalao as d on b.id = d.id
+    </select>
+
     <insert id="insertUser" parameterType="User">
         insert into user_register (number,password,id) values (#{number},#{password},'0')
     </insert>
