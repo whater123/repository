@@ -20,9 +20,4 @@ public class PageJumpController {
     public String toForm(){
         return "form";
     }
-
-    @RequestMapping("/application")
-    public String toApplication(){
-        return "application";
-    }
 }

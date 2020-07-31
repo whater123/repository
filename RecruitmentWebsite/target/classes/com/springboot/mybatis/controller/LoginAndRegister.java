@@ -4,7 +4,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.springboot.mybatis.pojo.StateCode;
 import com.springboot.mybatis.pojo.User;
 import com.springboot.mybatis.service.LoginAndRegisterService;
-import com.springboot.mybatis.service.ManagerService;
 import com.springboot.mybatis.util.JsonUtil;
 import com.springboot.mybatis.util.SystemParam;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +16,6 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.io.IOException;
 
 /**
  * @author w
@@ -28,12 +26,10 @@ public class LoginAndRegister {
     @Autowired
     LoginAndRegisterService loAndReService;
     @Autowired
-    ManagerService managerService;
-    @Autowired
     JsonUtil jsonUtil;
 
     @RequestMapping(value = "/register" , produces = "application/json;charset=UTF-8")
-    public String register(@RequestBody String context) throws IOException {
+    public String register(@RequestBody String context) throws JsonProcessingException {
         User user = (User) jsonUtil.getObject(context, User.class);
         StateCode registered = loAndReService.isRegistered(user);
 
@@ -48,16 +44,22 @@ public class LoginAndRegister {
     }
 
     @RequestMapping(value = "/login" , produces = "application/json;charset=UTF-8")
-    public String login(@RequestBody String context, HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public String login(@RequestBody String context, HttpServletRequest request, HttpServletResponse response) throws JsonProcessingException {
         //默认记住密码
-        HttpSession session = request.getSession();
-        User user = (User) jsonUtil.getObject(context, User.class);
-        if (!loAndReService.canLogin(user)) {
-            return jsonUtil.getJson(new StateCode("-1","用户名或密码错误，登录失败"));
-        } else {
-            //登录时设置session
-            session.setAttribute("user", jsonUtil.getJson(user));
-            return jsonUtil.getJson(user.returnLoginCode());
+        try{
+            System.out.println(context);
+            HttpSession session = request.getSession();
+            User user = (User) jsonUtil.getObject(context, User.class);
+            if (!loAndReService.canLogin(user)) {
+                return jsonUtil.getJson(new StateCode("-1","用户名或密码错误，登录失败"));
+            } else {
+                //登录时设置session
+                session.setAttribute("user", jsonUtil.getJson(user));
+                return jsonUtil.getJson(user.returnLoginCode());
+            }
+        }
+        catch (Exception e){
+            return "";
         }
     }
 
@@ -68,13 +70,13 @@ public class LoginAndRegister {
      * @throws JsonProcessingException json
      */
     @RequestMapping(value = "/getSession" )
-    public String getNowUser(HttpServletRequest request) throws IOException {
+    public String getNowUser(HttpServletRequest request) throws JsonProcessingException {
         User user = (User)jsonUtil.getObject(getNowUserJson(request), User.class);
-        return jsonUtil.getJson(loAndReService.getUserByNumber(user.getNumber()));
+        return jsonUtil.getJson(user);
     }
 
     @RequestMapping("/loginOut")
-    public String loginOut(HttpServletRequest request) throws IOException {
+    public String loginOut(HttpServletRequest request) throws JsonProcessingException {
         HttpSession session = request.getSession();
         User user = (User)jsonUtil.getObject(getNowUserJson(request), User.class);
 
@@ -88,12 +90,12 @@ public class LoginAndRegister {
     }
 
     @RequestMapping("/userIsManager")
-    public String isManager(HttpServletRequest request) throws IOException {
+    public String isManager(HttpServletRequest request) throws JsonProcessingException {
         User user = (User)jsonUtil.getObject(getNowUserJson(request), User.class);
         return String.valueOf(SystemParam.isManager(user));
     }
 
-    private String getNowUserJson(HttpServletRequest request) throws IOException {
+    private String getNowUserJson(HttpServletRequest request) throws JsonProcessingException {
         User user;
         HttpSession session = request.getSession();
         String string = (String) session.getAttribute("user");
