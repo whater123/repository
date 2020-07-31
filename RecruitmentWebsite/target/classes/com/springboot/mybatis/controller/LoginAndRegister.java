@@ -47,7 +47,6 @@ public class LoginAndRegister {
     public String login(@RequestBody String context, HttpServletRequest request, HttpServletResponse response) {
         //默认记住密码
         try{
-            System.out.println(context);
             HttpSession session = request.getSession();
             User user = (User) jsonUtil.getObject(context, User.class);
             if (!loAndReService.canLogin(user)) {

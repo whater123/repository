@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff8167fa-8c5a-4a30-9640-e4be80c9d830" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/LoginAndRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/LoginAndRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/ManagerController.java" afterDir="false" />
+    <list default="true" id="ff8167fa-8c5a-4a30-9640-e4be80c9d830" name="Default Changelist" comment="update 4.0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/ManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/ManagerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/ManagerController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +256,7 @@
       <workItem from="1595925069624" duration="10370000" />
       <workItem from="1596074632712" duration="6238000" />
       <workItem from="1596163526328" duration="3426000" />
-      <workItem from="1596186032440" duration="2055000" />
+      <workItem from="1596186032440" duration="2709000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1595921173538</created>
@@ -332,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596188049300</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update 4.0">
+      <created>1596188116528</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1596188116528</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,10 +402,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="170" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594784832040" />
-    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2" timestamp="1596188100590">
+    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2" timestamp="1596188709999">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596188100590" />
+    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596188709999" />
     <state x="28" y="65" key="DiffContextDialog" timestamp="1596163380466">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -476,9 +486,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1594375555857" />
-    <state x="431" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1596074953541">
+    <state x="431" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1596188493734">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1596074953541" />
+    <state x="431" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1596188493734" />
   </component>
 </project>

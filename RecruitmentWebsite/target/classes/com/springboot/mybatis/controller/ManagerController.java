@@ -71,7 +71,6 @@ public class ManagerController {
         String id = (String) map.get("id");
         String targetId = (String) map.get("targetId");
 
-        System.out.println(id+" "+targetId);
 
         User userMsg = managerService.getUserMsg(id);
         String isExist = managerService.getUserMsg(targetId).getNumber();
@@ -79,7 +78,6 @@ public class ManagerController {
             Random random = new Random();
             String newId = String.valueOf(random.nextInt(1000));
             while(managerService.getUserMsg(newId).getNumber()!=null){
-                System.out.println(managerService.getUserMsg(newId));
                 newId = String.valueOf(random.nextInt(1000));
             }
             return jsonUtil.getJson(new StateCode("-1","该id已存在，你可以使用这个id来进行修改："+newId));
