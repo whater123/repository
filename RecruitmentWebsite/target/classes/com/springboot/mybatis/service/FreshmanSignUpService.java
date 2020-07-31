@@ -171,11 +171,11 @@ public class FreshmanSignUpService implements FreshmanSignUpImp {
         }
         return null;
     }
-
+    @Override
     public InterviewData getInterviewDataById(String id){
         return (InterviewData) freshmanSignUpMapper.getInterviewDataById(id);
     }
-    
+
 
 
     /*

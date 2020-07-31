@@ -112,7 +112,7 @@ public class FreshmanSignUp {
                 }
             }
             else {
-                return user.getInterviewState();
+                return jsonUtil.getJson(user);
             }
         }
         catch (Exception e){

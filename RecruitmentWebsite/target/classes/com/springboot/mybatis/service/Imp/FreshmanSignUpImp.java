@@ -1,6 +1,7 @@
 package com.springboot.mybatis.service.Imp;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.springboot.mybatis.pojo.InterviewData;
 import com.springboot.mybatis.pojo.StateCode;
 import com.springboot.mybatis.pojo.User;
 
@@ -56,6 +57,10 @@ public interface FreshmanSignUpImp {
      * user_register和user_signup数据的User对象
      * */
     User getUserByNumber(String number);
+    /**
+     * 通过学号获得面试信息
+     * */
+    InterviewData getInterviewDataById(String id);
 
 
     //User对象操作
@@ -93,5 +98,6 @@ public interface FreshmanSignUpImp {
      * 合并 当前登录的User对象和报名生成json所转化的User对象
      * */
     User mergeUser(User loginUser,User contextUser) throws JsonProcessingException;
+
 
 }
