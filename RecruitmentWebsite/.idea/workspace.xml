@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff8167fa-8c5a-4a30-9640-e4be80c9d830" name="Default Changelist" comment="">
+    <list default="true" id="ff8167fa-8c5a-4a30-9640-e4be80c9d830" name="Default Changelist" comment="update 4.0">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/notice.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/logo3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/notice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/notice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b19dac05-d246-49f7-8a2b-a67b73a4e3f3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b19dac05-d246-49f7-8a2b-a67b73a4e3f3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/dao/NoticeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/dao/NoticeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/NoticeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/NoticeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/NoticeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/NoticeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/ManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/application.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/application.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/ManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/ManagerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/ManagerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/ManagerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/application.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/application.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/form.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,21 +49,6 @@
       <set />
     </option>
     <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@119.3.176.15" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@119.3.176.15" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@119.3.176.15" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="com_smart_pots: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="webapplication@localhost" type="feb32156:DbDataSourceImpl" />
@@ -129,7 +136,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/springboot/income-expenditure-detail" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32988507" />
@@ -140,8 +147,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\static\css" />
       <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources" />
+      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\static\css" />
       <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\templates" />
       <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\static" />
       <recent name="C:\Users\w\IdeaProjects\RecruitmentWebsite\src\main\resources\templates" />
@@ -270,6 +277,7 @@
       <workItem from="1595925069624" duration="10370000" />
       <workItem from="1596074632712" duration="6238000" />
       <workItem from="1596163526328" duration="3426000" />
+      <workItem from="1596186032440" duration="1775000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1595921173538</created>
@@ -361,7 +369,8 @@
     <MESSAGE value="Merge branch 'dev' of github.com:whater123/repository into dev&#10;&#10;# Conflicts:&#10;#&#9;RecruitmentWebsite/.idea/workspace.xml&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/MybatisApplication.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/FreshmanSignUp.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/LoginAndRegister.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/ManagerController.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/PageJumpController.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/dao/ManagerMapper.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/dao/UerRegisterMapper.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/pojo/LoginUser.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/service/Imp/LoginAndRegisterImp.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/service/Imp/ManagerImp.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/service/LoginAndRegisterService.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/service/ManagerService.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/util/SystemParam.class&#10;#&#9;RecruitmentWebsite/target/test-classes/com/springboot/mybatis/MybatisApplicationTests.class" />
     <MESSAGE value="update" />
     <MESSAGE value="update 3.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 3.0" />
+    <MESSAGE value="update 4.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 4.0" />
   </component>
   <component name="WindowStateProjectService">
     <state x="399" y="66" key="#Project_Structure" timestamp="1596075435590">
@@ -388,10 +397,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="507" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1594866383551" />
-    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595925216025">
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596186563058">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1595925216025" />
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1596186563058" />
     <state x="883" y="165" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1595587491612">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -400,10 +409,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="170" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594784832040" />
-    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2" timestamp="1596165678131">
+    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2" timestamp="1596187627110">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596165678131" />
+    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596187627110" />
     <state x="28" y="65" key="DiffContextDialog" timestamp="1596163380466">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -412,38 +421,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596157384725" />
-    <state width="1493" height="146" key="GridCell.Tab.0.bottom" timestamp="1596165642675">
+    <state width="1493" height="140" key="GridCell.Tab.0.bottom" timestamp="1596187642066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596165642675" />
-    <state width="1493" height="146" key="GridCell.Tab.0.center" timestamp="1596165642675">
+    <state width="1493" height="140" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596187642066" />
+    <state width="1493" height="140" key="GridCell.Tab.0.center" timestamp="1596187642065">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596165642675" />
-    <state width="1493" height="146" key="GridCell.Tab.0.left" timestamp="1596165642675">
+    <state width="1493" height="140" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596187642065" />
+    <state width="1493" height="140" key="GridCell.Tab.0.left" timestamp="1596187642065">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596165642675" />
-    <state width="1493" height="146" key="GridCell.Tab.0.right" timestamp="1596165642675">
+    <state width="1493" height="140" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596187642065" />
+    <state width="1493" height="140" key="GridCell.Tab.0.right" timestamp="1596187642066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596165642675" />
-    <state width="1493" height="146" key="GridCell.Tab.1.bottom" timestamp="1596165642675">
+    <state width="1493" height="140" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596187642066" />
+    <state width="1493" height="140" key="GridCell.Tab.1.bottom" timestamp="1596187642066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596165642675" />
-    <state width="1493" height="146" key="GridCell.Tab.1.center" timestamp="1596165642675">
+    <state width="1493" height="140" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596187642066" />
+    <state width="1493" height="140" key="GridCell.Tab.1.center" timestamp="1596187642066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596165642675" />
-    <state width="1493" height="146" key="GridCell.Tab.1.left" timestamp="1596165642675">
+    <state width="1493" height="140" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596187642066" />
+    <state width="1493" height="140" key="GridCell.Tab.1.left" timestamp="1596187642066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596165642675" />
-    <state width="1493" height="146" key="GridCell.Tab.1.right" timestamp="1596165642675">
+    <state width="1493" height="140" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596187642066" />
+    <state width="1493" height="140" key="GridCell.Tab.1.right" timestamp="1596187642066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596165642675" />
+    <state width="1493" height="140" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596187642066" />
     <state x="104" y="70" width="1395" height="694" key="MergeDialog" timestamp="1596163288175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

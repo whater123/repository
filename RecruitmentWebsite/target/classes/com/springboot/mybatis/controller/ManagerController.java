@@ -45,7 +45,7 @@ public class ManagerController {
     public String updateStageStatus(@RequestBody String context) throws JsonProcessingException {
         Map map = (Map) jsonUtil.getObject(context, Map.class);
         List ids = (List) map.get("ids");
-        Integer status = (Integer) map.get("status");
+        Integer status = Integer.valueOf((String) map.get("status"));
         try{
             Integer row = managerService.updateStageStatus(ids, status);
             if(row < ids.size()){
@@ -70,6 +70,9 @@ public class ManagerController {
         Map map = (Map) jsonUtil.getObject(context, Map.class);
         String id = (String) map.get("id");
         String targetId = (String) map.get("targetId");
+
+        System.out.println(id+" "+targetId);
+
         User userMsg = managerService.getUserMsg(id);
         String isExist = managerService.getUserMsg(targetId).getNumber();
         if(isExist !=null){
