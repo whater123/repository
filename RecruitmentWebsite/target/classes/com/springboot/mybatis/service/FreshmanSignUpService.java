@@ -2,6 +2,7 @@ package com.springboot.mybatis.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.springboot.mybatis.dao.FreshmanSignUpMapper;
+import com.springboot.mybatis.pojo.InterviewData;
 import com.springboot.mybatis.pojo.StateCode;
 import com.springboot.mybatis.pojo.User;
 import com.springboot.mybatis.service.Imp.FreshmanSignUpImp;
@@ -148,6 +149,34 @@ public class FreshmanSignUpService implements FreshmanSignUpImp {
         user.setCollege(user.getCollege().replace(" ",""));
         return user;
     }
+    @Override
+    public User getUserByNumber(String number){
+        String id = "0";
+        List<User> registerUserList = freshmanSignUpMapper.getAllRegister();
+        for(User i : registerUserList){
+            if(number.equals(i.getNumber())) {
+                id = i.getId();
+                break;
+            }
+        }
+        if("0".equals(id)){
+            return null;
+        }
+        List<User> signUpUserList = freshmanSignUpMapper.getAllSignUp();
+        for(User i : signUpUserList){
+            if(id.equals(i.getId())){
+                i.setSpecialty(freshmanSignUpMapper.getSpecialtyById(id));
+                return i;
+            }
+        }
+        return null;
+    }
+
+    public InterviewData getInterviewDataById(String id){
+        return (InterviewData) freshmanSignUpMapper.getInterviewDataById(id);
+    }
+    
+
 
     /*
     * 私有方法
@@ -182,4 +211,5 @@ public class FreshmanSignUpService implements FreshmanSignUpImp {
             return false;
         }
     }
+
 }

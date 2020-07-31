@@ -39,4 +39,22 @@
         user_register
     </select>
 
+    <select id="getSpecialtyById" resultType="String">
+        SELECT
+        *
+        FROM
+        user_dalao
+        WHERE
+        id = #{id}
+    </select>
+
+    <select id="getInterviewDataById" resultType="InterviewData">
+        SELECT
+        *
+        FROM
+        manager_interview_data
+        WHERE
+        id = #{id}
+    </select>
+
 </mapper>

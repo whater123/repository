@@ -2,6 +2,7 @@ package com.springboot.mybatis.controller;
 
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.springboot.mybatis.pojo.InterviewData;
 import com.springboot.mybatis.pojo.StateCode;
 import com.springboot.mybatis.pojo.User;
 import com.springboot.mybatis.service.FreshmanSignUpService;
@@ -95,6 +96,28 @@ public class FreshmanSignUp {
         freshmanSignUpService.insertSignUp_mogul(user);
         freshmanSignUpService.updateLoginId(user.getNumber(), user.getId());
         return jsonUtil.getJson(new StateCode("3", "新生报名成功"));
+    }
+
+    @RequestMapping(value = "/user/getAllInterviewData", produces = "application/json;charset=UTF-8")
+    public String getAllInterviewData(HttpServletRequest request, HttpServletResponse response) throws JsonProcessingException {
+        try{
+            User user = freshmanSignUpService.getUserByNumber(freshmanSignUpService.getLoginUser(request).getNumber());
+            InterviewData interviewData = freshmanSignUpService.getInterviewDataById(user.getId());
+            if("待审核".equals(user.getInterviewState())){
+                if(interviewData == null){
+                    return jsonUtil.getJson(new InterviewData("未发布","未发布","未发布"));
+                }
+                else{
+                    return jsonUtil.getJson(interviewData);
+                }
+            }
+            else {
+                return user.getInterviewState();
+            }
+        }
+        catch (Exception e){
+            return "出现错误";
+        }
     }
 
 }
