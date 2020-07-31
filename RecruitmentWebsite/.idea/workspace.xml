@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff8167fa-8c5a-4a30-9640-e4be80c9d830" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ff8167fa-8c5a-4a30-9640-e4be80c9d830" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -316,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596163405209</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Merge branch 'dev' of github.com:whater123/repository into dev&#10;&#10;# Conflicts:&#10;#&#9;RecruitmentWebsite/.idea/workspace.xml&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/MybatisApplication.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/FreshmanSignUp.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/LoginAndRegister.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/ManagerController.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/PageJumpController.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/dao/ManagerMapper.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/dao/UerRegisterMapper.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/pojo/LoginUser.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/service/Imp/LoginAndRegisterImp.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/service/Imp/ManagerImp.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/service/LoginAndRegisterService.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/service/ManagerService.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/util/SystemParam.class&#10;#&#9;RecruitmentWebsite/target/test-classes/com/springboot/mybatis/MybatisApplicationTests.class">
+      <created>1596163481457</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1596163481457</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,10 +379,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="170" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594784832040" />
-    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2" timestamp="1596163451398">
+    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2" timestamp="1596163583770">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596163451398" />
+    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596163583770" />
     <state x="28" y="65" key="DiffContextDialog" timestamp="1596163380466">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -386,38 +391,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596157384725" />
-    <state width="1493" height="316" key="GridCell.Tab.0.bottom" timestamp="1596163301940">
+    <state width="1493" height="252" key="GridCell.Tab.0.bottom" timestamp="1596163484953">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="316" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596163301940" />
-    <state width="1493" height="316" key="GridCell.Tab.0.center" timestamp="1596163301939">
+    <state width="1493" height="252" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596163484953" />
+    <state width="1493" height="252" key="GridCell.Tab.0.center" timestamp="1596163484953">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="316" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596163301939" />
-    <state width="1493" height="316" key="GridCell.Tab.0.left" timestamp="1596163301939">
+    <state width="1493" height="252" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596163484953" />
+    <state width="1493" height="252" key="GridCell.Tab.0.left" timestamp="1596163484953">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="316" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596163301939" />
-    <state width="1493" height="316" key="GridCell.Tab.0.right" timestamp="1596163301940">
+    <state width="1493" height="252" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596163484953" />
+    <state width="1493" height="252" key="GridCell.Tab.0.right" timestamp="1596163484953">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="316" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596163301940" />
-    <state width="1493" height="316" key="GridCell.Tab.1.bottom" timestamp="1596163301940">
+    <state width="1493" height="252" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596163484953" />
+    <state width="1493" height="252" key="GridCell.Tab.1.bottom" timestamp="1596163484954">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="316" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596163301940" />
-    <state width="1493" height="316" key="GridCell.Tab.1.center" timestamp="1596163301940">
+    <state width="1493" height="252" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596163484954" />
+    <state width="1493" height="252" key="GridCell.Tab.1.center" timestamp="1596163484953">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="316" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596163301940" />
-    <state width="1493" height="316" key="GridCell.Tab.1.left" timestamp="1596163301940">
+    <state width="1493" height="252" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596163484953" />
+    <state width="1493" height="252" key="GridCell.Tab.1.left" timestamp="1596163484953">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="316" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596163301940" />
-    <state width="1493" height="316" key="GridCell.Tab.1.right" timestamp="1596163301940">
+    <state width="1493" height="252" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596163484953" />
+    <state width="1493" height="252" key="GridCell.Tab.1.right" timestamp="1596163484954">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="316" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596163301940" />
+    <state width="1493" height="252" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596163484954" />
     <state x="104" y="70" width="1395" height="694" key="MergeDialog" timestamp="1596163288175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -442,10 +447,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="233" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1596074654136" />
-    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596163334733">
+    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596163589768">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1596163334733" />
+    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1596163589768" />
     <state x="499" y="183" key="extract.method.dialog" timestamp="1595657360545">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
