@@ -44,7 +44,7 @@ public class LoginAndRegister {
     }
 
     @RequestMapping(value = "/login" , produces = "application/json;charset=UTF-8")
-    public String login(@RequestBody String context, HttpServletRequest request, HttpServletResponse response) throws JsonProcessingException {
+    public String login(@RequestBody String context, HttpServletRequest request, HttpServletResponse response) {
         //默认记住密码
         try{
             System.out.println(context);
@@ -72,7 +72,7 @@ public class LoginAndRegister {
     @RequestMapping(value = "/getSession" )
     public String getNowUser(HttpServletRequest request) throws JsonProcessingException {
         User user = (User)jsonUtil.getObject(getNowUserJson(request), User.class);
-        return jsonUtil.getJson(user);
+        return jsonUtil.getJson(loAndReService.getUserByNumber(user.getNumber()));
     }
 
     @RequestMapping("/loginOut")
