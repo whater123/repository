@@ -3,7 +3,6 @@ package com.springboot.mybatis.pojo;
 import com.springboot.mybatis.util.SystemParam;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 /**
