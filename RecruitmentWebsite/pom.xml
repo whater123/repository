@@ -34,7 +34,6 @@
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
-<<<<<<< HEAD
          <!--https://mvnrepository.com/artifact/org.projectlombok/lombok-->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -42,15 +41,7 @@
             <version>1.18.12</version>
             <scope>provided</scope>
         </dependency>
-=======
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-          <dependency>
-              <groupId>org.projectlombok</groupId>
-              <artifactId>lombok</artifactId>
-              <version>1.18.12</version>
-              <scope>provided</scope>
-            </dependency>
->>>>>>> 928f32a670841e584c7d528cb106786e65eff40c
+
         <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
