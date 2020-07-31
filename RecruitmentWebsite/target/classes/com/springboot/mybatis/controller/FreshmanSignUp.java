@@ -34,12 +34,12 @@ public class FreshmanSignUp {
         try {
             User user = freshmanSignUpService.getLoginUser(request);
             if (!freshmanSignUpService.isSignedUp(user.getNumber())) {
-                return jsonUtil.getJson(new StateCode("0", "未报名"));
+                return jsonUtil.getJson(new StateCode("-1", "未报名"));
             }
         } catch (Exception e) {
             return jsonUtil.getJson(new StateCode("-1", "出现错误"));
         }
-        return jsonUtil.getJson(new StateCode("1", "已报名"));
+        return jsonUtil.getJson(new StateCode("3", "已报名"));
     }
 
     /**
