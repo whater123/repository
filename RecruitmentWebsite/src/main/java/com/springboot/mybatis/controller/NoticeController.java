@@ -27,9 +27,8 @@ public class NoticeController {
 
     @PostMapping(value = "/getNoticeById", produces = "application/json;charset=UTF-8")
     public String getNoticeByid(@RequestBody String context) throws IOException {
-        Map<String, Integer> map = (Map<String, Integer>) jsonUtil.getObject(context, Map.class);
-        Integer id = map.get("id");
-        System.out.println(id);
+        Map<String, String> map = (Map<String, String>) jsonUtil.getObject(context, Map.class);
+        Integer id = Integer.valueOf(map.get("id"));
         Notice notice = noticeService.getNoticeById(id);
         System.out.println(notice);
         return jsonUtil.getJson(notice);
@@ -60,8 +59,8 @@ public class NoticeController {
 
     @PostMapping(value = "/deleteNotice", produces = "application/json;charset=UTF-8")
     public String deleteNotice(@RequestBody String context) throws IOException {
-        Map<String, Integer> map = (Map<String, Integer>) jsonUtil.getObject(context, Map.class);
-        Integer id = map.get("id");
+        Map<String, String> map = (Map<String, String>) jsonUtil.getObject(context, Map.class);
+        Integer id = Integer.valueOf(map.get("id"));
         try {
             Integer row = noticeService.deleteNoticeById(id);
             if (row>0){

@@ -101,6 +101,7 @@ $(document).ready(function(){
                     dataType: 'text',
                     timeout: 600000,
                     success: function (data){
+                        alert("id修改成功！");
                     },
                     error:function(XMLHttpRequest){  //请求失败的回调方法
                     alert("Error: "+XMLHttpRequest.status);
@@ -122,6 +123,7 @@ $(document).ready(function(){
                     dataType: 'text',
                     timeout: 600000,
                     success: function (data){
+                        alert("状态修改成功！");
                     },
                     error:function(XMLHttpRequest){  //请求失败的回调方法
                     alert("Error: "+XMLHttpRequest.status);

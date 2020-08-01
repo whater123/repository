@@ -12,7 +12,6 @@ $.ajax({
             dataType: 'text',
             timeout: 600000,
             success: function (data){
-                alert(data);
                 let notice = JSON.parse(data);
                 $("#title").html(notice.title);
                 $("#data").html(notice.data);
