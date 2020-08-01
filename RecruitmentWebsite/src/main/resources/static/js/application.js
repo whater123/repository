@@ -139,5 +139,5 @@ $(document).ready(function(){
        });
      }
  });
-})
+});
      
