@@ -57,15 +57,14 @@
     </select>
 
     <update id="updateInterviewId">
-
-    <trim suffixOverrides=";">
-
-        update user_signup set id = #{targetId} where id = #{id};
-        update user_register set id = #{targetId} where id = #{id};
-        <if test="isDalao == 1">
-            update user_dalao set id = #{targetId} where id = #{id}
-        </if>
-    </trim>
+        <trim suffixOverrides=";">
+            update user_signup set id = #{targetId} where id = #{id};
+            update user_register set id = #{targetId} where id = #{id};
+            update manager_interview_data set id = #{targetId} where id = #{id};
+            <if test="isDalao == 1">
+                update user_dalao set id = #{targetId} where id = #{id}
+            </if>
+        </trim>
     </update>
 
 
