@@ -49,7 +49,7 @@ $(document).ready(function(){
                 $("#state").val(user[p].stageState);
                 document.getElementById('state').id='state'+number;
 
-                $("#finalState_follow").after('<label id="finalState">'); 
+                $("#finalState_follow").after('<label id="finalState" class="finalState_">'); 
                 $("#finalState").text(user[p].finalState);
                 document.getElementById('finalState').id='finalState'+number;
        
@@ -72,6 +72,7 @@ $(document).ready(function(){
       if(message==true){
       var newIds = document.getElementsByClassName('id_');
       var newState = document.getElementsByClassName('state_');
+      var newFinalState = document.getElementsByClassName('finalState_');
           var msg = new Object();
           if(arg==='大佬'){
           msg.isdalao = 1;}//0表示不再 1表示在
@@ -87,6 +88,7 @@ $(document).ready(function(){
             success: function (data){
                 let user = JSON.parse(data);
                 var length = user.length-1;
+                var length_ = user.length-1;
                 for(var p in user){
                 if(newIds[length].value!=user[p].id)
                 {
@@ -101,7 +103,8 @@ $(document).ready(function(){
                     dataType: 'text',
                     timeout: 600000,
                     success: function (data){
-                        alert("id修改成功！");
+                      thedata = JSON.parse(data);
+                      alert(thedata.msg);
                     },
                     error:function(XMLHttpRequest){  //请求失败的回调方法
                     alert("Error: "+XMLHttpRequest.status);
@@ -123,7 +126,25 @@ $(document).ready(function(){
                     dataType: 'text',
                     timeout: 600000,
                     success: function (data){
-                        alert("状态修改成功！");
+                      thedata = JSON.parse(data);
+                      alert(thedata.msg);
+                        $.ajax({
+                            type: "POST",
+                            contentType: "application/json",
+                            url: "/manager/queryStudents",
+                            data: JSON.stringify(msg),
+                            dataType: 'text',
+                            timeout: 600000,
+                            success:function(data){
+                                let user_ = JSON.parse(data);
+                                for(var p in user_){
+                                    newFinalState[length_].innerText=user_[p].finalState;
+                                    length_--;
+                                }},
+                            error:function(XMLHttpRequest){  //请求失败的回调方法
+                                alert("Error: "+XMLHttpRequest.status);
+                            }
+                        });
                     },
                     error:function(XMLHttpRequest){  //请求失败的回调方法
                     alert("Error: "+XMLHttpRequest.status);
@@ -139,5 +160,5 @@ $(document).ready(function(){
        });
      }
  });
-});
+})
      

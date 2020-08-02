@@ -30,7 +30,6 @@ public class NoticeController {
         Map<String, String> map = (Map<String, String>) jsonUtil.getObject(context, Map.class);
         Integer id = Integer.valueOf(map.get("id"));
         Notice notice = noticeService.getNoticeById(id);
-        System.out.println(notice);
         return jsonUtil.getJson(notice);
     }
 
@@ -48,9 +47,9 @@ public class NoticeController {
         try {
             Integer row = noticeService.updateNoticeById(notice);
             if (row > 0) {
-                return jsonUtil.getJson(new StateCode("0", "修改成功"));
+                return jsonUtil.getJson(new StateCode("5", "修改成功"));
             } else {
-                return jsonUtil.getJson(new StateCode("-1", "该用户不存在，修改失败"));
+                return jsonUtil.getJson(new StateCode("-1", "该通知不存在，修改失败"));
             }
         } catch (Exception e) {
             return jsonUtil.getJson(new StateCode("-1", "后端出现异常"));
@@ -64,9 +63,9 @@ public class NoticeController {
         try {
             Integer row = noticeService.deleteNoticeById(id);
             if (row>0){
-                return jsonUtil.getJson(new StateCode("0","删除成功"));
+                return jsonUtil.getJson(new StateCode("5","删除成功"));
             }else {
-                return jsonUtil.getJson(new StateCode("-1","该用户不存在，删除失败"));
+                return jsonUtil.getJson(new StateCode("-1","该通知不存在，删除失败"));
             }
         }catch (Exception e){
             return jsonUtil.getJson(new StateCode("-1","后端出现异常"));
@@ -81,7 +80,7 @@ public class NoticeController {
         try {
             Integer row = noticeService.addNotice(notice);
             if(row>0){
-                return jsonUtil.getJson(new StateCode("0", "添加成功"));
+                return jsonUtil.getJson(new StateCode("5", "添加成功"));
             }else {
                 return jsonUtil.getJson(new StateCode("-1","添加失败"));
             }

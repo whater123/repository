@@ -46,6 +46,8 @@ function noticeDelete(x){
   if(message==true){
   var get = x.split('delete')[1];
   var id = document.getElementsByClassName('allTitle')[get-1].id;
+  var deleteDate=document.getElementById('data'+get);
+  var deleteTitle=document.getElementById(id);
   var notice = new Object();
   notice.id=id; 
   $.ajax({
@@ -58,6 +60,8 @@ function noticeDelete(x){
             success:function(data){
              var thedata = JSON.parse(data);
              if(thedata.state==5){//删除成功
+                $(deleteDate).remove();
+                $(deleteTitle).remove();
                 alert(thedata.msg);}
              else if(thedata.state==-1){//删除失败
                 alert(thedata.msg);}
@@ -94,7 +98,6 @@ function getNotice(){
             $('#revise_follow').show();
             $('#delete_follow').show();
             }
-
             $.ajax({
             type: "POST",
             contentType: "application/json",

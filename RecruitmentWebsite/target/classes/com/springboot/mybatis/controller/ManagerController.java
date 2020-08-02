@@ -51,7 +51,7 @@ public class ManagerController {
             if(row < ids.size()){
                 return jsonUtil.getJson(new StateCode("-1","部分用户id不存在，未能修改"));
             }else {
-                return jsonUtil.getJson(new StateCode("0","修改成功"));
+                return jsonUtil.getJson(new StateCode("5","状态修改成功"));
             }
         }catch (Exception e){
             e.printStackTrace();
@@ -88,7 +88,7 @@ public class ManagerController {
             if(row == 0){
                 return jsonUtil.getJson(new StateCode("-1","没有该用户，修改失败"));
             }else {
-                return jsonUtil.getJson(new StateCode("0","修改成功"));
+                return jsonUtil.getJson(new StateCode("5","id修改成功"));
             }
         }catch (Exception e){
             e.printStackTrace();
