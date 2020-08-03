@@ -105,9 +105,10 @@ public class FreshmanSignUp {
             InterviewData interviewData = freshmanSignUpService.getInterviewDataById(user.getId());
             if("待审核".equals(user.getInterviewState())){
                 if(interviewData == null){
-                    return jsonUtil.getJson(new InterviewData("未发布","未发布","未发布"));
+                    return jsonUtil.getJson(new InterviewData("未发布","未发布","未发布","待审核"));
                 }
                 else{
+                    interviewData.setInterviewState("待审核");
                     return jsonUtil.getJson(interviewData);
                 }
             }
@@ -116,6 +117,7 @@ public class FreshmanSignUp {
             }
         }
         catch (Exception e){
+            System.out.println(e);
             return "出现错误";
         }
     }

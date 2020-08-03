@@ -67,12 +67,12 @@ public interface FreshmanSignUpImp {
     /**
      * 获得报名后全数据的User对象（普通报名）
      * */
-    User getUser_normal(String context,HttpServletRequest request) throws JsonProcessingException;
+    User getUser_normal(String context, HttpServletRequest request) throws JsonProcessingException;
 
     /**
      * 获得报名后全数据的User对象（大佬报名）
      * */
-    User getUser_mogul(String context,HttpServletRequest request) throws JsonProcessingException;
+    User getUser_mogul(String context, HttpServletRequest request) throws JsonProcessingException;
 
     /**
      * 通过session获得当前登录User对象
@@ -97,7 +97,7 @@ public interface FreshmanSignUpImp {
     /**
      * 合并 当前登录的User对象和报名生成json所转化的User对象
      * */
-    User mergeUser(User loginUser,User contextUser) throws JsonProcessingException;
+    User mergeUser(User loginUser, User contextUser) throws JsonProcessingException;
 
 
 }
