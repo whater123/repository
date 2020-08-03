@@ -76,12 +76,19 @@ function noticeDelete(x){
 function noticeRevise(x){
     var get = x.split('revise')[1];
     var id = document.getElementsByClassName('allTitle')[get-1].id;
-    var url = 'notice?id='+id;
+    var url = 'notice?id='+id+'&'+'revise=yes'+'&'+'publish=no';
     window.open(url);
 }
+//管理员发布通知
+$(document).ready(function(){
+    $("#notice_publish").click(function(){
+    var url = 'notice?id='+0+'&'+'revise=no'+'&'+'publish=yes';
+    window.open(url);
+    })
+});
 //普通用户查看通知
 function getNoticeById(x){
-  var url = 'notice?id='+x;
+  var url = 'notice?id='+x+'&'+'revise=no'+'&'+'publish=no';
   window.open(url);
 }
 //当切换至第三个div通知系统时
@@ -123,6 +130,9 @@ function getNotice(){
                 document.getElementById('title').id=notice[p].id;
 
                 $("#revise_follow").append('<input type="button" value="修改" id="revise">');
+                document.getElementById('revise').onclick=function(){
+
+                }
                 document.getElementById('revise').id='revise'+number;
 
                 $("#delete_follow").append('<input type="button" value="删除" id="delete">');
@@ -269,6 +279,69 @@ $(document).ready(function(){
   }); 
 });
 
+//用户查看自己的面试信息(面试)
+$(document).ready(function(){
+    $("#getInterviewBtn").click(function(){
+    $.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: "/getSession",
+            dataType: 'text',
+            timeout: 600000,
+            success: function (data){
+                let user = JSON.parse(data);
+                //返回的值全为空 说明未登陆//
+                if(user.number==""||user.number==null||user.password==""||user.password==null){
+                  alert('您还未登陆，请先登陆');       
+                }
+                else{        
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json",
+                    url: "/user/ifSignUp",
+                    dataType: 'text',
+                    timeout: 600000,
+                    success: function (data){
+                      let ifLogin = JSON.parse(data);
+                      //参数为0未报名 参数为1已报名
+                      if(ifLogin.state==-1){
+                        alert('您还未报名，请先填写报名表');   
+                      }else if(ifLogin.state==3){
+                         $.ajax({
+                          type: "POST",
+                          contentType: "application/json",
+                          url: "/user/getAllInterviewData",
+                          dataType: 'text',
+                          timeout: 600000,
+                          success:function(data){
+                          let dataOfInterview = JSON.parse(data);
+                          if(dataOfInterview.interviewState=='未通过'||
+                            dataOfInterview.interviewState=='已通过'){
+                            alert('面试状态:'+dataOfInterview.interviewState);
+                          }
+                          else{
+                           alert('面试时间:'+dataOfInterview.time+'\n'+
+                                 '面试地点:'+dataOfInterview.place+'\n'+
+                                 '面试官:'+dataOfInterview.interviewer+'\n'+
+                                 '面试状态:'+dataOfInterview.interviewState
+                                );
+                          }},
+                          error:function(XMLHttpRequest){  //请求失败的回调方法
+                          alert("Error: "+XMLHttpRequest.status);                           
+                          }
+                          });                
+                      }
+                      },              
+                    error:function(XMLHttpRequest){  //请求失败的回调方法
+                    alert("Error: "+XMLHttpRequest.status);
+                      }
+                  });}   
+            },
+                    error:function(XMLHttpRequest){  //请求失败的回调方法
+                    alert("Error: "+XMLHttpRequest.status);} 
+    });
+  }); 
+}); 
 //**//
 window.onload=function()
 {

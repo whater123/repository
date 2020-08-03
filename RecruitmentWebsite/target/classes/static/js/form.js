@@ -45,6 +45,11 @@ if(arg=='yes'){
                 $("#classroom_normal").val(user.classroom);
                 $("#department_normal").val(user.department);
                 $("#context_normal").val(user.context);
+                if(user.specialty!=null&&user.specialty!=''){
+                $("#context_normal").after('<label id="specialty">特长</label>');
+                $("#specialty").after('<input type="text" id="specialty_normal">');
+                $("#specialty_normal").val(user.specialty);
+                }
                 $("#btn_normal").hide();//隐藏提交按钮
 
                },              
@@ -82,7 +87,7 @@ if(arg>0&&arg<1000){
                 $("#department_normal").val(user.department);
                 $("#context_normal").val(user.context);
                 if(user.specialty!=null&&user.specialty!=''){
-                $("#context_normal").after('<label id="specialty">面试状态</label>');
+                $("#context_normal").after('<label id="specialty">特长</label>');
                 $("#specialty").after('<input type="text" id="specialty_normal">');
                 $("#specialty_normal").val(user.specialty);
                 }
