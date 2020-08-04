@@ -13,15 +13,15 @@ import java.util.List;
 @SpringBootTest
 class MybatisApplicationTests {
 
-    @Autowired
-    ManagerMapper managerMapper;
-    @Autowired
-    DataSource dataSource;
+//    @Autowired
+//    ManagerMapper managerMapper;
+//    @Autowired
+//    DataSource dataSource;
 
     @Test
     void contextLoads() throws SQLException {
-        List<User> all = managerMapper.getAll();
-        System.out.println(all);
+//        List<User> all = managerMapper.getAll();
+//        System.out.println(all);
 
     }
 }

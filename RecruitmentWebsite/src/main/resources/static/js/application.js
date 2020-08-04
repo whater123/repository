@@ -3,7 +3,17 @@ var url = decodeURI(window.location.href);
 var argsIndex = url .split("?name=");
 var arg = argsIndex[1];
 $('#logo_name').html(arg);
-
+//固定选择从查询的条件
+if(arg==='大佬'){
+        $("#major_follow").after('<div id="department_follow">志愿部门:<select id="department_search"><option value=""></option><option value="硬件技术部">硬件技术部</option><option value="服务技术部">服务技术部</option><option value="算法应用部">算法应用部</option><option value="前端开发部">前端开发部</option><option value="移动开发部">移动开发部</option><option value="应用策划部">应用策划部</option><option value="游戏程序部">游戏程序部</option><option value="游戏策划部">游戏策划部</option><option value="游戏美术部">游戏美术部</option><option value="财务部">财务部</option></select></div>');
+        $("#department_follow").after('<div>是否为大佬:<label id="isdalao_search"></label></div>');
+        $("#isdalao_search").text('是'); 
+}
+else{
+        $("#major_follow").after('<div id="department_follow">志愿部门:<label id="department_search"></label></div>');
+        $("#department_search").text(arg);
+        $("#department_follow").after('<div>是否为大佬:<select id="isdalao_search"><option value=""></option><option value="1">是</option><option value="0">否</option></select></div>'); 
+}
 //通过id值得到学生信息的函数
 function getInfById(x){
   var get = 'id' + x.split('name')[1]; 
@@ -87,13 +97,24 @@ $(document).ready(function(){
             if(text!=''&&text!=null){
               msg.name=text;
             }
+            //固定选择的条件
+            if(arg==='大佬'){
+               msg.isdalao = 1;
+               text= $("#department_search").val();
+               if(text!=''&&text!=null){
+               msg.department=text;
+               }
+            }
+            else{
+               msg.department = arg;
+               text= $("#isdalao_search").val();
+               if(text!=''&&text!=null){
+               msg.isdalao=text;
+               }
+            }
             text= $("#number_search").val();
             if(text!=''&&text!=null){
               msg.number=text;
-            }
-            text= $("#college_search").val();
-            if(text!=''&&text!=null){
-              msg.college=text;
             }
             text= $("#classroom_search").val();
             if(text!=''&&text!=null){
@@ -107,13 +128,9 @@ $(document).ready(function(){
             if(text!=''&&text!=null){
               msg.major=text;
             }
-            text= $("#department_search").val();
+            text= $("#college_search").val();
             if(text!=''&&text!=null){
-              msg.department=text;
-            }
-            text= $("#isdalao_search").val();
-            if(text!=''&&text!=null){
-              msg.isdalao=text;
+              msg.college=text;
             }
             text= $("#stageState_search").val();
             if(text!=''&&text!=null){
@@ -164,7 +181,7 @@ $(document).ready(function(){
                 alert("Error: "+XMLHttpRequest.status);
             }
         });
-  });
+  })
 });
 //修改报名信息                
 $(document).ready(function(){
