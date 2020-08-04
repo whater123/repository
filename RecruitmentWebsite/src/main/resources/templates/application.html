@@ -12,7 +12,50 @@
         <span id="logo_name"></span>
       </div>
       <div id="bottom">
-        <img src="../static/img/纪念碑谷4.jpg" style="width:350px;height:550px;position: relative;left: 50px;display: inline-block;">
+          <div id="left-search">
+            <div>姓名:<input type="text" id="name_search"></div>
+            <div>学号:<input type="text" id="number_search"></div>
+            <div>学院:<input type="text" id="college_search"></div>
+            <div>班级:<input type="text" id="classroom_search"></div>
+            <div>面试id:<input type="text" id="id_search"></div>
+            <div>专业:<input type="text" id="major_search"></div>
+            <div>志愿部门:
+            <select id="department_search">
+            <option value=""></option>
+            <option value="硬件技术部">硬件技术部</option>
+            <option value="服务技术部">服务技术部</option>
+            <option value="算法应用部">算法应用部</option>
+            <option value="前端开发部">前端开发部</option>
+            <option value="移动开发部">移动开发部</option>
+            <option value="应用策划部">应用策划部</option>
+            <option value="游戏程序部">游戏程序部</option>
+            <option value="游戏策划部">游戏策划部</option>
+            <option value="游戏美术部">游戏美术部</option>
+            <option value="财务部">财务部</option>
+            </select></div>
+            <div>是否为大佬:
+            <select id="isdalao_search">
+            <option value=""></option>
+            <option value="1">是</option>
+            <option value="0">否</option>
+            </select></div>
+            <div>面试状态/考核作业:
+            <select id="stageState_search">
+            <option value=""></option>
+            <option value="0">待审核/待审核</option>
+            <option value="1">已通过/待审核</option>
+            <option value="2">已通过/已通过</option>
+            <option value="3">未通过/待审核</option>
+            <option value="4">已通过/未通过</option>
+            </select></div>
+            <div>
+              <input type="button" value="查询" id="search_2">
+            </div>
+               
+          </div>
+          <div id="left-pic">
+            <img src="../static/img/纪念碑谷4.jpg" style="width: 100%;height: 100%;">
+          </div>
           <div id="two_btn">
             <input type="button" value="查看报名表" id="show_all">
             <input type="button" value="选择查询" id="search">

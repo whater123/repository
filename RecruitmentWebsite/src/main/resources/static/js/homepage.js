@@ -408,7 +408,7 @@ $(document).ready(function(){
                       if(ifLogin.state==-1){
                         alert('您还未报名，请先填写报名表');   
                       }else if(ifLogin.state==3){
-                        alert('大作业状态:'+user.bigWorkState);
+                        alert('大作业状态:'+user.bigWorkState);             
                       }
                       },              
                     error:function(XMLHttpRequest){  //请求失败的回调方法

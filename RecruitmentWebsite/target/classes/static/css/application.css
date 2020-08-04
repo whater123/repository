@@ -27,6 +27,34 @@
     top: -75px;
     left: 140px;
 }
+/**左边的选择查询**/
+#left-search{
+  width:350px;
+  height:550px;
+  position: relative;
+  left: 50px; 
+  display: none;
+  border-right:solid 1px rgb(172,79,67);
+}
+#left-search div{
+    padding-left: 50px;
+    height: 50px;
+}
+#search_2{
+    border-radius: 10px;
+    cursor:pointer;
+    width: 100px;
+    padding: 0 16px;
+    height: 44px;
+}
+#left-pic{
+  width:350px;
+  height:550px;
+  position: relative;
+  left: 50px;
+  display: inline-block;
+}
+/**按钮**/
 #two_btn{
     position: absolute;
     left: 500px;
