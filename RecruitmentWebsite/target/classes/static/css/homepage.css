@@ -387,8 +387,8 @@
     position: absolute;
     z-index: 2;
     height: 0px;
-    width: 120px;
-    right: 150px;
+    width: 80px;
+    right: 183px;
     top: 70px;
     border:1px solid black;
     transition:  height 0.5s;

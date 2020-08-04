@@ -53,7 +53,7 @@ public class ManagerService implements ManagerImp {
         stringStringMap.put("department",user.getDepartment());
         stringStringMap.put("major",user.getMajor());
         stringStringMap.put("isdalao",user.getIsdalao());
-        stringStringMap.put("interviewState",user.getInterviewState());
+        stringStringMap.put("stageState",user.getStageState());
         return managerMapper.getSomeUser(stringStringMap);
     }
 

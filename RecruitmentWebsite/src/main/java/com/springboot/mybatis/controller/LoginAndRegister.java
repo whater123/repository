@@ -101,7 +101,6 @@ public class LoginAndRegister {
             user = (User) jsonUtil.getObject(string, User.class);
         } else {
             user = new User("", "");
-            System.out.println("获取session失败！！！！");
         }
         return String.valueOf(SystemParam.isManager(user));
     }
@@ -113,7 +112,6 @@ public class LoginAndRegister {
             user = (User) jsonUtil.getObject(string, User.class);
         } else {
             user = new User("", "");
-            System.out.println("获取session失败！！！！");
         }
         return jsonUtil.getJson(user);
     }

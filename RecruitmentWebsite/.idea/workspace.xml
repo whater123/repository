@@ -4,14 +4,28 @@
     <list default="true" id="ff8167fa-8c5a-4a30-9640-e4be80c9d830" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/LoginAndRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/LoginAndRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/service/Imp/LoginAndRegisterImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/service/Imp/LoginAndRegisterImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/service/LoginAndRegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/service/LoginAndRegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/PageJumpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/PageJumpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/service/ManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/service/ManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/util/SystemParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/util/SystemParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ManagerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/ManagerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/notice.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/LoginAndRegisterImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/LoginAndRegisterImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/LoginAndRegisterImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/LoginAndRegisterImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/PageJumpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/PageJumpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/PageJumpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/PageJumpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/LoginAndRegisterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/LoginAndRegisterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/LoginAndRegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/LoginAndRegisterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/ManagerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/ManagerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/ManagerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/ManagerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/util/SystemParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/util/SystemParam.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/util/SystemParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/util/SystemParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/ManagerMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/ManagerMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/notice.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +137,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32988507" />
@@ -141,8 +155,8 @@
       <recent name="C:\Users\w\IdeaProjects\RecruitmentWebsite\src\main\resources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\templates" />
       <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources" />
+      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\templates" />
       <recent name="E:\Git\repository\RecruitmentWebsite\src\main\java\com\springboot\mybatis\controller" />
       <recent name="E:\Git\repository\RecruitmentWebsite\src\main\java\com\springboot\mybatis\service\Imp" />
       <recent name="E:\Git\repository\RecruitmentWebsite\src\main\java\com\springboot\mybatis\service" />
@@ -274,7 +288,7 @@
       <workItem from="1596442819063" duration="24000" />
       <workItem from="1596447811216" duration="9564000" />
       <workItem from="1596507552826" duration="1475000" />
-      <workItem from="1596513683624" duration="5319000" />
+      <workItem from="1596513683624" duration="9182000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1595921173538</created>
@@ -437,7 +451,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596521249568</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="update 4.3">
+      <created>1596527272414</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1596527272414</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -461,7 +482,8 @@
     <MESSAGE value="Merge branch 'dev' of github.com:whater123/repository into dev&#10;&#10;# Conflicts:&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/FreshmanSignUp.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/ManagerController.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/NoticeController.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/pojo/InterviewData.class" />
     <MESSAGE value="update 4.1" />
     <MESSAGE value="update 4.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 4.2" />
+    <MESSAGE value="update 4.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 4.3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="74" key="#Inspections" timestamp="1596347717038">
@@ -508,10 +530,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="170" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594784832040" />
-    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2" timestamp="1596521248559">
+    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2" timestamp="1596527270950">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596521248559" />
+    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596527270950" />
     <state x="28" y="65" width="1228" height="687" key="DiffContextDialog" timestamp="1596520449112">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -520,38 +542,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="901" y="199" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596244832983" />
-    <state width="1493" height="220" key="GridCell.Tab.0.bottom" timestamp="1596527181595">
+    <state width="1493" height="157" key="GridCell.Tab.0.bottom" timestamp="1596530827413">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="220" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596527181595" />
-    <state width="1493" height="220" key="GridCell.Tab.0.center" timestamp="1596527181595">
+    <state width="1493" height="157" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596530827413" />
+    <state width="1493" height="157" key="GridCell.Tab.0.center" timestamp="1596530827413">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="220" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596527181595" />
-    <state width="1493" height="220" key="GridCell.Tab.0.left" timestamp="1596527181595">
+    <state width="1493" height="157" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596530827413" />
+    <state width="1493" height="157" key="GridCell.Tab.0.left" timestamp="1596530827413">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="220" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596527181595" />
-    <state width="1493" height="220" key="GridCell.Tab.0.right" timestamp="1596527181595">
+    <state width="1493" height="157" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596530827413" />
+    <state width="1493" height="157" key="GridCell.Tab.0.right" timestamp="1596530827413">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="220" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596527181595" />
-    <state width="1493" height="220" key="GridCell.Tab.1.bottom" timestamp="1596527181596">
+    <state width="1493" height="157" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596530827413" />
+    <state width="1493" height="157" key="GridCell.Tab.1.bottom" timestamp="1596530827413">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="220" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596527181596" />
-    <state width="1493" height="220" key="GridCell.Tab.1.center" timestamp="1596527181596">
+    <state width="1493" height="157" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596530827413" />
+    <state width="1493" height="157" key="GridCell.Tab.1.center" timestamp="1596530827413">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="220" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596527181596" />
-    <state width="1493" height="220" key="GridCell.Tab.1.left" timestamp="1596527181596">
+    <state width="1493" height="157" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596530827413" />
+    <state width="1493" height="157" key="GridCell.Tab.1.left" timestamp="1596530827413">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="220" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596527181596" />
-    <state width="1493" height="220" key="GridCell.Tab.1.right" timestamp="1596527181596">
+    <state width="1493" height="157" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596530827413" />
+    <state width="1493" height="157" key="GridCell.Tab.1.right" timestamp="1596530827413">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="220" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596527181596" />
+    <state width="1493" height="157" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596530827413" />
     <state x="-1" y="70" width="1501" height="694" key="MergeDialog" timestamp="1596508229237">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -44,14 +44,8 @@
             <if test="isdalao != null">
                 and a.isdalao = #{isdalao}
             </if>
-            <if test="interviewState == '已通过'">
-                and a.stageState = 1 or a.stageState = 2 or a.stageState = 4
-            </if>
-            <if test="interviewState == '未通过'">
-                and a.stageState = 3
-            </if>
-            <if test="interviewState == '待审核'">
-                and a.stageState = 0
+            <if test="stageState != null">
+                and a.stageState = #{stageState}
             </if>
         </where>
     </select>

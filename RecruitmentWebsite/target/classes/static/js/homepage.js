@@ -177,7 +177,29 @@ function jumpto(e){
     console.log(name);
     var url = 'application?name='+name;
     window.open(url);
-} 
+}
+//新生登录成功出现最新的通知
+function getNewNotice(){
+  $.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: "/user/getNewNotice",
+            dataType: 'text',
+            timeout: 600000,
+            success: function(data){
+                let notice = JSON.parse(data);
+                alert('最近一次发布的通知如下:'+'\n'+
+                      '标题:'+notice.title+'\n'+
+                      '日期:'+notice.date+'\n'+
+                      '内容:'+notice.context+'\n'+
+                      '请留意动态通知避免遗漏信息！'
+                                );
+                },
+             error:function(XMLHttpRequest){  //请求失败的回调方法
+                alert("Error: "+XMLHttpRequest.status);
+            }
+        });
+}  
 //登录和注册
 $(document).ready(function(){
         $("#loginBtn").click(function(){
@@ -211,6 +233,7 @@ $(document).ready(function(){
                     alert(stateCode.msg);
                     $("#middle-5-before").hide();
                     $("#middle-5-after-login1").show();
+                    getNewNotice();//新生登录成功出现最新的通知
                 }},
             error:function(XMLHttpRequest){  //请求失败的回调方法
                 alert("Error: "+XMLHttpRequest.status);
@@ -252,7 +275,6 @@ $(document).ready(function(){
         });
       }}
    )});
- 
 //判断是报名还是查看报名信息(网申)
 $(document).ready(function(){
     $("#getSignBtn").click(function(){
@@ -295,7 +317,6 @@ $(document).ready(function(){
     });
   }); 
 });
-
 //用户查看自己的面试信息(面试)
 $(document).ready(function(){
     $("#getInterviewBtn").click(function(){
@@ -358,7 +379,89 @@ $(document).ready(function(){
                     alert("Error: "+XMLHttpRequest.status);} 
     });
   }); 
-}); 
+});
+//用户查看自己的大作业状态(作业考核)
+$(document).ready(function(){
+    $("#getBigWorkBtn").click(function(){
+      $.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: "/getSession",
+            dataType: 'text',
+            timeout: 600000,
+            success: function (data){
+                let user = JSON.parse(data);
+                //返回的值全为空 说明未登陆//
+                if(user.number==""||user.number==null||user.password==""||user.password==null){
+                  alert('您还未登陆，请先登陆');       
+                }
+                else{        
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json",
+                    url: "/user/ifSignUp",
+                    dataType: 'text',
+                    timeout: 600000,
+                    success: function (data){
+                      let ifLogin = JSON.parse(data);
+                      //参数为0未报名 参数为1已报名
+                      if(ifLogin.state==-1){
+                        alert('您还未报名，请先填写报名表');   
+                      }else if(ifLogin.state==3){
+                        alert('大作业状态:'+user.bigWorkState);
+                      }
+                      },              
+                    error:function(XMLHttpRequest){  //请求失败的回调方法
+                    alert("Error: "+XMLHttpRequest.status);
+                      }
+                  });}   
+            },
+                    error:function(XMLHttpRequest){  //请求失败的回调方法
+                    alert("Error: "+XMLHttpRequest.status);} 
+    });
+  }); 
+});
+//用户查看自己的录取结果(录取结果)
+$(document).ready(function(){
+    $("#getFinalBtn").click(function(){
+      $.ajax({
+            type: "POST",
+            contentType: "application/json",
+            url: "/getSession",
+            dataType: 'text',
+            timeout: 600000,
+            success: function (data){
+                let user = JSON.parse(data);
+                //返回的值全为空 说明未登陆//
+                if(user.number==""||user.number==null||user.password==""||user.password==null){
+                  alert('您还未登陆，请先登陆');       
+                }
+                else{        
+                $.ajax({
+                    type: "POST",
+                    contentType: "application/json",
+                    url: "/user/ifSignUp",
+                    dataType: 'text',
+                    timeout: 600000,
+                    success: function (data){
+                      let ifLogin = JSON.parse(data);
+                      //参数为0未报名 参数为1已报名
+                      if(ifLogin.state==-1){
+                        alert('您还未报名，请先填写报名表');   
+                      }else if(ifLogin.state==3){
+                        alert('录取结果:'+user.finalState);             
+                      }
+                      },              
+                    error:function(XMLHttpRequest){  //请求失败的回调方法
+                    alert("Error: "+XMLHttpRequest.status);
+                      }
+                  });}   
+            },
+                    error:function(XMLHttpRequest){  //请求失败的回调方法
+                    alert("Error: "+XMLHttpRequest.status);} 
+    });
+  }); 
+});
 //**//
 window.onload=function()
 {
