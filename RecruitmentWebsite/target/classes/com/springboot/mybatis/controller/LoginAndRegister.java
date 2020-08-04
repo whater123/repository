@@ -70,14 +70,15 @@ public class LoginAndRegister {
      */
     @RequestMapping(value = "/getSession" )
     public String getNowUser(HttpServletRequest request) throws JsonProcessingException {
-        User user = (User)jsonUtil.getObject(getNowUserJson(request), User.class);
+        HttpSession session = request.getSession();
+        User user = (User)jsonUtil.getObject(getNowUserJson(session), User.class);
         return jsonUtil.getJson(loAndReService.getUserByNumber(user.getNumber()));
     }
 
     @RequestMapping("/loginOut")
     public String loginOut(HttpServletRequest request) throws JsonProcessingException {
         HttpSession session = request.getSession();
-        User user = (User)jsonUtil.getObject(getNowUserJson(request), User.class);
+        User user = (User)jsonUtil.getObject(getNowUserJson(session), User.class);
 
         if (user == null|| "".equals(user.getNumber())|| "".equals(user.getPassword())){
             return jsonUtil.getJson(new StateCode("-1","您未登录，注销失败"));
@@ -90,18 +91,26 @@ public class LoginAndRegister {
 
     @RequestMapping("/userIsManager")
     public String isManager(HttpServletRequest request) throws JsonProcessingException {
-        User user = (User)jsonUtil.getObject(getNowUserJson(request), User.class);
-        return String.valueOf(SystemParam.isManager(user));
-    }
-
-    private String getNowUserJson(HttpServletRequest request) throws JsonProcessingException {
-        User user;
         HttpSession session = request.getSession();
+        User user;
         String string = (String) session.getAttribute("user");
         if (string != null) {
             user = (User) jsonUtil.getObject(string, User.class);
         } else {
             user = new User("", "");
+            System.out.println("获取session失败！！！！");
+        }
+        return String.valueOf(SystemParam.isManager(user));
+    }
+
+    private String getNowUserJson(HttpSession session) throws JsonProcessingException {
+        User user;
+        String string = (String) session.getAttribute("user");
+        if (string != null) {
+            user = (User) jsonUtil.getObject(string, User.class);
+        } else {
+            user = new User("", "");
+            System.out.println("获取session失败！！！！");
         }
         return jsonUtil.getJson(user);
     }

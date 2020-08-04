@@ -28,7 +28,9 @@ public class NoticeController {
     public String getNoticeByid(@RequestBody String context) throws IOException {
         Map<String, Integer> map = (Map<String, Integer>) jsonUtil.getObject(context, Map.class);
         Integer id = map.get("id");
+        System.out.println(id);
         Notice notice = noticeService.getNoticeById(id);
+        System.out.println(notice);
         return jsonUtil.getJson(notice);
     }
 

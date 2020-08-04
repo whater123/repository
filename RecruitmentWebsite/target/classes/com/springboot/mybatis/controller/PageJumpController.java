@@ -25,4 +25,9 @@ public class PageJumpController {
     public String toApplication(){
         return "application";
     }
+
+    @RequestMapping("/notice")
+    public String toNotice(){
+        return "notice";
+    }
 }

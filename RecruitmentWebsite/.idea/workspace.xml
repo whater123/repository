@@ -2,29 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff8167fa-8c5a-4a30-9640-e4be80c9d830" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b19dac05-d246-49f7-8a2b-a67b73a4e3f3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b19dac05-d246-49f7-8a2b-a67b73a4e3f3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/LoginAndRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/LoginAndRegister.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/NoticeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/dao/NoticeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/dao/NoticeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/service/Imp/NoticeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/service/Imp/NoticeImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/service/NoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/service/NoticeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/NoticeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis/mapper/NoticeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/FreshmanSignUp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/FreshmanSignUp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/PageJumpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/PageJumpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/notice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/notice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/ManagerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/ManagerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/LoginAndRegister.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/NoticeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/NoticeController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/NoticeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/FreshmanSignUpMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/FreshmanSignUpMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/NoticeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/NoticeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/NoticeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/NoticeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/pojo/InterviewData.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/pojo/InterviewData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/FreshmanSignUpService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/FreshmanSignUpService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/FreshmanSignUpImp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/FreshmanSignUpImp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/NoticeImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/NoticeImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/NoticeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/NoticeImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/NoticeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/NoticeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/NoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/NoticeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis/mapper/NoticeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis/mapper/NoticeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/PageJumpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/PageJumpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/PageJumpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/PageJumpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/notice.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/notice.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,21 +37,6 @@
       <set />
     </option>
     <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@119.3.176.15" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@119.3.176.15" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@119.3.176.15" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="com_smart_pots: schema" type="76f4a085:MysqlImplModel$Schema" />
-      </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="webapplication@localhost" type="feb32156:DbDataSourceImpl" />
@@ -148,22 +124,22 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="D:/springboot/income-expenditure-detail" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/js" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32988507" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\static\css" />
+      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\static\js" />
       <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources" />
+      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\static\css" />
       <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\templates" />
       <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\static" />
-      <recent name="C:\Users\w\IdeaProjects\RecruitmentWebsite\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\w\IdeaProjects\RecruitmentWebsite\src\main\resources\static" />
@@ -288,10 +264,8 @@
       <workItem from="1595920754041" duration="1036000" />
       <workItem from="1595925069624" duration="10370000" />
       <workItem from="1596074632712" duration="6238000" />
-      <workItem from="1596163526328" duration="2087000" />
-      <workItem from="1596191463567" duration="1936000" />
-      <workItem from="1596330014802" duration="5487000" />
-      <workItem from="1596506523608" duration="790000" />
+      <workItem from="1596163526328" duration="3426000" />
+      <workItem from="1596186032440" duration="10287000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1595921173538</created>
@@ -356,21 +330,35 @@
       <option name="project" value="LOCAL" />
       <updated>1596163624923</updated>
     </task>
-    <task id="LOCAL-00010" summary="update">
-      <created>1596166359681</created>
+    <task id="LOCAL-00010" summary="update 3.0">
+      <created>1596165680162</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1596166359681</updated>
+      <updated>1596165680162</updated>
     </task>
     <task id="LOCAL-00011" summary="update 4.0">
-      <created>1596189769870</created>
+      <created>1596188049299</created>
       <option name="number" value="00011" />
       <option name="presentableId" value="LOCAL-00011" />
       <option name="project" value="LOCAL" />
-      <updated>1596189769870</updated>
+      <updated>1596188049300</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update 4.0">
+      <created>1596188116528</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1596188116528</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update 4.0">
+      <created>1596190300379</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1596190300379</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,9 +377,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'dev' of github.com:whater123/repository into dev&#10;&#10;# Conflicts:&#10;#&#9;RecruitmentWebsite/.idea/workspace.xml&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/MybatisApplication.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/FreshmanSignUp.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/LoginAndRegister.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/ManagerController.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/PageJumpController.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/dao/ManagerMapper.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/dao/UerRegisterMapper.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/pojo/LoginUser.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/service/Imp/LoginAndRegisterImp.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/service/Imp/ManagerImp.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/service/LoginAndRegisterService.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/service/ManagerService.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/util/SystemParam.class&#10;#&#9;RecruitmentWebsite/target/test-classes/com/springboot/mybatis/MybatisApplicationTests.class" />
     <MESSAGE value="update" />
+    <MESSAGE value="update 3.0" />
     <MESSAGE value="update 4.0" />
     <option name="LAST_COMMIT_MESSAGE" value="update 4.0" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="399" y="66" key="#Project_Structure" timestamp="1596075435590">
@@ -406,10 +394,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="369" y="148" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1595666214106" />
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1596503147837">
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1596024164147">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1596503147837" />
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1596024164147" />
     <state x="604" y="272" width="449" height="271" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1596160613434">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -418,10 +406,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="507" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1594866383551" />
-    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595925216025">
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596186563058">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1595925216025" />
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1596186563058" />
     <state x="883" y="165" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1595587491612">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -430,82 +418,78 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="170" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594784832040" />
-    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2" timestamp="1596189768552">
+    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2" timestamp="1596190299046">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596189768552" />
+    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596190299046" />
     <state x="28" y="65" key="DiffContextDialog" timestamp="1596163380466">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="28" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1596163380466" />
-    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1596506563719">
+    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1596157384725">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596506563719" />
-    <state width="1281" height="70" key="GridCell.Tab.0.bottom" timestamp="1596506494938">
+    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596157384725" />
+    <state width="1493" height="123" key="GridCell.Tab.0.bottom" timestamp="1596196137876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1281" height="70" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596506494938" />
-    <state width="1281" height="70" key="GridCell.Tab.0.center" timestamp="1596506494938">
+    <state width="1493" height="123" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596196137876" />
+    <state width="1493" height="123" key="GridCell.Tab.0.center" timestamp="1596196137876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1281" height="70" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596506494938" />
-    <state width="1281" height="70" key="GridCell.Tab.0.left" timestamp="1596506494938">
+    <state width="1493" height="123" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596196137876" />
+    <state width="1493" height="123" key="GridCell.Tab.0.left" timestamp="1596196137876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1281" height="70" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596506494938" />
-    <state width="1281" height="70" key="GridCell.Tab.0.right" timestamp="1596506494938">
+    <state width="1493" height="123" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596196137876" />
+    <state width="1493" height="123" key="GridCell.Tab.0.right" timestamp="1596196137876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1281" height="70" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596506494938" />
-    <state width="1281" height="70" key="GridCell.Tab.1.bottom" timestamp="1596506494939">
+    <state width="1493" height="123" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596196137876" />
+    <state width="1493" height="123" key="GridCell.Tab.1.bottom" timestamp="1596196137879">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1281" height="70" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596506494939" />
-    <state width="1281" height="70" key="GridCell.Tab.1.center" timestamp="1596506494939">
+    <state width="1493" height="123" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596196137879" />
+    <state width="1493" height="123" key="GridCell.Tab.1.center" timestamp="1596196137877">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1281" height="70" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596506494939" />
-    <state width="1281" height="70" key="GridCell.Tab.1.left" timestamp="1596506494939">
+    <state width="1493" height="123" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596196137877" />
+    <state width="1493" height="123" key="GridCell.Tab.1.left" timestamp="1596196137876">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1281" height="70" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596506494939" />
-    <state width="1281" height="70" key="GridCell.Tab.1.right" timestamp="1596506494939">
+    <state width="1493" height="123" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596196137876" />
+    <state width="1493" height="123" key="GridCell.Tab.1.right" timestamp="1596196137878">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1281" height="70" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596506494939" />
+    <state width="1493" height="123" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596196137878" />
     <state x="104" y="70" width="1395" height="694" key="MergeDialog" timestamp="1596163288175">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="104" y="70" width="1395" height="694" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1596163288175" />
-    <state x="477" y="129" key="MultipleFileMergeDialog" timestamp="1596189710130">
+    <state x="590" y="138" key="MultipleFileMergeDialog" timestamp="1596188863048">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="129" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1596189710130" />
-    <state x="516" y="137" key="RollbackChangesDialog" timestamp="1596502830133">
+    <state x="590" y="138" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1596188863048" />
+    <state x="516" y="137" key="RollbackChangesDialog" timestamp="1596165150179">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="516" y="137" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1596502830133" />
-    <state x="382" y="11" width="1038" height="812" key="SettingsEditor" timestamp="1596506833746">
+    <state x="516" y="137" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1596165150179" />
+    <state x="73" y="12" width="1038" height="812" key="SettingsEditor" timestamp="1596075642890">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="382" y="11" width="1038" height="812" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596506833746" />
+    <state x="73" y="12" width="1038" height="812" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596075642890" />
     <state x="117" y="147" key="VCS.ChangelistChooser" timestamp="1596032647480">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="117" y="147" key="VCS.ChangelistChooser/0.0.1536.824@0.0.1536.824" timestamp="1596032647480" />
-    <state x="425" y="166" key="Vcs.Push.Dialog.v2" timestamp="1596502591281">
+    <state x="499" y="233" key="com.intellij.ide.util.TipDialog" timestamp="1596074654136">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="166" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596502591281" />
-    <state x="499" y="233" key="com.intellij.ide.util.TipDialog" timestamp="1596506523249">
+    <state x="499" y="233" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1596074654136" />
+    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596188826817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="233" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1596506523249" />
-    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1596189657644">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1596189657644" />
+    <state x="564" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1596188826817" />
     <state x="499" y="183" key="extract.method.dialog" timestamp="1595657360545">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -514,17 +498,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="225" y="162" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1594218929453" />
-    <state x="274" y="275" width="671" height="285" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1596506614365">
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup" timestamp="1594375555857">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="274" y="275" width="671" height="285" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.824@0.0.1536.824" timestamp="1596506614365" />
-    <state x="426" y="186" width="672" height="677" key="run.anything.popup" timestamp="1596502611347">
+    <state x="425" y="187" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1594375555857" />
+    <state x="431" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1596188493734">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="426" y="186" width="672" height="677" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1596502611347" />
-    <state x="431" y="146" width="672" height="678" key="search.everywhere.popup" timestamp="1596074953541">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="431" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1596074953541" />
+    <state x="431" y="146" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1596188493734" />
   </component>
 </project>
