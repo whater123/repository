@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff8167fa-8c5a-4a30-9640-e4be80c9d830" name="Default Changelist" comment="Merge branch 'dev' of github.com:whater123/repository into dev&#10;&#10;# Conflicts:&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/FreshmanSignUp.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/ManagerController.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/NoticeController.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/pojo/InterviewData.class">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ff8167fa-8c5a-4a30-9640-e4be80c9d830" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller/NoticeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-druid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-druid.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/homepage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/notice.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/notice.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application-druid.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-druid.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/NoticeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/NoticeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/controller/NoticeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/NoticeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/dao/NoticeMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/NoticeImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/Imp/NoticeImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/NoticeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springboot/mybatis/service/NoticeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/notice.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/homepage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/js/notice.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/notice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/notice.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/notice.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +122,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/springboot/mybatis/controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.32988507" />
@@ -135,19 +132,19 @@
     <selection>jr</selection>
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\java\com\springboot\mybatis\controller" />
-      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\java\com\springboot\mybatis\service\Imp" />
-      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\java\com\springboot\mybatis\service" />
-      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\java\com\springboot\mybatis\pojo" />
-      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\w\IdeaProjects\RecruitmentWebsite\src\main\resources\static" />
       <recent name="C:\Users\w\IdeaProjects\RecruitmentWebsite\src\main\resources\templates" />
       <recent name="C:\Users\w\IdeaProjects\RecruitmentWebsite\target\classes\templates" />
       <recent name="C:\Users\w\IdeaProjects\RecruitmentWebsite\target\classes" />
       <recent name="C:\Users\w\IdeaProjects\RecruitmentWebsite\src\main\resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources\templates" />
+      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\resources" />
+      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\java\com\springboot\mybatis\controller" />
+      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\java\com\springboot\mybatis\service\Imp" />
+      <recent name="E:\Git\repository\RecruitmentWebsite\src\main\java\com\springboot\mybatis\service" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.MybatisApplication">
@@ -275,7 +272,8 @@
       <workItem from="1596355566769" duration="4000" />
       <workItem from="1596442819063" duration="24000" />
       <workItem from="1596447811216" duration="9564000" />
-      <workItem from="1596507552826" duration="1346000" />
+      <workItem from="1596507552826" duration="1475000" />
+      <workItem from="1596513683624" duration="1180000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1595921173538</created>
@@ -417,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1596461184714</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="update 4.1">
+      <created>1596509020611</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1596509020611</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,7 +444,8 @@
     <MESSAGE value="update 3.0" />
     <MESSAGE value="update 4.0" />
     <MESSAGE value="Merge branch 'dev' of github.com:whater123/repository into dev&#10;&#10;# Conflicts:&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/FreshmanSignUp.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/ManagerController.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/NoticeController.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/pojo/InterviewData.class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'dev' of github.com:whater123/repository into dev&#10;&#10;# Conflicts:&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/FreshmanSignUp.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/ManagerController.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/controller/NoticeController.class&#10;#&#9;RecruitmentWebsite/target/classes/com/springboot/mybatis/pojo/InterviewData.class" />
+    <MESSAGE value="update 4.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 4.1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="74" key="#Inspections" timestamp="1596347717038">
@@ -486,50 +492,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="170" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824@0.0.1536.824" timestamp="1594784832040" />
-    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2" timestamp="1596509000080">
+    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2" timestamp="1596520953114">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596509000080" />
-    <state x="28" y="65" key="DiffContextDialog" timestamp="1596508154787">
+    <state x="148" y="17" width="1038" height="804" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1596520953114" />
+    <state x="28" y="65" width="1228" height="687" key="DiffContextDialog" timestamp="1596520449112">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="28" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1596508154787" />
+    <state x="28" y="65" width="1228" height="687" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1596520449112" />
     <state x="901" y="199" key="FileChooserDialogImpl" timestamp="1596244832983">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="901" y="199" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1596244832983" />
-    <state width="1493" height="80" key="GridCell.Tab.0.bottom" timestamp="1596509000105">
+    <state width="1493" height="149" key="GridCell.Tab.0.bottom" timestamp="1596520829569">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="80" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596509000105" />
-    <state width="1493" height="80" key="GridCell.Tab.0.center" timestamp="1596509000105">
+    <state width="1493" height="149" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596520829569" />
+    <state width="1493" height="149" key="GridCell.Tab.0.center" timestamp="1596520829568">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="80" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596509000105" />
-    <state width="1493" height="80" key="GridCell.Tab.0.left" timestamp="1596509000105">
+    <state width="1493" height="149" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596520829568" />
+    <state width="1493" height="149" key="GridCell.Tab.0.left" timestamp="1596520829568">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="80" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596509000105" />
-    <state width="1493" height="80" key="GridCell.Tab.0.right" timestamp="1596509000105">
+    <state width="1493" height="149" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596520829568" />
+    <state width="1493" height="149" key="GridCell.Tab.0.right" timestamp="1596520829568">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="80" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596509000105" />
-    <state width="1493" height="80" key="GridCell.Tab.1.bottom" timestamp="1596509000105">
+    <state width="1493" height="149" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596520829568" />
+    <state width="1493" height="149" key="GridCell.Tab.1.bottom" timestamp="1596520829569">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="80" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596509000105" />
-    <state width="1493" height="80" key="GridCell.Tab.1.center" timestamp="1596509000105">
+    <state width="1493" height="149" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596520829569" />
+    <state width="1493" height="149" key="GridCell.Tab.1.center" timestamp="1596520829569">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="80" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596509000105" />
-    <state width="1493" height="80" key="GridCell.Tab.1.left" timestamp="1596509000105">
+    <state width="1493" height="149" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1596520829569" />
+    <state width="1493" height="149" key="GridCell.Tab.1.left" timestamp="1596520829569">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="80" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596509000105" />
-    <state width="1493" height="80" key="GridCell.Tab.1.right" timestamp="1596509000105">
+    <state width="1493" height="149" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1596520829569" />
+    <state width="1493" height="149" key="GridCell.Tab.1.right" timestamp="1596520829569">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="80" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596509000105" />
+    <state width="1493" height="149" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1596520829569" />
     <state x="-1" y="70" width="1501" height="694" key="MergeDialog" timestamp="1596508229237">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

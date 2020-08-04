@@ -26,7 +26,7 @@ if(ifPublish=='no'){
             success: function (data){
                 let notice = JSON.parse(data);
                 $("#title").html(notice.title);
-                $("#data").html(notice.date);
+                $("#data").html(notice.data);
                 $("#context").text(notice.context);
                },              
             error:function(XMLHttpRequest){  //请求失败的回调方法

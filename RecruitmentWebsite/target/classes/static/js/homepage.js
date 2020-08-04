@@ -47,6 +47,8 @@ function noticeDelete(x){
   var get = x.split('delete')[1];
   var id = document.getElementsByClassName('allTitle')[get-1].id;
   var deleteDate=document.getElementById('data'+get);
+  var deleteBtn=document.getElementById('delete'+get);
+  var reviseBtn=document.getElementById('revise'+get);
   var deleteTitle=document.getElementById(id);
   var notice = new Object();
   notice.id=id; 
@@ -62,6 +64,8 @@ function noticeDelete(x){
              if(thedata.state==5){//删除成功
                 $(deleteDate).remove();
                 $(deleteTitle).remove();
+                $(deleteBtn).remove();
+                $(reviseBtn).remove();
                 alert(thedata.msg);}
              else if(thedata.state==-1){//删除失败
                 alert(thedata.msg);}
@@ -85,6 +89,20 @@ $(document).ready(function(){
     var url = 'notice?id='+0+'&'+'revise=no'+'&'+'publish=yes';
     window.open(url);
     })
+});
+//刷新按钮
+$(document).ready(function(){
+    $("#notice_flash").click(function(){
+    var data_remove=$('#data_follow').children();
+    var title_remove=$('#title_follow').children();
+    var revise_remove=$('#revise_follow').children();
+    var delete_remove=$('#delete_follow').children();
+    $(data_remove).remove();
+    $(title_remove).remove();
+    $(revise_remove).remove();
+    $(delete_remove).remove();
+    getNotice();
+  })
 });
 //普通用户查看通知
 function getNoticeById(x){
@@ -131,8 +149,7 @@ function getNotice(){
 
                 $("#revise_follow").append('<input type="button" value="修改" id="revise">');
                 document.getElementById('revise').onclick=function(){
-
-                }
+                noticeRevise(''+this.id);}; //给修改按钮绑定点击事件 管理员修改通知
                 document.getElementById('revise').id='revise'+number;
 
                 $("#delete_follow").append('<input type="button" value="删除" id="delete">');
