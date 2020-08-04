@@ -42,8 +42,6 @@ if(ifPublish=='no'){
             dataType: 'text',
             timeout: 600000,
             success:function(xml){
-                alert(xml);
-
             //是管理员 显示修改通知的按钮
             if(xml==="true"){
             $('#bottom').show();

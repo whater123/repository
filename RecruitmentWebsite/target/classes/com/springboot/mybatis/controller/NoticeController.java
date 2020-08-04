@@ -8,7 +8,6 @@ import com.springboot.mybatis.util.JsonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
@@ -27,7 +26,7 @@ public class NoticeController {
     @PostMapping(value = "/manager/getNoticeById", produces = "application/json;charset=UTF-8")
     public String getNoticeByid(@RequestBody String context) throws IOException {
         Map<String, String> map = (Map<String, String>) jsonUtil.getObject(context, Map.class);
-        Integer id = Integer.valueOf(map.get("id"));
+        Integer id = Integer.valueOf(String.valueOf(map.get("id")));
         Notice notice = noticeService.getNoticeById(id);
         return jsonUtil.getJson(notice);
     }
@@ -72,7 +71,7 @@ public class NoticeController {
     @PostMapping(value = "/manager/deleteNotice", produces = "application/json;charset=UTF-8")
     public String deleteNotice(@RequestBody String context) throws IOException {
         Map<String, String> map = (Map<String, String>) jsonUtil.getObject(context, Map.class);
-        Integer id = Integer.valueOf(map.get("id"));
+        Integer id = Integer.valueOf(String.valueOf(map.get("id")));
         try {
             Integer row = noticeService.deleteNoticeById(id);
             if (row>0){
