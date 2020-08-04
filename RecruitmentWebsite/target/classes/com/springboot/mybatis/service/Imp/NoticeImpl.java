@@ -14,6 +14,12 @@ public interface NoticeImpl {
     Notice getNoticeById(Integer id);
 
     /**
+     *
+     * @return 返回最新的通知
+     */
+    Notice getLatestNotice();
+
+    /**
      * 获取所有的通知
      * @return 返回封装所有通知POJO的list
      */

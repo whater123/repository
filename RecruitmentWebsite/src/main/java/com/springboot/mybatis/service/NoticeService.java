@@ -20,6 +20,11 @@ public class NoticeService implements NoticeImpl {
     }
 
     @Override
+    public Notice getLatestNotice() {
+        return noticeMapper.getLatestNotice();
+    }
+
+    @Override
     public List<Notice> getAllNotices() {
         return noticeMapper.getAll();
     }

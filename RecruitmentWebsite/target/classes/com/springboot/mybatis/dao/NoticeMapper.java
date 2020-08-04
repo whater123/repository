@@ -12,6 +12,8 @@ public interface NoticeMapper {
 
     Notice getNoticeById(Integer id);
 
+    Notice getLatestNotice();
+
     List<Notice> getAll();
 
     Integer addNotice(Notice notice);
