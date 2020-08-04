@@ -32,4 +32,11 @@ public interface LoginAndRegisterImp {
      * @return user
      */
     User getUserByNumber(String number);
+
+    /**
+     * 注册接口的数据效验
+     * @param user 注册者
+     * @return boolean
+     */
+    boolean dataValidation(User user);
 }

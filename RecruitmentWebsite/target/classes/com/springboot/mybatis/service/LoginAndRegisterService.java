@@ -8,6 +8,7 @@ import com.springboot.mybatis.util.SystemParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -65,6 +66,18 @@ public class LoginAndRegisterService implements LoginAndRegisterImp {
             }
         }
         return new User("","");
+    }
+
+    @Override
+    public boolean dataValidation(User user) {
+        try {
+            //转化为整数，若报错则不全为数字
+            String s = BigDecimal.valueOf(Long.parseLong(user.getNumber())).toString();
+        } catch (Exception e) {
+            System.out.println("error");
+            return false;
+        }
+        return user.getNumber().startsWith("2020") && user.getNumber().length() == 12;
     }
 
 }

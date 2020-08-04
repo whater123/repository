@@ -31,6 +31,9 @@ public class LoginAndRegister {
     @RequestMapping(value = "/register" , produces = "application/json;charset=UTF-8")
     public String register(@RequestBody String context) throws JsonProcessingException {
         User user = (User) jsonUtil.getObject(context, User.class);
+        if (!loAndReService.dataValidation(user)){
+            return jsonUtil.getJson(new StateCode("-1","请输入正确的学号"));
+        }
         StateCode registered = loAndReService.isRegistered(user);
 
         if ("0".equals(registered.getState())){
