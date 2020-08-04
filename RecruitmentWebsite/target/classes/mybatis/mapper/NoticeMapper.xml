@@ -6,6 +6,10 @@
     <select id="getNoticeById" resultType="notice">
         select * from manager_notice where id= #{id}
     </select>
+
+    <select id="getLatestNotice" resultType="notice">
+        select * from manager_notice order by date desc limit 1
+    </select>
     
     <select id="getAll" resultType="notice">
         select * from manager_notice 

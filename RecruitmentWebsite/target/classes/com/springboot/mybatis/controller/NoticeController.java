@@ -17,7 +17,6 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/manager")
 public class NoticeController {
 
     @Autowired
@@ -25,7 +24,7 @@ public class NoticeController {
     @Autowired
     NoticeService noticeService;
 
-    @PostMapping(value = "/getNoticeById", produces = "application/json;charset=UTF-8")
+    @PostMapping(value = "/manager/getNoticeById", produces = "application/json;charset=UTF-8")
     public String getNoticeByid(@RequestBody String context) throws IOException {
         Map<String, String> map = (Map<String, String>) jsonUtil.getObject(context, Map.class);
         Integer id = Integer.valueOf(map.get("id"));
@@ -33,13 +32,27 @@ public class NoticeController {
         return jsonUtil.getJson(notice);
     }
 
-    @PostMapping(value = "/getAllNotice", produces = "application/json;charset=UTF-8")
+    @PostMapping(value = "/user/getNewNotice",produces = "application/json;charset=UTF-8")
+    public String getNewNotice() throws JsonProcessingException {
+        try {
+            Notice latestNotice = noticeService.getLatestNotice();
+            if(latestNotice!=null){
+                return jsonUtil.getJson(latestNotice);
+            }else {
+                return jsonUtil.getJson(new StateCode("-1","目前还没有通知!"));
+            }
+        } catch (Exception e) {
+            return jsonUtil.getJson(new StateCode("-1","后端出现异常"));
+        }
+    }
+
+    @PostMapping(value = "/manager/getAllNotice", produces = "application/json;charset=UTF-8")
     public String getAllNotice() throws JsonProcessingException {
         List<Notice> notices = noticeService.getAllNotices();
         return jsonUtil.getJson(notices);
     }
 
-    @PostMapping(value = "/updateNotice", produces = "application/json;charset=UTF-8")
+    @PostMapping(value = "/manager/updateNotice", produces = "application/json;charset=UTF-8")
     public String updateNotice(@RequestBody String context) throws IOException {
         Notice notice = (Notice) jsonUtil.getObject(context, Notice.class);
         Date date = new Date();
@@ -56,7 +69,7 @@ public class NoticeController {
         }
     }
 
-    @PostMapping(value = "/deleteNotice", produces = "application/json;charset=UTF-8")
+    @PostMapping(value = "/manager/deleteNotice", produces = "application/json;charset=UTF-8")
     public String deleteNotice(@RequestBody String context) throws IOException {
         Map<String, String> map = (Map<String, String>) jsonUtil.getObject(context, Map.class);
         Integer id = Integer.valueOf(map.get("id"));
@@ -72,7 +85,7 @@ public class NoticeController {
         }
     }
 
-    @PostMapping(value = "/addNotice",produces = "application/json;charset=UTF-8")
+    @PostMapping(value = "/manager/addNotice",produces = "application/json;charset=UTF-8")
     public String addNotice(@RequestBody String context) throws IOException {
         Notice notice = (Notice) jsonUtil.getObject(context, Notice.class);
         Date date = new Date();
