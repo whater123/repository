@@ -5,6 +5,7 @@ import com.springboot.mybatis.pojo.User;
 import com.springboot.mybatis.util.JsonUtil;
 import com.springboot.mybatis.util.SystemParam;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpSession;
 /**
  * @author w
  */
+@CrossOrigin
 @Controller
 public class PageJumpController {
 

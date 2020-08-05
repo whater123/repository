@@ -15,6 +15,7 @@ import java.util.Random;
 /**
  * @author w
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/manager")
 public class ManagerController {

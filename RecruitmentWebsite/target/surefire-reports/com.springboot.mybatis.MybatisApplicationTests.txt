@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.springboot.mybatis.MybatisApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.377 s - in com.springboot.mybatis.MybatisApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.129 s - in com.springboot.mybatis.MybatisApplicationTests

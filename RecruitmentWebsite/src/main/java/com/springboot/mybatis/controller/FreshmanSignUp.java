@@ -8,6 +8,7 @@ import com.springboot.mybatis.pojo.User;
 import com.springboot.mybatis.service.FreshmanSignUpService;
 import com.springboot.mybatis.util.JsonUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +23,7 @@ import java.util.regex.Pattern;
 /**
  * @author w
  */
+@CrossOrigin
 @RestController
 public class FreshmanSignUp {
     @Autowired
