@@ -9,7 +9,7 @@
 
     <select id="getAll" resultType="User">
         select * from
-        user_register as b left join user_signUp as a on a.id = b.id
+        user_register as b left join user_signup as a on a.id = b.id
         left join user_dalao as d on b.id = d.id
         where b.id !=0
     </select>

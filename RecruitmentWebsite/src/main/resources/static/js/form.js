@@ -23,7 +23,7 @@ if(arg=='yes'){
       $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/app/getSession",
+            url: "/getSession",
             dataType: 'text',
             timeout: 600000,
             success: function (data){
@@ -66,7 +66,7 @@ if(arg>0&&arg<1000){
       $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/app/manager/getStudentMsg/"+arg,
+            url: "/manager/getStudentMsg/"+arg,
             dataType: 'text',
             timeout: 600000,
             success: function (data){
@@ -117,7 +117,7 @@ $(document).ready(function(){
         $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/app/user/freshmanSignUp_normal",
+            url: "/user/freshmanSignUp_normal",
             data: JSON.stringify(user),
             dataType: 'text',
             timeout: 600000,
@@ -159,7 +159,7 @@ $(document).ready(function(){
         $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/app/user/freshmanSignUp_mogul",
+            url: "/user/freshmanSignUp_mogul",
             data: JSON.stringify(user),
             dataType: 'text',
             timeout: 600000,

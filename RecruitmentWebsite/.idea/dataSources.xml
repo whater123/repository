@@ -7,11 +7,11 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/webapplication?serverTimezone=GMT</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="@119.3.176.15" uuid="f0a4f8a4-b759-4b66-a0ff-ff1bfd6411d1">
+    <data-source source="LOCAL" name="webapplication@119.3.176.15" uuid="f0a4f8a4-b759-4b66-a0ff-ff1bfd6411d1">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://119.3.176.15:3306</jdbc-url>
+      <jdbc-url>jdbc:mysql://119.3.176.15:3306/webapplication?useSSL=true&amp;serverTimezone=GMT&amp;useAffectedRows=true</jdbc-url>
     </data-source>
   </component>
 </project>

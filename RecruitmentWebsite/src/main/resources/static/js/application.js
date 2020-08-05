@@ -34,7 +34,7 @@ $(document).ready(function(){
           $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/app/manager/queryStudents",
+            url: "/manager/queryStudents",
             data: JSON.stringify(msg),
             dataType: 'text',
             timeout: 600000,
@@ -139,7 +139,7 @@ $(document).ready(function(){
             $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/app/manager/queryStudents",
+            url: "/manager/queryStudents",
             data: JSON.stringify(msg),
             dataType: 'text',
             timeout: 600000,
@@ -239,7 +239,7 @@ $(document).ready(function(){
           $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/app/manager/queryStudents",
+            url: "/manager/queryStudents",
             data: JSON.stringify(msg),
             dataType: 'text',
             timeout: 600000,
@@ -256,7 +256,7 @@ $(document).ready(function(){
                     $.ajax({
                     type: "POST",
                     contentType: "application/json",
-                    url: "app/manager/editId",
+                    url: "/manager/editId",
                     data: JSON.stringify(Obj),
                     dataType: 'text',
                     timeout: 600000,
@@ -279,7 +279,7 @@ $(document).ready(function(){
                     $.ajax({
                     type: "POST",
                     contentType: "application/json",
-                    url: "/app/manager/editStatus",
+                    url: "/manager/editStatus",
                     data: JSON.stringify(Obj),
                     dataType: 'text',
                     timeout: 600000,
@@ -289,7 +289,7 @@ $(document).ready(function(){
                         $.ajax({
                             type: "POST",
                             contentType: "application/json",
-                            url: "/app/manager/queryStudents",
+                            url: "/manager/queryStudents",
                             data: JSON.stringify(msg),
                             dataType: 'text',
                             timeout: 600000,
