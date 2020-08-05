@@ -14,7 +14,7 @@ $(document).ready(function(){
         $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/login",
+            url: "/app/login",
             data: JSON.stringify(user),
             dataType: 'text',
             timeout: 600000,
@@ -54,7 +54,7 @@ $(document).ready(function(){
         $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/register",
+            url: "/app/register",
             data: JSON.stringify(user),
             dataType: 'text',
             timeout: 600000,

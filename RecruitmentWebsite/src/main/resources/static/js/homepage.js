@@ -55,7 +55,7 @@ function noticeDelete(x){
   $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/manager/deleteNotice",
+            url: "/app/manager/deleteNotice",
             data: JSON.stringify(notice),
             dataType: 'text',
             timeout: 600000,
@@ -113,7 +113,7 @@ function getNoticeById(x){
 function getNotice(){
    $.ajax({
         type: "POST",
-            url: "/userIsManager",
+            url: "/app/userIsManager",
             dataType: 'text',
             timeout: 600000,
             success:function(xml){
@@ -126,7 +126,7 @@ function getNotice(){
             $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/manager/getAllNotice",
+            url: "/app/manager/getAllNotice",
             dataType: 'text',
             timeout: 600000,
             success: function (data){
@@ -183,7 +183,7 @@ function getNewNotice(){
   $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/user/getNewNotice",
+            url: "/app/user/getNewNotice",
             dataType: 'text',
             timeout: 600000,
             success: function(data){
@@ -216,7 +216,7 @@ $(document).ready(function(){
         $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/login",
+            url: "/app/login",
             data: JSON.stringify(user),
             dataType: 'text',
             timeout: 600000,
@@ -257,7 +257,7 @@ $(document).ready(function(){
         $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/register",
+            url: "/app/register",
             data: JSON.stringify(user),
             dataType: 'text',
             timeout: 600000,
@@ -281,7 +281,7 @@ $(document).ready(function(){
     $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/getSession",
+            url: "/app/getSession",
             dataType: 'text',
             timeout: 600000,
             success: function (data){
@@ -294,7 +294,7 @@ $(document).ready(function(){
                 $.ajax({
                     type: "POST",
                     contentType: "application/json",
-                    url: "/user/ifSignUp",
+                    url: "/app/user/ifSignUp",
                     dataType: 'text',
                     timeout: 600000,
                     success: function (data){
@@ -323,7 +323,7 @@ $(document).ready(function(){
     $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/getSession",
+            url: "/app/getSession",
             dataType: 'text',
             timeout: 600000,
             success: function (data){
@@ -336,7 +336,7 @@ $(document).ready(function(){
                 $.ajax({
                     type: "POST",
                     contentType: "application/json",
-                    url: "/user/ifSignUp",
+                    url: "/app/user/ifSignUp",
                     dataType: 'text',
                     timeout: 600000,
                     success: function (data){
@@ -348,7 +348,7 @@ $(document).ready(function(){
                          $.ajax({
                           type: "POST",
                           contentType: "application/json",
-                          url: "/user/getAllInterviewData",
+                          url: "/app/user/getAllInterviewData",
                           dataType: 'text',
                           timeout: 600000,
                           success:function(data){
@@ -386,7 +386,7 @@ $(document).ready(function(){
       $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/getSession",
+            url: "/app/getSession",
             dataType: 'text',
             timeout: 600000,
             success: function (data){
@@ -399,7 +399,7 @@ $(document).ready(function(){
                 $.ajax({
                     type: "POST",
                     contentType: "application/json",
-                    url: "/user/ifSignUp",
+                    url: "/app/user/ifSignUp",
                     dataType: 'text',
                     timeout: 600000,
                     success: function (data){
@@ -427,7 +427,7 @@ $(document).ready(function(){
       $.ajax({
             type: "POST",
             contentType: "application/json",
-            url: "/getSession",
+            url: "/app/getSession",
             dataType: 'text',
             timeout: 600000,
             success: function (data){
@@ -440,7 +440,7 @@ $(document).ready(function(){
                 $.ajax({
                     type: "POST",
                     contentType: "application/json",
-                    url: "/user/ifSignUp",
+                    url: "/app/user/ifSignUp",
                     dataType: 'text',
                     timeout: 600000,
                     success: function (data){
