@@ -1,0 +1,44 @@
+#all{
+   width: 1000px;
+   height: 750px;
+   margin:auto;
+}
+#top{
+   text-align: center;
+   width: 100%;
+   height: 80px;
+   margin-top: 25px;
+}
+/**图片**/
+#logo{
+	display: block;  
+	width: 100px;
+	height: 50px;
+  float: left;
+}
+#title{
+  display: block;
+  width: 900px;
+  height: 50px;
+  float: left;
+  text-align: center;  
+}
+#data{
+  display: block;
+  margin-left: 800px;
+  width: 200px;
+  height: 30px;
+  float: left;
+}
+#middle{
+  height: 400px;
+}
+#context{
+  font-size: 15px;
+  line-height: 30px;
+}
+#all_Publish{
+   width: 1000px;
+   height: 750px;
+   margin:auto;
+}

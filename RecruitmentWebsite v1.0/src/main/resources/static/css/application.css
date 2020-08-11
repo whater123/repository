@@ -1,0 +1,98 @@
+#all{
+   width: 1300px;
+   height: 750px;
+   margin: auto;
+}
+#top{
+   padding-top: 10px;
+   text-align: center;
+   width: 100%;
+   height: 120px; 
+ 
+}
+#bottom{
+    width: 1300px;
+    margin: auto;
+}
+/**图片**/
+#logo{
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+#logo_name{
+    position: relative;
+    font-size: 30px;
+    top: -75px;
+    left: 140px;
+}
+/**左边的选择查询**/
+#left-search{
+  width:350px;
+  height:550px;
+  position: relative;
+  left: 50px; 
+  display: none;
+  border-right:solid 1px rgb(172,79,67);
+}
+#left-search div{
+    padding-left: 50px;
+    height: 50px;
+}
+#search_2{
+    border-radius: 10px;
+    cursor:pointer;
+    width: 100px;
+    padding: 0 16px;
+    height: 44px;
+}
+#left-pic{
+  width:350px;
+  height:550px;
+  position: relative;
+  left: 50px;
+  display: inline-block;
+}
+/**按钮**/
+#two_btn{
+    position: absolute;
+    left: 500px;
+    width: 400px;
+    display: inline-block;
+}
+#two_btn input{
+    border-radius: 10px;
+    display: inline-block;
+    width: 100px;
+    padding: 0 16px;
+    height: 44px;
+    text-align: center;
+    box-sizing: border-box;  
+    cursor:pointer;
+}
+#show_inf{
+    float: right;
+    padding-top: 50px;
+    width: 820px;
+    height: 500px;
+    overflow: scroll;
+}
+.divs label{
+    box-sizing: border-box;
+    display: block;
+    width: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 25px;
+    cursor: pointer;
+}
+.divs input,select{
+    box-sizing: border-box;
+    display: block;
+    width: 65px;
+    height: 25px;
+}
+#div3 label,select{
+    width: 140px;
+}
