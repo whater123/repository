@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7f6764ff-2a19-4117-8fc1-a3a1932600d1" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1iEIXJ6frlrDvW2f6EVlkg9yQ4K" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\w\IdeaProjects\together\src\main\resources\templates" />
+      <recent name="C:\Users\w\IdeaProjects\together\src\main\resources" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.together.util" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.together.controller" />
+      <recent name="com.together.service" />
+      <recent name="com.together.service.Imp" />
+      <recent name="com.together.handle" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\w\IdeaProjects\together\src\main\resources\templates" />
+      <recent name="C:\Users\w\IdeaProjects\together\src\main\java\com\together\util" />
+      <recent name="C:\Users\w\IdeaProjects\together\src\main\java\com\together\config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TogetherApplication">
+    <configuration name="TogetherApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="together" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.together.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.together" />
+      <option name="MAIN_CLASS_NAME" value="com.together.TogetherApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TogetherApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="together" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.together.TogetherApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TogetherApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f6764ff-2a19-4117-8fc1-a3a1932600d1" name="Default Changelist" comment="" />
+      <created>1601466362613</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601466362613</updated>
+      <workItem from="1601466367295" duration="3407000" />
+      <workItem from="1601469795981" duration="1645000" />
+      <workItem from="1601474149395" duration="2512000" />
+      <workItem from="1601518536865" duration="5104000" />
+      <workItem from="1601800728884" duration="2145000" />
+      <workItem from="1601861445164" duration="2978000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="499" y="170" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1601471239670">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="170" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1601471239670" />
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser" timestamp="1601522761886">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="121" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1601522761886" />
+    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1601802682819">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601802682819" />
+    <state width="1493" height="196" key="GridCell.Tab.0.bottom" timestamp="1601523647111">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="196" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601523647111" />
+    <state width="1493" height="196" key="GridCell.Tab.0.center" timestamp="1601523647111">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="196" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1601523647111" />
+    <state width="1493" height="196" key="GridCell.Tab.0.left" timestamp="1601523647111">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="196" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1601523647111" />
+    <state width="1493" height="196" key="GridCell.Tab.0.right" timestamp="1601523647111">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="196" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601523647111" />
+    <state width="1493" height="196" key="GridCell.Tab.1.bottom" timestamp="1601523647111">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="196" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1601523647111" />
+    <state width="1493" height="196" key="GridCell.Tab.1.center" timestamp="1601523647111">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="196" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1601523647111" />
+    <state width="1493" height="196" key="GridCell.Tab.1.left" timestamp="1601523647111">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="196" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1601523647111" />
+    <state width="1493" height="196" key="GridCell.Tab.1.right" timestamp="1601523647111">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="196" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1601523647111" />
+    <state x="299" y="70" key="Maven.ArtifactSearchDialog" timestamp="1601468522896">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="299" y="70" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1601468522896" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1601478075360">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1601478075360" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1601520441032">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1601520441032" />
+  </component>
+</project>
