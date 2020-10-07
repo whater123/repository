@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+/**获取和验证 验证码的controller
+ * @author w
+ */
 @Controller
 public class VerificationController {
 
@@ -35,22 +38,22 @@ public class VerificationController {
         return jsonObject.toString();
     }
 
-//    @RequestMapping("/submit")
-//    @ResponseBody
-//    public String text2(HttpServletRequest request, String v){
-//        HttpSession session = request.getSession();
-//        String id = session.getId();
-//
-//        String code = verificationService.getCode(id);
-//        //删除存储的数据
-//        verificationService.delKey(id);
-//        if (v.equalsIgnoreCase(code)){
-//            //修改
-//            return "输入正确";
-//        }
-//        else {
-//            return "错误";
-//        }
-//    }
+    @RequestMapping("/submit")
+    @ResponseBody
+    public String text2(HttpServletRequest request, String v){
+        HttpSession session = request.getSession();
+        String id = session.getId();
+
+        String code = verificationService.getCode(id);
+        //删除存储的数据
+        verificationService.delKey(id);
+        if (v.equalsIgnoreCase(code)){
+            //修改
+            return "输入正确";
+        }
+        else {
+            return "错误";
+        }
+    }
 }
 

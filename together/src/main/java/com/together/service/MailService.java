@@ -52,11 +52,7 @@ public class MailService implements MailServiceImp {
         if (string == null) {
             return false;
         }
-        String regEx1 = "^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
-        Pattern p;
-        Matcher m;
-        p = Pattern.compile(regEx1);
-        m = p.matcher(string);
-        return m.matches();
+        String regex6 = "[1-9]\\d{7,10}@qq\\.com";
+        return string.matches(regex6);
     }
 }
