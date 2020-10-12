@@ -22,6 +22,6 @@ public class WebConfig implements WebMvcConfigurer {
         registry.addInterceptor(interceptor)
                 .addPathPatterns("/**")
                 //设置放行url
-                .excludePathPatterns("/login", "/getAllThemes","/register","/isRegistered","/getMailCode");
+                .excludePathPatterns("/login", "/getAllThemes","/register","/isRegistered","/getMailCode","/changePassword","/error");
     }
 }

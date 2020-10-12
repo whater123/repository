@@ -23,7 +23,11 @@ public class Data {
     private Theme theme;
     private User user;
 
-    public Data(String token,User user) {
+    public Data(User user) {
+        this.user = user;
+    }
+
+    public Data(String token, User user) {
         this.token = token;
         this.user = user;
     }

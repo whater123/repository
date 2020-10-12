@@ -1,17 +1,22 @@
 package com.together;
 
 import com.together.service.MailService;
+import com.together.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 
+import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 
 @SpringBootTest
 class TogetherApplicationTests {
     @Autowired
     MailService mailService;
+    @Autowired
+    UserService userService;
     @Autowired
     RedisTemplate<String,Object> redisTemplate;
 
@@ -22,9 +27,9 @@ class TogetherApplicationTests {
 
     @Test
     void t(){
-        String regex6 = "[1-9]\\d{7,10}@qq\\.com";
-        String string = "308932645@q.com";
-        System.out.println(string.matches(regex6));
+        String pwRegex = "^[\\w]{8,16}$";
+        String string = "123456abc___";
+        System.out.println(string.matches(pwRegex));
     }
 
     @Test
@@ -35,5 +40,11 @@ class TogetherApplicationTests {
         Set<Object> keys = redisTemplate.opsForHash().keys("tokens");
         System.out.println(keys);
         System.out.println(keys.contains("token1"));
+    }
+
+    //ture
+    @Test
+    void t2(){
+        System.out.println(userService.getUserId("11"));
     }
 }

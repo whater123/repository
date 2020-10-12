@@ -1,6 +1,9 @@
 package com.together.service;
 
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.together.dao.UserMapper;
+import com.together.pojo.User;
 import com.together.service.Imp.MailServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,7 +19,8 @@ public class MailService implements MailServiceImp {
 
     @Autowired
     private JavaMailSender mailSender;
-
+    @Autowired
+    private UserMapper userMapper;
     @Value("${spring.mail.username}")
     private String fromEmail;
 //    @Autowired
@@ -50,6 +54,12 @@ public class MailService implements MailServiceImp {
     @Override
     public boolean isEmail(String string) {
         if (string == null) {
+            return false;
+        }
+        QueryWrapper<User> userQueryWrapper = new QueryWrapper<>();
+        userQueryWrapper.in("email",string);
+        User user = userMapper.selectOne(userQueryWrapper);
+        if (user != null){
             return false;
         }
         String regex6 = "[1-9]\\d{7,10}@qq\\.com";

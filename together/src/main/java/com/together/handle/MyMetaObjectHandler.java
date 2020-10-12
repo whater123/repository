@@ -13,7 +13,7 @@ import java.util.Date;
 public class MyMetaObjectHandler implements MetaObjectHandler {
     @Override
     public void insertFill(MetaObject metaObject) {
-        this.setFieldValByName("commentTime",new Date(),metaObject);
+        this.setFieldValByName("registerTime",new Date(),metaObject);
 //        this.setFieldValByName("updateTime",new Date(),metaObject);
     }
 

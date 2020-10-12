@@ -1,15 +1,13 @@
 package com.together.pojo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -31,9 +29,41 @@ public class User {
     private String introduce;
     private int score;
     private String headName;
-    //在UserService里get后set
-    @TableField(exist = false)//表示该属性不为数据库表字段，但又是必须使用的。
-    private List<String> favour = null;
+
+    @TableField(fill = FieldFill.INSERT)
+    private Date registerTime;
+    /**
+     * 偏爱主题
+     */
+    @TableField(exist = false)
+    private List<String> favour;
+    /**
+     * 关注id列表
+     */
+    @TableField(exist = false)
+    private List<Integer> followCount;
+    /**
+     * 粉丝id列表
+     */
+    @TableField(exist = false)
+    private List<Integer> fanCount;
+    /**
+     * 邮箱验证码
+     */
+    @TableField(exist = false)
+    private String code;
+
+    /**
+     * 能否进行忘记密码的操作
+     */
+    @TableField(exist = false)
+    private String canRefreshPassword;
+
+    /**
+     * 免密登录token
+     */
+    @TableField(exist = false)
+    private String token;
 
     public User(int id, String name, String password, String email, String phone, int sex, int age, String introduce, int score, String headName) {
         this.id = id;
