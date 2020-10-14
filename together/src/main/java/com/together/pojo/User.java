@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -17,36 +18,30 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class User {
-    @TableId(type = IdType.AUTO)//id自增
-    private int id;
+public class User implements Serializable {
+    @TableId(type = IdType.AUTO)
+    private int userId;
+
+    @TableField(value = "user_name")
     private String name;
+
+    @TableField(value = "user_password")
     private String password;
+
+    @TableField(value = "user_email")
     private String email;
+
+    @TableField(value = "user_phone")
     private String phone;
-    private int sex;
-    private int age;
-    private String introduce;
-    private int score;
+
+    @TableField(value = "user_level")
+    private int level;
+
+    @TableField(value = "user_head_name")
     private String headName;
 
-    @TableField(fill = FieldFill.INSERT)
+    @TableField(value = "user_register_time",fill = FieldFill.INSERT)
     private Date registerTime;
-    /**
-     * 偏爱主题
-     */
-    @TableField(exist = false)
-    private List<String> favour;
-    /**
-     * 关注id列表
-     */
-    @TableField(exist = false)
-    private List<Integer> followCount;
-    /**
-     * 粉丝id列表
-     */
-    @TableField(exist = false)
-    private List<Integer> fanCount;
     /**
      * 邮箱验证码
      */
@@ -65,16 +60,20 @@ public class User {
     @TableField(exist = false)
     private String token;
 
-    public User(int id, String name, String password, String email, String phone, int sex, int age, String introduce, int score, String headName) {
-        this.id = id;
+    @TableField(exist = false)
+    private String longitude;
+
+    @TableField(exist = false)
+    private String latitude;
+
+    public User(int userId, String name, String password, String email, String phone, int level, String headName, Date registerTime) {
+        this.userId = userId;
         this.name = name;
         this.password = password;
         this.email = email;
         this.phone = phone;
-        this.sex = sex;
-        this.age = age;
-        this.introduce = introduce;
-        this.score = score;
+        this.level = level;
         this.headName = headName;
+        this.registerTime = registerTime;
     }
 }

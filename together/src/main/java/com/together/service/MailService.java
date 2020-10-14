@@ -57,7 +57,7 @@ public class MailService implements MailServiceImp {
             return false;
         }
         QueryWrapper<User> userQueryWrapper = new QueryWrapper<>();
-        userQueryWrapper.in("email",string);
+        userQueryWrapper.in("user_email",string);
         User user = userMapper.selectOne(userQueryWrapper);
         if (user != null){
             return false;

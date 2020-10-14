@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -34,5 +35,17 @@ public class Data {
 
     public Data(List<Theme> themeList) {
         this.themeList = themeList;
+    }
+
+    public List<String> getThemeList(){
+        if(this.themeList == null){
+            return null;
+        }
+        List<String> themeList = new ArrayList<>();
+        for (Theme theme :this.themeList
+                ) {
+            themeList.add(theme.getName());
+        }
+        return themeList;
     }
 }

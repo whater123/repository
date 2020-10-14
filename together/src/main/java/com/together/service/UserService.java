@@ -10,10 +10,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * @author w
@@ -29,7 +28,7 @@ public class UserService implements UserServiceImp {
     @Override
     public boolean phoneIsRegistered(String phone) {
         HashMap<String,Object> map = new HashMap<>();
-        map.put("phone",phone);
+        map.put("user_phone",phone);
         List<User> users = userMapper.selectByMap(map);
         return !users.isEmpty();
     }
@@ -44,61 +43,55 @@ public class UserService implements UserServiceImp {
     }
 
     @Override
-    public List<String> getUserFavour(String id) {
-        return (List<String>) redisTemplate.opsForHash().get("users", id);
-    }
-
-    @Override
     public void userRegister(User user) {
         userMapper.insert(user);
-        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.in("phone",user.getPhone());
-        String id = String.valueOf(userMapper.selectOne(queryWrapper).getId());
-        //将偏爱主题存入redis
-        redisTemplate.opsForHash().put("users",id,user.getFavour());
-
     }
 
     @Override
     public boolean isPassword(String password) {
         if (password == null) {
-            return false;
+            return true;
         }
         String pwRegex = "^[\\w]{8,16}$";
-        return password.matches(pwRegex);
+        return !password.matches(pwRegex);
     }
 
     @Override
-    public User login(String phone, String password) {
+    public User loginAndGetUser(String phone, String password) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.in("phone",phone).in("password",password);
+        queryWrapper.in("user_phone",phone).in("user_password",password);
         return userMapper.selectOne(queryWrapper);
     }
 
     @Override
-    public String getToken(String id) {
-        UUID uuid = UUID.randomUUID();
+    public String setAndGetTokenById(String id) {
+        String uuid = String.valueOf(UUID.randomUUID());
+
+        //如果有了，就延期
+        if (getTokenById(Integer.parseInt(id)) != null){
+            uuid = getTokenById(Integer.parseInt(id));
+        }
         //设置7天有效期
         redisTemplate.opsForValue().set(String.valueOf(uuid),id,7, TimeUnit.DAYS);
         return String.valueOf(uuid);
     }
 
     @Override
-    public void delayedToken(String token) {
+    public void delayedTokenByToken(String token) {
         int id = Integer.parseInt(getUserIdByToken(token));
         redisTemplate.opsForValue().set(String.valueOf(token),id,7, TimeUnit.DAYS);
     }
 
     @Override
-    public int getUserId(String phone) {
+    public int getUserIdByPhone(String phone) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
-        queryWrapper.in("phone",phone);
+        queryWrapper.in("user_phone",phone);
         User user = userMapper.selectOne(queryWrapper);
         if (user == null){
             return 0;
         }
         else {
-            return user.getId();
+            return user.getUserId();
         }
     }
 
@@ -115,13 +108,31 @@ public class UserService implements UserServiceImp {
     @Override
     public User returnHandle(User user) {
         user.setPassword(null);
-        user.setFavour(getUserFavour(String.valueOf(user.getId())));
         user.setRegisterTime(null);
-        return  user;
+        if (user.getHeadName() == null){
+            user.setHeadName("default");
+        }
+        return user;
     }
 
     @Override
     public void updateUser(User user) {
         userMapper.updateById(user);
+    }
+
+    @Override
+    public String getTokenById(int id) {
+        Set<String> keys = redisTemplate.keys("*-*");
+        if (keys == null){
+            return null;
+        }
+        for (String key: keys
+             ) {
+            String tokenId = (String) redisTemplate.opsForValue().get(key);
+            if (String.valueOf(id).equals(tokenId)){
+                return key;
+            }
+        }
+        return null;
     }
 }

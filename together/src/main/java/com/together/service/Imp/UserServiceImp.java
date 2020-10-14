@@ -20,13 +20,6 @@ public interface UserServiceImp {
     boolean isPhone(String phone);
 
     /**
-     * 获取用户的偏爱主题
-     * @param id id
-     * @return List
-     */
-    List<String> getUserFavour(String id);
-
-    /**
      * 用户注册
      * @param user 用户
      */
@@ -45,27 +38,27 @@ public interface UserServiceImp {
      * @param password 密码
      * @return 验证通过返回user对象，未通过返回null
      */
-    User login(String phone,String password);
+    User loginAndGetUser(String phone,String password);
 
     /**
      * 根据id设置token到redis,并返回token
      * @param id 用户id
      * @return token
      */
-    String getToken(String id);
+    String setAndGetTokenById(String id);
 
     /**
      * 延时7天token的有效期
      * @param token 用户token
      */
-    void delayedToken(String token);
+    void delayedTokenByToken(String token);
 
     /**
      * 获取用户id
      * @param phone 用户电话
      * @return id
      */
-    int getUserId(String phone);
+    int getUserIdByPhone(String phone);
 
     /**
      * 根据token获取用户id
@@ -93,4 +86,11 @@ public interface UserServiceImp {
      * @param user user
      */
     void updateUser(User user);
+
+    /**
+     * 根据id搜索token，没有则返回null
+     * @param id id
+     * @return token/null
+     */
+    String getTokenById(int id);
 }

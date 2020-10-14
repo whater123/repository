@@ -2,14 +2,13 @@ package com.together;
 
 import com.together.service.MailService;
 import com.together.service.UserService;
+import com.together.util.DistanceUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 @SpringBootTest
 class TogetherApplicationTests {
@@ -45,6 +44,7 @@ class TogetherApplicationTests {
     //ture
     @Test
     void t2(){
-        System.out.println(userService.getUserId("11"));
+        System.out.println(DistanceUtil.getDistance(113.311182,28.316266,113.48971,27.984494));
+
     }
 }

@@ -98,13 +98,11 @@ public class LoAndReController {
     @RequestMapping(value = "/register",produces = "application/json;charset=UTF-8")
     public ReturnData register(@RequestBody User user){
         try{
-            //默认信誉分为10
-            user.setScore(10);
             String code = (String) redisTemplate.opsForValue().get(user.getEmail());
             if (code == null){
                 return new ReturnData("1",true,"未发送邮箱验证码");
             }
-            if (!userService.isPassword(user.getPassword())){
+            if (userService.isPassword(user.getPassword())){
                 return new ReturnData("1",true,"密码非法");
             }
             if (code.equalsIgnoreCase(user.getCode())){
@@ -125,15 +123,14 @@ public class LoAndReController {
     @RequestMapping(value = "/login",produces = "application/json;charset=UTF-8")
     public ReturnData login(@RequestBody User user){
         try{
-            User login = userService.login(user.getPhone(), MD5util.code(user.getPassword()));
+            User login = userService.loginAndGetUser(user.getPhone(), MD5util.code(user.getPassword()));
         if (login == null){
             return new ReturnData("1",true,"手机号或密码错误");
         }
         else {
-            login.setId(userService.getUserId(user.getPhone()));
             login = userService.returnHandle(login);
             //设置7天的token
-            String token = userService.getToken(String.valueOf(login.getId()));
+            String token = userService.setAndGetTokenById(String.valueOf(login.getUserId()));
             return new ReturnData("0",false,new Data(token,login));
         }}catch (Exception e){
             e.printStackTrace();
@@ -150,7 +147,7 @@ public class LoAndReController {
             }
             User userById = userService.getUserById(Integer.parseInt(userIdByToken));
             //token延期7天
-            userService.delayedToken(user.getToken());
+            userService.delayedTokenByToken(user.getToken());
             userById = userService.returnHandle(userById);
             return new ReturnData("0", false, new Data(userById));
         }
@@ -166,10 +163,10 @@ public class LoAndReController {
             if (!"ture".equals(user.getCanRefreshPassword().trim())) {
                 return new ReturnData("1", true, "非法访问");
             }
-            if (!userService.isPassword(user.getPassword())) {
+            if (userService.isPassword(user.getPassword())) {
                 return new ReturnData("1", true, "密码非法");
             }
-            int userId = userService.getUserId(user.getPhone());
+            int userId = userService.getUserIdByPhone(user.getPhone());
             if (userId == 0) {
                 return new ReturnData("1", true, "手机号未注册");
             }
