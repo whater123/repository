@@ -25,4 +25,12 @@ public class Relation implements Serializable {
 
     @TableField(value = "relation_launcher")
     private int isLauncher;
+
+    public boolean getHasPunchCard(){
+        return this.hasPunchCard == 1;
+    }
+
+    public boolean getIsLauncher(){
+        return this.isLauncher == 1;
+    }
 }

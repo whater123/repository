@@ -30,6 +30,11 @@ public class Activity implements Serializable {
 
     private int themeId;
 
+    private int userLauncherId;
+
+    @TableField(exist = false)
+    private String userLauncherName;
+
     @TableField(exist = false)
     private String themeName;
 

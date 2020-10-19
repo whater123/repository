@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.together.dao.ActivityMapper;
 import com.together.dao.CommentMapper;
 import com.together.dao.RelationMapper;
+import com.together.dao.UserMapper;
 import com.together.pojo.Activity;
 import com.together.pojo.Comment;
 import com.together.pojo.Relation;
@@ -27,6 +28,8 @@ public class ActivityService implements ActivityServiceImp {
     CommentMapper commentMapper;
     @Autowired
     RelationMapper relationMapper;
+    @Autowired
+    UserMapper userMapper;
     @Autowired
     ThemeService themeService;
     @Autowired
@@ -59,7 +62,7 @@ public class ActivityService implements ActivityServiceImp {
                 int joinNumber = activity1.getJoinNumber() - activity2.getJoinNumber();
                 int timeState = activity1.getTimeState() - activity2.getTimeState();
                 return (int) distance-(likeCount*10 + commentCount*50 + joinNumber*200 + timeState*2000); }
-            );
+                );
         if (activities.size()>5){
             return activities.subList(0, 5);
         }
@@ -78,6 +81,7 @@ public class ActivityService implements ActivityServiceImp {
             QueryWrapper<Comment> queryWrapper1 = new QueryWrapper<>();
             queryWrapper1.eq("activity_id",activity.getActivityId());
 
+            activity.setUserLauncherName(userMapper.selectById(activity.getUserLauncherId()).getName());
             activity.setThemeName(themeService.getTheme(activity.getThemeId()).getName());
             activity.setJoinNumber(relationMapper.selectCount(queryWrapper));
             activity.setCommentCount(commentMapper.selectCount(queryWrapper1));
@@ -132,6 +136,13 @@ public class ActivityService implements ActivityServiceImp {
         activityAndComments.put("activity",activity);
         activityAndComments.put("comments",comments);
         return activityAndComments;
+    }
+
+    @Override
+    public Relation getRelation(int activityId, int userId) {
+        QueryWrapper<Relation> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("activity_id",activityId).eq("user_id",userId);
+        return relationMapper.selectOne(queryWrapper);
     }
 
 

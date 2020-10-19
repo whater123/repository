@@ -2,10 +2,7 @@ package com.together.pojo.returnPojo;
 
 import com.fasterxml.jackson.annotation.JacksonInject;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.together.pojo.Activity;
-import com.together.pojo.Comment;
-import com.together.pojo.Theme;
-import com.together.pojo.User;
+import com.together.pojo.*;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
@@ -25,9 +22,14 @@ public class Data {
     private Theme theme;
     private User user;
     private Activity activity;
+    private Relation relation;
     private List<Theme> themeList;
     private List<Activity> activityList;
     private List<Comment> commentList;
+
+    public Data(Relation relation) {
+        this.relation = relation;
+    }
 
     public Data(List<Comment> commentList, Activity activity) {
         this.commentList = commentList;

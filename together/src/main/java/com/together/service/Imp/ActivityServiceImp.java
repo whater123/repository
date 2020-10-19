@@ -1,6 +1,7 @@
 package com.together.service.Imp;
 
 import com.together.pojo.Activity;
+import com.together.pojo.Relation;
 
 import java.util.List;
 import java.util.Map;
@@ -61,4 +62,12 @@ public interface ActivityServiceImp {
      * @return "activity"：事件信息 "comments"：所有评论列表
      */
     Map<String,Object> getActivityAndCommentsById(int activityId,double longitude, double latitude);
+
+    /**
+     * 获取用户与事件的关系
+     * @param activityId 事件id
+     * @param userId 用户id
+     * @return 返回是否为发起人，是否已打卡
+     */
+    Relation getRelation(int activityId,int userId);
 }
