@@ -2,6 +2,8 @@ package com.together.pojo.returnPojo;
 
 import com.fasterxml.jackson.annotation.JacksonInject;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.together.pojo.Activity;
+import com.together.pojo.Comment;
 import com.together.pojo.Theme;
 import com.together.pojo.User;
 import lombok.AllArgsConstructor;
@@ -20,9 +22,21 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Data {
     private String token;
-    private List<Theme> themeList;
     private Theme theme;
     private User user;
+    private Activity activity;
+    private List<Theme> themeList;
+    private List<Activity> activityList;
+    private List<Comment> commentList;
+
+    public Data(List<Comment> commentList, Activity activity) {
+        this.commentList = commentList;
+        this.activity = activity;
+    }
+
+    public Data(List<Activity> activityList, int key) {
+        this.activityList = activityList;
+    }
 
     public Data(User user) {
         this.user = user;

@@ -4,6 +4,9 @@ import com.together.pojo.User;
 
 import java.util.List;
 
+/**
+ * @author w
+ */
 public interface UserServiceImp {
     /**
      * 返回电话是否被注册

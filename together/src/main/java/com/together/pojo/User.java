@@ -42,6 +42,10 @@ public class User implements Serializable {
 
     @TableField(value = "user_register_time",fill = FieldFill.INSERT)
     private Date registerTime;
+
+    @TableField(value = "user_baned")
+    private int isBaned;
+
     /**
      * 邮箱验证码
      */
@@ -75,5 +79,9 @@ public class User implements Serializable {
         this.level = level;
         this.headName = headName;
         this.registerTime = registerTime;
+    }
+
+    public boolean getIsBaned(){
+        return this.isBaned != 0;
     }
 }

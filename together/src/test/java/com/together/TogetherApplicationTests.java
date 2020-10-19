@@ -1,6 +1,10 @@
 package com.together;
 
+import com.together.dao.CommentMapper;
+import com.together.pojo.Activity;
+import com.together.service.ActivityService;
 import com.together.service.MailService;
+import com.together.service.ThemeService;
 import com.together.service.UserService;
 import com.together.util.DistanceUtil;
 import org.junit.jupiter.api.Test;
@@ -8,6 +12,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.*;
 
 @SpringBootTest
@@ -16,6 +24,12 @@ class TogetherApplicationTests {
     MailService mailService;
     @Autowired
     UserService userService;
+    @Autowired
+    ActivityService activityService;
+    @Autowired
+    ThemeService themeService;
+    @Autowired
+    CommentMapper commentMapper;
     @Autowired
     RedisTemplate<String,Object> redisTemplate;
 
@@ -46,5 +60,10 @@ class TogetherApplicationTests {
     void t2(){
         System.out.println(DistanceUtil.getDistance(113.311182,28.316266,113.48971,27.984494));
 
+    }
+
+    @Test
+    void t3() throws ParseException {
+        System.out.println(LocalDateTime.now());
     }
 }

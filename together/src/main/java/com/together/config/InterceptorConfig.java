@@ -22,12 +22,12 @@ public class InterceptorConfig  implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         // 如果是登陆页面则放行
         System.out.println("拦截器生效: " + request.getRequestURI());
-        if (request.getRequestURI().contains("login")) {
+        if (request.getRequestURI().contains("ogin")) {
             return true;
         }
         //验证token，前端也是
         String token = request.getHeader("token");
-        Set<String> keys = redisTemplate.keys("*");
+        Set<String> keys = redisTemplate.keys("*-*");
         if (keys == null){
             return false;
         }

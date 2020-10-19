@@ -76,7 +76,7 @@ public class LoAndReController {
 
             String code = verificationService.getCode();
             mailService.sendSimplemail(
-                    mail,
+                     mail,
                     "约吧邮箱验证",
                     "[约吧] 验证码："+code+"（10分钟内有效）。您正在登陆约吧账号，请勿将验证码告诉其他人哦");
             //key为邮箱，有效时间为10分钟
@@ -127,6 +127,9 @@ public class LoAndReController {
         if (login == null){
             return new ReturnData("1",true,"手机号或密码错误");
         }
+        if (login.getIsBaned()){
+            return new ReturnData("1",true,"该用户已被封禁！");
+        }
         else {
             login = userService.returnHandle(login);
             //设置7天的token
@@ -142,10 +145,13 @@ public class LoAndReController {
     public ReturnData loginToken(@RequestBody User user){
         try {
             String userIdByToken = userService.getUserIdByToken(user.getToken());
-            if ("null".equals(userIdByToken)) {
+            if (userIdByToken == null) {
                 return new ReturnData("1", true, "未登录");
             }
             User userById = userService.getUserById(Integer.parseInt(userIdByToken));
+            if (userById.getIsBaned()){
+                return new ReturnData("1",true,"该用户已被封禁！");
+            }
             //token延期7天
             userService.delayedTokenByToken(user.getToken());
             userById = userService.returnHandle(userById);
@@ -179,4 +185,21 @@ public class LoAndReController {
             return new ReturnData("500", true, "服务器错误");
         }
     }
+
+    @RequestMapping(value = "/loginOut",produces = "application/json;charset=UTF-8")
+    public ReturnData loginOut(@RequestBody User user){
+        try {
+            String userIdByToken = userService.getUserIdByToken(user.getToken());
+            if (userIdByToken == null) {
+                return new ReturnData("1", true, "该用户还未登录");
+            } else {
+                redisTemplate.delete(user.getToken());
+                return new ReturnData("0", false);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+            return new ReturnData("500", true, "服务器错误");
+        }
+    }
+
 }

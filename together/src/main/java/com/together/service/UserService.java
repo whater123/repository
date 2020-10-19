@@ -97,7 +97,11 @@ public class UserService implements UserServiceImp {
 
     @Override
     public String getUserIdByToken(String token) {
-        return String.valueOf(redisTemplate.opsForValue().get(token));
+        Object o = redisTemplate.opsForValue().get(token);
+        if (o == null){
+            return null;
+        }
+        return String.valueOf(o);
     }
 
     @Override
@@ -128,8 +132,8 @@ public class UserService implements UserServiceImp {
         }
         for (String key: keys
              ) {
-            String tokenId = (String) redisTemplate.opsForValue().get(key);
-            if (String.valueOf(id).equals(tokenId)){
+            Object tokenId = redisTemplate.opsForValue().get(key);
+            if (tokenId != null && tokenId.equals(id)) {
                 return key;
             }
         }
